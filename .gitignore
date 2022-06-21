@@ -1,0 +1,15 @@
+.DS_Store
+
+.vscode
+.local
+
+**/node_modules
+
+.env
+.env.production
+.env.development
+
+build
+.output
+.vercel
+.vercel_build_output
