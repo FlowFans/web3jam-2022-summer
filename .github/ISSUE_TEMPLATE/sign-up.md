@@ -1,7 +1,7 @@
 ---
 name: Sign Up
 about: Web3 Jam 项目注册
-title: "[项目报名]"
+title: "[项目注册] <项目/团队名称>"
 labels: ''
 assignees: btspoony
 
@@ -28,7 +28,7 @@ assignees: btspoony
 
 ### 产品方案
 
-请填写简介。包括但不限于：
+请填写简介（注册时若暂不填写可设为`TBD`）。包括但不限于：
 
 - 产品介绍
 - 技术架构
@@ -37,6 +37,7 @@ assignees: btspoony
 
 ## Web3 Jam 期间的开发规划
 
+请在项目注册时便进行填写。  
 例子如下（请团队根据自身情况定义具体工作）：
 
 *Cadence合约*
@@ -49,8 +50,8 @@ assignees: btspoony
 - [ ] FCL接入
 - [ ] NFT盲盒购买
 
-# 团队成员
+## 团队成员
 
-| 姓名 Name | 角色 Role      | 个人经历 Bio | 联系方式 Contact     |
-| ---- | ------------------- | --- | --------------- |
+| 姓名 Name | 角色 Role     | 个人经历 Bio | 联系方式 Contact     |
+| ---- | ------------------- | --- | ----------------------- |
 | Alex | Full-Stack Engineer | ... | Github账号 / 微信 / 邮件  |
