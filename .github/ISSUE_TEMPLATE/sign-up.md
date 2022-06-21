@@ -1,7 +1,7 @@
 ---
 name: Sign Up
 about: Web3 Jam 项目注册
-title: "[报名]"
+title: "[项目报名]"
 labels: ''
 assignees: btspoony
 
@@ -26,7 +26,7 @@ assignees: btspoony
 - 目标用户 Target audience
 - 需求证明 Evidence for the need
 
-### 解决方案
+### 产品方案
 
 请填写简介。包括但不限于：
 
