@@ -1,6 +1,6 @@
 # Web3 Jam 2022 on Flow - NFT 主题创新黑客松
 
-![banner](/assets/banner.png)
+![banner](/assets/banner-2160x960.jpg)
 
 ## 什么是 Web3 Jam
 
@@ -51,7 +51,7 @@ Web3 Jam on Flow 是一场持续一个多月的创新黑客松活动，旨在更
 
 ## 项目递交流程
 
-请 fork 本仓库，并以发送 PR 的形式进行项目资料到递交。  
+请 fork 本仓库，并以发送 PR 的形式进行项目资料的递交。  
 为确保各个团队递交到的目录独立，递交 PR 时各团队请确保自己递交的目录文件夹名为 `/submissions/issue-#/`，即：  
 各个团队在 `submissions` 目录下创建一个名为 `issue-#` 的递交目录（其中 `#` 为您团队注册时的 Issue 编号）。
 
@@ -59,7 +59,7 @@ Web3 Jam on Flow 是一场持续一个多月的创新黑客松活动，旨在更
 
 可参考递交模板 `./submissions/.template` 目录的形式：
 
-```
+```txt
 submissions
   L issue-0/
     L src/
