@@ -32,6 +32,13 @@ Please describe the following, including but not limited to:
 
 <!-- Please list the features and docs you achieved during the event -->
 
+> Delivery Meterials
+
+- [Source Code](./src/)
+<!-- Optional -->
+- [Pitch Deck](./docs/deck.pdf) <!-- or using online documentation url / ipfs url -->
+- [Demo Video](./docs/demo.mp4) <!-- or using online documentation url / ipfs url -->
+
 ## Additional information
 
 <!-- More information you want the judges to see -->

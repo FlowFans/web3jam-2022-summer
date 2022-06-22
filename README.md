@@ -57,7 +57,7 @@ Web3 Jam on Flow 是一场持续一个多月的创新黑客松活动，旨在更
 
 ### 项目递交目录格式
 
-可参考递交模板 `./submissions/.template` 目录的形式：
+可参考递交模板 `./submissions/.template` 目录的形式（可以复制 `.template` 文件夹，并改名为各团队相应的递交目录 `issue-#` ）：
 
 ```txt
 submissions
@@ -75,10 +75,10 @@ submissions
 比赛递交的资料，主要需要包含三部分内容：
 
 - Cadence 合约代码（可将代码部署到 Flow Testnet 上）
-- 项目简介（<font color="coral">**英文递交**</font>，写在 README.md 中，以方便部分海外评委在初审期间了解项目）
+- 项目简介（写在 README.md 中，<font color="coral">**英文递交**</font>，以方便部分海外评委在初审期间了解项目）
 - 演示资料（演示文档 + Demo视频，初审时为**可选**递交资料，DemoDay时需要线上路演。DemoDay主要由中文评委组成可以用中文，若视频在初审期间递交建议加上英文字幕）
-  - 演示文档，用于在 DemoDay 上进行路演的材料，是 DemoDay 的评分依据之一。可递交一个在线文档或命名为 `./docs/deck.pdf` 放置在项目递交资料中。
-  - 不长于 **5分钟** 的产品 DEMO 演示视频，是 DemoDay 的评分依据之一。 可递交一个在线文档（Google Drive、IPFS等均可）或命名为 `./docs/demo.mp4` 放置在项目递交资料中。
+  - 演示文档，用于在 DemoDay 上进行路演的材料，是 DemoDay 的评分依据之一。可链接一个在线文档或命名为 `./docs/deck.pdf` 放置在项目递交资料中，在 `README.md` 内填好对应的链接。
+  - 不长于 **5分钟** 的产品 DEMO 演示视频，是 DemoDay 的评分依据之一。 可链接一个在线文档（Google Drive、IPFS等均可）或命名为 `./docs/demo.mp4` 放置在项目递交资料中，在 `README.md` 内填好对应的链接。
 
 比赛产出需要遵循的要求：
 
