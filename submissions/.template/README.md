@@ -34,7 +34,7 @@ Please describe the following, including but not limited to:
 
 > Delivery Meterials
 
-- [Source Code](./src/)
+- [Source Code](./src/), deployed to Testnet address: 0x00000000
 <!-- Optional -->
 - [Pitch Deck](./docs/deck.pdf) <!-- or using online documentation url / ipfs url -->
 - [Demo Video](./docs/demo.mp4) <!-- or using online documentation url / ipfs url -->
