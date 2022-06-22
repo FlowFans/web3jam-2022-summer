@@ -6,7 +6,7 @@
 
 Web3 Jam on Flow 是一场持续一个多月的创新黑客松活动，旨在更好地连接 Web2 和 Web3 的互联网人才，让双方有机会深入浅出地进行行业交流和落地技术方案的探讨。  
 
-团队或者个人均可以报名参加，我们本期活动的主题为 NFT+、NFT featured，可选的赛道为：
+团队或者个人均可以报名参加，本期活动可选的赛道为：
 
 - [NFT x DAO/Tools][github-issues-1]
 - [NFT x Game/Entertainment][github-issues-2]
