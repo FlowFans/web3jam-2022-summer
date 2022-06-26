@@ -166,7 +166,7 @@ pub contract Geohash: NonFungibleToken {
             // deposit it in the recipient's account using their reference
             var index = 0
             while index < 32 {
-              recipient.deposit(token: <-create Geohash.NFT(id: Geohash.totalSupply, uri: parentURI.concat(alphabet[index])))
+              recipient.deposit(token: <-create Geohash.NFT(id: Geohash.totalSupply, uri: parentURI.concat(alphabet[index].toString())))
 
               emit Minted(
                   id: Geohash.totalSupply,
