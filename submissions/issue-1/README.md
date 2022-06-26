@@ -4,7 +4,7 @@
 
 - [ ] NFT x DAO/Tools
 - [ ] NFT x Game/Entertainment
-- [ ] NFT x Life/Metaverse
+- [x] NFT x Life/Metaverse
 
 ## Description
 
