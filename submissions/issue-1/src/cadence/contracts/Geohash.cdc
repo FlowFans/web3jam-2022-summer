@@ -42,9 +42,7 @@ pub contract Geohash: NonFungibleToken {
     // to allow others to deposit Geohash into their Collection. It also allows for reading
     // the details of Geohash in the Collection.
     pub resource interface GeohashCollectionPublic {
-        pub fun deposit(token: @NonFungibleToken.NFT)
-        pub fun getIDs(): [UInt64]
-        pub fun borrowNFT(id: UInt64): &NonFungibleToken.NFT
+        pub fun divide(id: UInt64)
         pub fun borrowGeohash(id: UInt64): &Geohash.NFT? {
             // If the result isn't nil, the id of the returned reference
             // should be the same as the argument to the function
