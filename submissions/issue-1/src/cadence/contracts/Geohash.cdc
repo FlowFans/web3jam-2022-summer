@@ -173,17 +173,17 @@ pub contract Geohash: NonFungibleToken {
     // fetch
     // Get a reference to a Geohash from an account's Collection, if available.
     // If an account does not have a Geohash.Collection, panic.
-    // If it has a collection but does not contain the itemID, return nil.
-    // If it has a collection and that collection contains the itemID, return a reference to that.
+    // If it has a collection but does not contain the id, return nil.
+    // If it has a collection and that collection contains the id, return a reference to that.
     //
-    pub fun fetch(_ from: Address, itemID: UInt64): &Geohash.NFT? {
+    pub fun fetch(_ from: Address, id: UInt64): &Geohash.NFT? {
         let collection = getAccount(from)
             .getCapability(Geohash.CollectionPublicPath)!
             .borrow<&Geohash.Collection{Geohash.GeohashCollectionPublic}>()
             ?? panic("Couldn't get collection")
-        // We trust Geohash.Collection.borowGeohash to get the correct itemID
+        // We trust Geohash.Collection.borowGeohash to get the correct id
         // (it checks it before returning it).
-        return collection.borrowGeohash(id: itemID)
+        return collection.borrowGeohash(id: id)
     }
 
     // initializer
