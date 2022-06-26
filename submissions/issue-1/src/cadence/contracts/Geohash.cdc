@@ -7,13 +7,13 @@ pub contract Geohash: NonFungibleToken {
     pub event ContractInitialized()
     pub event Withdraw(id: UInt64, from: Address?)
     pub event Deposit(id: UInt64, to: Address?)
-    pub event Minted(id: UInt64, uri: String)
+    pub event Minted(id: UInt64, metadata: String)
+    pub event Burned(id: UInt64)
 
     // Named Paths
     //
     pub let CollectionStoragePath: StoragePath
     pub let CollectionPublicPath: PublicPath
-    pub let MinterStoragePath: StoragePath
 
     // totalSupply
     // The total number of Geohash that have been minted
@@ -26,15 +26,15 @@ pub contract Geohash: NonFungibleToken {
 
         pub let id: UInt64
 
-        pub let uri: String
+        pub let metadata: String
 
-        init(id: UInt64, uri: String) {
+        init(id: UInt64, metadata: String) {
             self.id = id
-            self.uri = uri
+            self.metadata = metadata
         }
 
         pub fun tokenURI(): String {
-            return self.uri
+            return self.metadata
         }
     }
 
@@ -59,6 +59,12 @@ pub contract Geohash: NonFungibleToken {
     // A collection of Geohash NFTs owned by an account
     //
     pub resource Collection: GeohashCollectionPublic, NonFungibleToken.Provider, NonFungibleToken.Receiver, NonFungibleToken.CollectionPublic {
+        pub fun divide(id: UInt64) {
+            let token = self.borrowGeohash(id: id) ?? panic("Could not borrow a reference to the owner's collection")
+            self.burnNFT(id: id)
+            self.batchMintNFT(parentURI: token.metadata)
+        }
+
         // dictionary of NFT conforming tokens
         // NFT is a resource type with an `UInt64` ID field
         //
@@ -101,7 +107,6 @@ pub contract Geohash: NonFungibleToken {
 
         // borrowNFT
         // Gets a reference to an NFT in the collection
-        // so that the caller can read its metadata and call its methods
         //
         pub fun borrowNFT(id: UInt64): &NonFungibleToken.NFT {
             return (&self.ownedNFTs[id] as &NonFungibleToken.NFT?)!
@@ -109,7 +114,6 @@ pub contract Geohash: NonFungibleToken {
 
         // borrowGeohash
         // Gets a reference to an NFT in the collection as a Geohash,
-        // exposing all of its fields (including the typeID & rarityID).
         // This is safe as there are no functions that can be called on the Geohash.
         //
         pub fun borrowGeohash(id: UInt64): &Geohash.NFT? {
@@ -119,6 +123,34 @@ pub contract Geohash: NonFungibleToken {
             } else {
                 return nil
             }
+        }
+
+        // batchMintNFT
+        // Mints a new NFT with a new ID
+        //
+        priv fun batchMintNFT(
+            parentURI: String,
+        ) {
+            let alphabet = "0123456789bcdefghjkmnpqrstuvwxyz"
+            var index = 0
+            while index < 32 {
+                let metadata = parentURI.concat(alphabet[index].toString())
+                self.deposit(token: <-create Geohash.NFT(id: Geohash.totalSupply, metadata: metadata))
+                Geohash.totalSupply = Geohash.totalSupply + (1 as UInt64)
+                index = index + 1
+                emit Minted(
+                    id: Geohash.totalSupply,
+                    metadata: metadata
+                )
+            }
+        }
+
+        priv fun burnNFT(id: UInt64) {
+            emit Burned(id: id)
+
+            let token <- self.withdraw(withdrawID: id)
+
+            destroy token
         }
 
         // destructor
@@ -138,44 +170,6 @@ pub contract Geohash: NonFungibleToken {
     //
     pub fun createEmptyCollection(): @NonFungibleToken.Collection {
         return <- create Collection()
-    }
-
-    // NFTMinter
-    // Resource that an admin or something similar would own to be
-    // able to mint new NFTs
-    //
-    pub resource NFTMinter {
-        pub let alphabet = "0123456789bcdefghjkmnpqrstuvwxyz"
-
-        pub fun divide(id: UInt64) {
-          // need test
-          let parentURI = borrowGeohash(id).tokenURI
-          // burn
-          batchMint(parentURI)
-        }
-
-        // batchMint
-        // Mints a new NFT with a new ID
-        // and deposit it in the recipients collection using their collection reference
-        //
-
-        priv fun batchMint(
-            recipient: &{NonFungibleToken.CollectionPublic},
-            parentURI: String,
-        ) {
-            // deposit it in the recipient's account using their reference
-            var index = 0
-            while index < 32 {
-              recipient.deposit(token: <-create Geohash.NFT(id: Geohash.totalSupply, uri: parentURI.concat(alphabet[index].toString())))
-
-              emit Minted(
-                  id: Geohash.totalSupply,
-                  uri: uri
-              )
-              Geohash.totalSupply = Geohash.totalSupply + (1 as UInt64)
-              index = index + 1
-            }
-        }
     }
 
     // fetch
@@ -200,14 +194,9 @@ pub contract Geohash: NonFungibleToken {
         // Set our named paths
         self.CollectionStoragePath = /storage/GeohashCollectionV1
         self.CollectionPublicPath = /public/GeohashCollectionV1
-        self.MinterStoragePath = /storage/GeohashMinterV1
 
         // Initialize the total supply
         self.totalSupply = 0
-
-        // Create a Minter resource and save it to storage
-        let minter <- create NFTMinter()
-        self.account.save(<-minter, to: self.MinterStoragePath)
 
         emit ContractInitialized()
     }

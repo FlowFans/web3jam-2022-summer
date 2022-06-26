@@ -96,10 +96,10 @@ pub contract interface NonFungibleToken {
 
         // deposit takes an NFT as an argument and adds it to the Collection
         //
-		pub fun deposit(token: @NFT)
+		    pub fun deposit(token: @NFT)
     }
 
-    // Interface that an account would commonly 
+    // Interface that an account would commonly
     // publish for their collection
     pub resource interface CollectionPublic {
         pub fun deposit(token: @NFT)
