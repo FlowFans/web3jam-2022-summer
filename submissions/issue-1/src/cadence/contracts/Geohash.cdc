@@ -60,7 +60,7 @@ pub contract Geohash: NonFungibleToken {
         pub fun divide(id: UInt64) {
             let token = self.borrowGeohash(id: id) ?? panic("Could not borrow a reference to the owner's collection")
             self.burnNFT(id: id)
-            self.batchMintNFT(parentURI: token.metadata)
+            self.batchMintNFT(origin: token.metadata)
         }
 
         // dictionary of NFT conforming tokens
@@ -127,15 +127,18 @@ pub contract Geohash: NonFungibleToken {
         // Mints a new NFT with a new ID
         //
         priv fun batchMintNFT(
-            parentURI: String,
+            origin: String,
         ) {
-            let alphabet = "0123456789bcdefghjkmnpqrstuvwxyz"
-            var index = 0
-            while index < 32 {
-                let metadata = parentURI.concat(alphabet[index].toString())
+            let alphabet = [
+              "0","1","2","3","4","5","6","7",
+              "8","9","b","c","d","e","f","g",
+              "h","j","k","m","n","p","q","r",
+              "s","t","u","v","w","x","y","z",
+            ]
+            for item in alphabet {
+                let metadata = origin.concat(item)
                 self.deposit(token: <-create Geohash.NFT(id: Geohash.totalSupply, metadata: metadata))
                 Geohash.totalSupply = Geohash.totalSupply + (1 as UInt64)
-                index = index + 1
                 emit Minted(
                     id: Geohash.totalSupply,
                     metadata: metadata
