@@ -63,6 +63,11 @@ pub contract Geohash: NonFungibleToken {
             self.batchMintNFT(origin: token.metadata)
         }
 
+        pub fun initMint() {
+            assert(Geohash.totalSupply == 0, message:"Geohash has inited")
+            self.batchMintNFT(origin: "")
+        }
+
         // dictionary of NFT conforming tokens
         // NFT is a resource type with an `UInt64` ID field
         //
@@ -129,12 +134,10 @@ pub contract Geohash: NonFungibleToken {
         priv fun batchMintNFT(
             origin: String,
         ) {
-            let alphabet = [
-              "0","1","2","3","4","5","6","7",
-              "8","9","b","c","d","e","f","g",
-              "h","j","k","m","n","p","q","r",
-              "s","t","u","v","w","x","y","z",
-            ]
+            let alphabet = [ "0","1","2","3","4","5","6","7",
+                            "8","9","b","c","d","e","f","g",
+                            "h","j","k","m","n","p","q","r",
+                            "s","t","u","v","w","x","y","z"]
             for item in alphabet {
                 let metadata = origin.concat(item)
                 self.deposit(token: <-create Geohash.NFT(id: Geohash.totalSupply, metadata: metadata))
@@ -202,4 +205,3 @@ pub contract Geohash: NonFungibleToken {
         emit ContractInitialized()
     }
 }
-
