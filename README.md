@@ -96,7 +96,7 @@ submissions
 
 ## 本期活动主题
 
-将于 2022年7月17日晚 第三场讨论会结束后正式公布。
+![theme](/assets/theme.png)
 
 ## 活动奖项与奖金
 
