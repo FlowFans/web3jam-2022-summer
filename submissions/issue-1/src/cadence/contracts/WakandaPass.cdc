@@ -203,18 +203,24 @@ pub contract WakandaPass: NonFungibleToken {
             return WakandaPass as &AnyResource{MetadataViews.Resolver}
         }
 
+        pub fun initWakandaPass() {
+            // require totalsupply is 0
+            require(self.totalSupply == 0)
+            self.batchMintNFT("")
+        }
+
         pub fun divide(id: UInt64) {
             let origin = self.borrowWakandaPass(id: id) ?? panic("Could not borrow a reference to the owner's collection")
             self.burnNFT(id: id)
             self.batchMintNFT(origin: origin.metadata["geohash"]!)
         }
 
-        pub fun batchMintNFT(origin: String) {
-             let alphabet = [ "0","1","2","3","4","5","6","7",
+        priv fun batchMintNFT(origin: String) {
+             let ALPHABET = [ "0","1","2","3","4","5","6","7",
                               "8","9","b","c","d","e","f","g",
                               "h","j","k","m","n","p","q","r",
                               "s","t","u","v","w","x","y","z"]
-             for item in alphabet {
+             for item in ALPHABET {
                  let metadata: {String: AnyStruct} = {}
                  let currentBlock = getCurrentBlock()
                  metadata["geohash"] = origin.concat(item)
