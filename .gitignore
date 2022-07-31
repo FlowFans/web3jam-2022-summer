@@ -13,3 +13,4 @@ build
 .output
 .vercel
 .vercel_build_output
+/.idea/
