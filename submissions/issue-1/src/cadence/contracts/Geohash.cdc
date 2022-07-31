@@ -1,4 +1,5 @@
-import NonFungibleToken from 0x01
+import NonFungibleToken from "./NonFungibleToken";
+import MetadataViews from "./MetadataViews.cdc"
 
 pub contract Geohash: NonFungibleToken {
 
@@ -22,13 +23,26 @@ pub contract Geohash: NonFungibleToken {
 
     // A Geohash as an NFT
     //
-    pub resource NFT: NonFungibleToken.INFT {
+    pub resource NFT: NonFungibleToken.INFT, MetadataViews.Resolver {
 
         pub let id: UInt64
 
-        pub let metadata: String
+        pub let name: String
+        pub let description: String
+        pub let thumbnail: String
 
-        init(id: UInt64, metadata: String) {
+        access(self) let royalties: [MetadataViews.Royalty]
+        access(self) let metadata: {String: AnyStruct}
+
+        init(
+          id: UInt64,
+          name: String,
+          description: String,
+          thumbnail: String,
+          royalties: [MetadataViews.Royalty],
+          metadata: {String: AnyStruct},
+
+        ) {
             self.id = id
             self.metadata = metadata
         }
