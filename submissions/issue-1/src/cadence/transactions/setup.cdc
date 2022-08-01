@@ -11,7 +11,12 @@ transaction {
             // save it to the account
             signer.save(<-collection, to: WakandaPass.CollectionStoragePath)
             // create a public capability for the collection
-            signer.link<&WakandaPass.Collection{NonFungibleToken.CollectionPublic, WakandaPass.WakandaPassCollectionPublic}>(WakandaPass.CollectionPublicPath, target: WakandaPass.CollectionStoragePath)
+            signer.link<&WakandaPass.Collection{NonFungibleToken.CollectionPublic,
+            WakandaPass.WakandaPassCollectionPublic}>(WakandaPass.CollectionPublicPath,
+            target: WakandaPass.CollectionStoragePath)
         }
     }
 }
+
+// transfer token
+
