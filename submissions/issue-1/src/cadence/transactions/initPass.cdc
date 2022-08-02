@@ -6,7 +6,7 @@ import WakandaPass from 0x02
 // It must be run with the account that has the minter resource
 // stored at path WakandaPass.CollectionStoragePath
 
-transaction(metadata: String) {
+transaction() {
 
     // local variable for storing the minter reference
     let minter: &WakandaPass.Collection
