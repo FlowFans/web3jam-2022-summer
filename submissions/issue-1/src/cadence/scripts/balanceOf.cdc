@@ -1,5 +1,5 @@
-import NonFungibleToken from 0x01
-import WakandaPass from 0x02
+import NonFungibleToken from 0xf5c21ffd3438212b
+import WakandaPass from 0xf5c21ffd3438212b
 
 pub fun main(address: Address): Int {
     let account = getAccount(address)

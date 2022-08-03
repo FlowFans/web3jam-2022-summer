@@ -1,4 +1,4 @@
-import WakandaPass from 0x02
+import WakandaPass from 0xf5c21ffd3438212b
 // This script reads the current number of cogito that have been minted
 // from the Cogito contract and returns that number to the caller
 // Returns: UInt64

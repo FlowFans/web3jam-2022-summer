@@ -1,4 +1,4 @@
-import NonFungibleToken from "./NonFungibleToken.cdc"
+import NonFungibleToken from 0xf5c21ffd3438212b
 
 pub contract WakandaPass: NonFungibleToken {
 
