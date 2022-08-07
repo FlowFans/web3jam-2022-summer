@@ -113,7 +113,6 @@ pub contract WakandaPass: NonFungibleToken {
                               "h","j","k","m","n","p","q","r",
                               "s","t","u","v","w","x","y","z"]
              for item in ALPHABET {
-                 let currentBlock = getCurrentBlock()
                  self.deposit(token: <-create WakandaPass.NFT(
                   id: WakandaPass.totalSupply,
                   metadata: origin.concat(item)

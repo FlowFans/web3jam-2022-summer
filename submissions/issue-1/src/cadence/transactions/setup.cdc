@@ -18,5 +18,3 @@ transaction {
     }
 }
 
-// transfer token
-
