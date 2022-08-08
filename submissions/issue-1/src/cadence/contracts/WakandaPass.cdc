@@ -103,8 +103,8 @@ pub contract WakandaPass: NonFungibleToken {
 
         pub fun divide(id: UInt64) {
             let origin = self.borrowWakandaPass(id: id) ?? panic("Could not borrow a reference to the owner's collection")
-            self.burnNFT(id: id)
             self.batchMintNFT(origin: origin.metadata)
+            self.burnNFT(id: id)
         }
 
         priv fun batchMintNFT(origin: String) {
