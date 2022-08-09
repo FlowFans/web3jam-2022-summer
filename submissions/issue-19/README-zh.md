@@ -62,7 +62,7 @@ _客户端_
 
 - [x] UI design
 - [x] FCL 接入
-- [x] 创建 Stream 
+- [x] 创建 Stream
 - [x] Stream 信息/票据展示
 - [ ] 动态票据样式设计
 
