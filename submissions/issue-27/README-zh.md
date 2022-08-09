@@ -20,15 +20,15 @@ Relation希望构建Web3原生的NFT社群运营工具NFT Club，它将帮助NFT
 
 Relation Club 是web3 native的社区运营工具。同时也是Relation为NFT持有者们创建的聚集地。它可以将拥有同一系列的NFT持有者们聚集在一起，持有该系列的NFT是加入Club的唯一凭证。
 
-Club具有以下特性：
+**Relation Club具有以下特性：**
 
--进出基于NFT的链上所有权，无需额外认证
--相对于传统NFT社群工具，提供更加安全的聊天服务和运营支持
--Flow友好
--帮助创作者将地址映射到真实的用户
--丰富且有趣的运营工具
+1. 进出基于NFT的链上所有权，无需额外认证
+2. 相对于传统NFT社群工具，提供更加安全的聊天服务和运营支持
+3. Flow友好
+4. 帮助创作者将地址映射到真实的用户
+5. 丰富且有趣的运营工具
 
-Relation Club将包下述模块。
+**Relation Club将包下述模块：**
 
 - Club Space.Club space 是Club 的主页，将包含Club基本信息，linked page，Club news，Proposal，活跃用户和成员墙，是Club成员的聚集地.
 
