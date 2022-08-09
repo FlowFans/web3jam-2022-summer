@@ -22,22 +22,19 @@ Relation Club 是web3 native的社区运营工具。同时也是Relation为NFT�
 
 Relation Club将包下述模块。
 
-- Club Space
-Club space 是Club 的主页，将包含Club基本信息，linked page，Club news，Proposal，活跃用户和成员墙，是Club成员的聚集地.
+- Club Space.Club space 是Club 的主页，将包含Club基本信息，linked page，Club news，Proposal，活跃用户和成员墙，是Club成员的聚集地.
+
 ![image](https://user-images.githubusercontent.com/91399393/183704985-c4f966d7-ce56-4b9d-b442-cb25bf86014e.png)
 
-- Club Chat
-Club chat是NFT Club的成员聊天群组，服务将根据合约的holders信息自动管理Club成员，Chat的IM协议将支持文字、图片、emoji、自定义表情、NFT分享、网页分享等消息格式。
+- Club Chat.Club chat是NFT Club的成员聊天群组，服务将根据合约的holders信息自动管理Club成员，Chat的IM协议将支持文字、图片、emoji、自定义表情、NFT分享、网页分享等消息格式。
 
-- Club信息聚合中间件，负责收集和管理NFT holders的链上公开信息的infra，将为Club提供基础的服务支持，并可以自动完成成员管理，用户通过FCL登录Relation Club后，将根据用户地址验证用户是否持有某些NFT，它将被自动加入对应的Club，而根据Flow链上的权属更新，如果他失去了NFT，则将被移出Club，由新的持有者进入。
+- Club信息聚合中间件.负责收集和管理NFT holders的链上公开信息的infra，将为Club提供基础的服务支持，并可以自动完成成员管理，用户通过FCL登录Relation Club后，将根据用户地址验证用户是否持有某些NFT，它将被自动加入对应的Club，而根据Flow链上的权属更新，如果他失去了NFT，则将被移出Club，由新的持有者进入。
 
-- Club合约标准，Relation nft 是relation labs 在flow chain 实现relation nft club 的标准实行 开发者可以参考实现自己flow nft 合约加入relation club 从而进入relation世界，实现艺术家与nft 持有者更充分的交流。
+- Club合约标准.Relation nft 是relation labs 在flow chain 实现relation nft club 的标准实行 开发者可以参考实现自己flow nft 合约加入relation club 从而进入relation世界，实现艺术家与nft 持有者更充分的交流。
 
-- Club运营工具，Club 提供一系列运营工具帮助NFT创作者更便捷、有趣的运营Club。
+- Club运营工具.Club 提供一系列运营工具帮助NFT创作者更便捷、有趣的运营Club。
 
--Club统计
-基于聚合的Web3地址，Club帮助创作者能将用户定位为人而非地址，更加全面的了解NFT用户群体，制定运营策略。
-这使得Club统计不仅可以提供On-chain的数据分析，还能提供基于真实用户个体的进阶数据统计。
+-Club统计.基于聚合的Web3地址，Club帮助创作者能将用户定位为人而非地址，更加全面的了解NFT用户群体，制定运营策略。这使得Club统计不仅可以提供On-chain的数据分析，还能提供基于真实用户个体的进阶数据统计。
 
 ![812feed524de4f80b29b3ea219f3bea](https://user-images.githubusercontent.com/91399393/183707938-3760a52b-deea-48b2-abf5-929fbaab36a1.jpg)
 
