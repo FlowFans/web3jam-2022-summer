@@ -76,9 +76,11 @@ Testnet 合约[地址](https://flow-view-source.com/testnet/account/0x457f3685a6
 
 | 姓名 Name | 角色 Role     | 个人经历 Bio | 联系方式 Contact     |
 | ---- | ------------------- | --- | ----------------------- |
-| Jessica | Economic Designer | Crypto and commodity derivatives trader,5+ years of blockchain research experience,CFA, ACCA,Visiting researcher at Imperial College |  j.chang@relationlabs.ai  |
+| Yann | Full Stack Developer | 15+ years of experience in cloud computing, big data and large-scale distributed systems. |  yann.ren@relationlabs.ai  |
+|  Ben | Full Stack Developer | former core development engineer of IBM, AWS.10+ years of back-end development experience |  j.chang@relationlabs.ai  |
+| Jessica | Economic Designer | Crypto and commodity derivatives trader,5+ years of blockchain research experience,CFA, ACCA,Visiting researcher at Imperial College |  b.zhang@relationlabs.ai |
 | Joe | Product Manager/Engineer | former product leader of top blockchain companies, 6+ years of project experience in finance, logistics, social networking, games products | pikajoe@relationlabs.ai  |
-| Santry | Marketing |Former CMO at Patract Labs,9+ years of marketing, operation and management experiences |  santry@relationlabs.ai  |            |
+| Santry | Marketing |Former CMO at Patract Labs,9+ years of marketing, operation and management experiences |  santry@relationlabs.ai |            |
 
 
 
