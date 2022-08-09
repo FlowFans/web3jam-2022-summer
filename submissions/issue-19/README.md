@@ -67,6 +67,7 @@ _Service end_
 > Delivery Materials
 
 - [Source Code](./src/), deployed to Testnet address: 0xb797a88390357df4
+- testnet [version](https://testnet.melody.im/) https://testnet.melody.im/
 
 - [Pitch Deck](./docs/deck.pdf) <!-- or using online documentation url / ipfs url -->  TBD
 - [Demo Video](./docs/demo.mp4) <!-- or using online documentation url / ipfs url --> TBD

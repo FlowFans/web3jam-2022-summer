@@ -47,6 +47,7 @@ _技术架构_
 ## Web3 Jam 期间的开发规划
 
 Testnet 合约[地址](https://flow-view-source.com/testnet/account/0xb797a88390357df4)
+测试版本[地址](https://testnet.melody.im/) https://testnet.melody.im/
 deployed to Testnet address: 0xb797a88390357df4
 
 
