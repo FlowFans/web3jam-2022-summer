@@ -1,0 +1,84 @@
+{
+  "emulators": {
+    "default": {
+      "port": 3569,
+      "serviceAccount": "emulator-account"
+    }
+  },
+  "contracts": {
+    "NonFungibleToken": {
+      "source": "./cadence/contracts/standard/NonFungibleToken.cdc",
+      "aliases": {
+        "testnet": "0x631e88ae7f1d7c20"
+      }
+    },
+    "MetadataViews": {
+      "source": "./cadence/contracts/standard/MetadataViews.cdc",
+      "aliases": {
+        "testnet": "0x631e88ae7f1d7c20"
+      }
+    },
+    "FungibleToken": {
+      "source": "./cadence/contracts/standard/FungibleToken.cdc",
+      "aliases": {
+        "testnet": "0x9a0766d93b6608b7",
+        "emulator": "0xee82856bf20e2aa6"
+      }
+    },
+    "FlowToken": {
+      "source": "./cadence/contracts/tokens/FlowToken.cdc",
+      "aliases": {
+        "testnet": "0x631e88ae7f1d7c20",
+        "emulator": "0x0ae53cb6e3f42a79"
+      }
+    },
+    "FUSD": {
+      "source": "./cadence/contracts/tokens/FUSD.cdc",
+      "aliases": {
+        "testnet": "0xe223d8a629e49c68",
+        "emulator": "0xf8d6e0586b0a20c7"
+      }
+    },
+    "Kibble": {
+      "source": "./cadence/contracts/tokens/Kibble.cdc",
+      "aliases": {
+        "emulator": "0xf8d6e0586b0a20c7"
+      }
+    },
+    "Melody": "./cadence/contracts/Melody.cdc",
+    "MelodyError": "./cadence/contracts/MelodyError.cdc",
+    "MelodyTicket": "./cadence/contracts/MelodyTicket.cdc"
+  },
+  "networks": {
+    "emulator": "127.0.0.1:3569",
+    "mainnet": "access.mainnet.nodes.onflow.org:9000",
+    "testnet": "access.devnet.nodes.onflow.org:9000"
+  },
+  "accounts": {
+    "emulator-account": {
+      "address": "f8d6e0586b0a20c7",
+      "keys": "84f82df6790f07b281adb5bbc848bd6298a2de67f94bdfac7a400d5a1b893de5"
+    },
+    "test1": {
+      "address": "01cf0e2f2f715450",
+      "keys": "368083923398158fe8f6e31b7483e8d00c4a2c959900cc28cc173dbd5c78b6b4"
+    },
+    "test2": {
+      "address": "179b6b1cb6755e31",
+      "keys": "5f10a1fd823113cff24e49d780d2103d31a6d92f9ebe7680c12a71d238688967"
+    }
+  },
+  "deployments": {
+    "emulator": {
+      "emulator-account": [
+        "NonFungibleToken",
+        "Kibble",
+        "FUSD",
+        "MetadataViews",
+        "Melody",
+        "MelodyError",
+        "MelodyTicket"
+      ]
+    }
+  }
+}
