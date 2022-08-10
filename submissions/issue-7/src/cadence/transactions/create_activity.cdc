@@ -1,5 +1,5 @@
-import NebulaActivity from 0x01
-import ExampleToken from 0x05
+import NebulaActivity from "../contract/NebulaActivity.cdc"
+import ExampleToken from "../contract/ExampleToken.cdc"
 
 transaction(
 activityName: String,
@@ -8,6 +8,16 @@ hostName: String,
 tags: [String],
 metaDataVerifiedURL: String,
 metaDataNotVerifiedURL: String,
+startYear: UInt64,
+startMonth: UInt64,
+startDay: UInt64,
+startHour: UInt64,
+startMinute: UInt64,
+endYear: UInt64,
+endMonth: UInt64,
+endDay: UInt64,
+endtHour: UInt64,
+endMinute: UInt64
 ) {
     let activityInfo: NebulaActivity.ActivityInfo
 
@@ -16,19 +26,19 @@ metaDataNotVerifiedURL: String,
             ?? panic("Your account don't have an activities manager")
         // Initialize the start time
         let startTime = NebulaActivity.Date(
-        _year: 2022,
-        _month: 8,
-        _day: 1,
-        _hour: 9,
-        _minute: 0
+        _year: startYear,
+        _month: startMonth,
+        _day: startDay,
+        _hour: startHour,
+        _minute: startMinute
         )
         // Initialize the end time
         let endTime = NebulaActivity.Date(
-        _year: 2022,
-        _month: 8,
-        _day: 2,
-        _hour: 9,
-        _minute: 0
+        _year: endYear,
+        _month: endMonth,
+        _day: endDay,
+        _hour: endtHour,
+        _minute: endMinute
         )
         // Initialize the activityInfo
         self.activityInfo = NebulaActivity.ActivityInfo(

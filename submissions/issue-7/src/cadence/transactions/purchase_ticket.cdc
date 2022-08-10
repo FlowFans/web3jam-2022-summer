@@ -1,6 +1,6 @@
-import NebulaActivity from 0x01
-import FungibleToken from 0x04
-import ExampleToken from 0x05
+import NebulaActivity from "../contract/NebulaActivity.cdc"
+import FungibleToken from "../contract/FungibleToken.cdc"
+import ExampleToken from "../contract/ExampleToken.cdc"
 
 transaction(activityName: String, number: UInt64, type: String, sellerAddress: Address) {
     // "ticketCollection" is the buyer's owned ticketCollection

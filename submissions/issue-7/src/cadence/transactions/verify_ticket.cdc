@@ -1,4 +1,4 @@
-import NebulaActivity from 0x01
+import NebulaActivity from "./contract/NebulaActivity.cdc"
 
 transaction(consumerAddress: Address, activityName: String, id: UInt64) {
     let ticketCollection: &NebulaActivity.TicketsCollection{NebulaActivity.TicketsCollectionPublic}
@@ -18,7 +18,7 @@ transaction(consumerAddress: Address, activityName: String, id: UInt64) {
 
     execute {
         let ticketMachine = self.activityShop.borrowTicketMachine(activityName: activityName)
-        //let res = ticketMachine.verifyHost(id: 1, ticket: Capability<&NebulaTicket{NebulaTicketPublic}>, date: Date)
-        //log(res)
+        let res = ticketMachine.verifyHost(id: 1, ticket: Capability<&NebulaTicket{NebulaTicketPublic}>, date: Date)
+
     }
 }

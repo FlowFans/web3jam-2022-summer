@@ -1,4 +1,4 @@
-import NebulaActivity from 0x01
+import NebulaActivity from "../contract/NebulaActivity.cdc"
 
 transaction(activityName: String, supply: {String: UInt64}, price: {String: UFix64}) {
     prepare(acct: AuthAccount) {

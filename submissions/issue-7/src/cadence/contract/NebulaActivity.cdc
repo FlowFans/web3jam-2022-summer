@@ -1,6 +1,6 @@
-import NonFungibleToken from 0x03
-import FungibleToken from 0x04
-import ExampleToken from 0x05
+import NonFungibleToken from "../NonFungibleToken.cdc"
+import FungibleToken from "../FungibleToken.cdc"
+import ExampleToken from "../ExampleToken.cdc"
 
 /*
   This is a Standard Contract for a NebulaActivity

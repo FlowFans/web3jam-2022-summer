@@ -1,4 +1,4 @@
-import NebulaActivity from 0x01
+import NebulaActivity from "../contract/NebulaActivity.cdc"
 
 transaction(address: Address) {
 
