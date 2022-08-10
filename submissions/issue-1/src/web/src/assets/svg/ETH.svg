@@ -1,0 +1,28 @@
+<svg id="ETH_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #bfdafa;
+      }
+
+      .cls-2 {
+        fill: #2b3439;
+      }
+
+      .cls-3 {
+        fill: #677889;
+      }
+
+      .cls-4 {
+        fill: #060506;
+      }
+    </style>
+  </defs>
+  <path id="路径_59" data-name="路径 59" class="cls-1" d="M12,24A12,12,0,1,0,0,12,12,12,0,0,0,12,24Z"/>
+  <path id="路径_60" data-name="路径 60" class="cls-2" d="M12,4.364v5.664l4.909,2.1Z"/>
+  <path id="路径_61" data-name="路径 61" class="cls-3" d="M12,4.364,7.091,12.127,12,10.027Z"/>
+  <path id="路径_62" data-name="路径 62" class="cls-2" d="M12,10.009l-4.909,2.1L12,14.909Z"/>
+  <path id="路径_63" data-name="路径 63" class="cls-4" d="M12,10.009v4.9l4.909-2.8Z"/>
+  <path id="路径_64" data-name="路径 64" class="cls-3" d="M12,19.636V15.818l-4.909-2.8Z"/>
+  <path id="路径_65" data-name="路径 65" class="cls-2" d="M12,15.818v3.818l4.909-6.618Z"/>
+</svg>

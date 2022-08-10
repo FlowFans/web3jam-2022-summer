@@ -1,0 +1,76 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2021-09-25 11:16+0800\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: en-US\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/components/Web3Status/index.tsx
+msgid "Account"
+msgstr "Account"
+
+#: src/pages/App.tsx
+msgid "Allowance of {year}: {0} tCO2e"
+msgstr "Allowance of {year}: {0} tCO2e"
+
+#: src/components/Blocklist/index.tsx
+msgid "Blocked address"
+msgstr "Blocked address"
+
+#: src/components/AccountDetails/index.tsx
+msgid "Change"
+msgstr "Change"
+
+#: src/pages/App.tsx
+msgid "Claim Carbon Credit"
+msgstr "Claim Carbon Credit"
+
+#: src/components/Web3Status/index.tsx
+#: src/components/Web3Status/index.tsx
+msgid "Connect"
+msgstr "Connect"
+
+#: src/components/AccountDetails/index.tsx
+msgid "Connected with {name}"
+msgstr "Connected with {name}"
+
+#: src/components/AccountDetails/index.tsx
+msgid "Disconnect"
+msgstr "Disconnect"
+
+#: src/components/Web3Status/index.tsx
+#: src/components/Web3Status/index.tsx
+msgid "Error"
+msgstr "Error"
+
+#: src/components/Web3Status/PeddingView.tsx
+msgid "Error Connecting"
+msgstr "Error Connecting"
+
+#: src/components/Web3Status/PeddingView.tsx
+msgid "Initializing..."
+msgstr "Initializing..."
+
+#: src/components/Web3Status/index.tsx
+msgid "Install Metamask"
+msgstr "Install Metamask"
+
+#: src/components/Web3ReactManager/index.tsx
+msgid "Loading"
+msgstr "Loading"
+
+#: src/components/Web3ReactManager/index.tsx
+msgid "Oops! An unknown error occurred. Please refresh the page, or visit from another browser or device."
+msgstr "Oops! An unknown error occurred. Please refresh the page, or visit from another browser or device."
+
+#: src/components/Web3Status/index.tsx
+msgid "Wrong Network"
+msgstr "Wrong Network"
