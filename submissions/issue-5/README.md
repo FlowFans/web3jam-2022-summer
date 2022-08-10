@@ -50,7 +50,7 @@ We can find some similar successful products in the Web2 world, such as Facebook
 * Besides Flow, we are trying to provide advertising access interfaces to other chains, without losing the unique resource features provided by Flow.
 
 ### Technology Architecture
-![image](https://user-images.githubusercontent.com/83746881/180392687-5d3400e2-61a8-4e1f-8f19-92945ee84199.png)
+![image](https://user-images.githubusercontent.com/83746881/183852679-d1d23c57-f84f-43c8-afc4-9d31343780f6.png)
 The key points of the technology are as follows:  
 * `Duanji` is a standard Flow NFT. Besides static content properties, `Duanji` has its dynamical feature `funny index`.
 * `Punster` is a standard Flow NFT, and it is also a standard Flow *Collection*. A `Punster` NFT can contain lots of `Duanji` NFTs. The dynamical properties of `Punster` include  
