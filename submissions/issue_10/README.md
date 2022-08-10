@@ -1,6 +1,6 @@
-## 赛道选择
+## Track
 
-请选择一项赛道类型进行报名：
+Pick your tracks：
 
 - [x] NFT x DAO/Tools - 组织工具
 - [ ] NFT x Game/Entertainment - 游戏娱乐
