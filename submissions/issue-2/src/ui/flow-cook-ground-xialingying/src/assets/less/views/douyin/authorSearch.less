@@ -1,0 +1,195 @@
+.authorsearch {
+  position: relative;
+  flex: 1;
+
+  .au {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    .au_m {
+      position: relative;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      .au_conent {
+        // padding: 10px;
+        // background-color: #f6f8fa;
+        // overflow-y: scroll;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        // height: calc(100vh - 101px);
+
+        .au_war {
+          min-width: 728px;
+          min-height: calc(100vh - 101px);
+          // height: calc(100vh - 101px);
+          padding-top: 35px;
+          background-color: #fff;
+
+          .au_bar {
+            .au_radio {
+              text-align: center;
+            }
+
+            .au_word {
+              width: 628px;
+              margin: 30px auto 0;
+              .inp {
+                border: 1px solid #409eff;
+                background-color: #409eff;
+                font-size: 14px;
+                color: #fff;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+              }
+
+              .au_tit {
+                margin-top: 20px;
+                display: flex;
+
+                .tit_a {
+                  font-size: 14px;
+                  color: #999;
+
+                }
+
+                .tit_b {
+                  flex: 1;
+                }
+
+                .tit_c {
+                  font-size: 14px;
+                  color: #409eff;
+                  cursor: pointer;
+                  text-align: left;
+                }
+              }
+            }
+          }
+
+          //关键词搜索
+          .key-word-block {
+            img {
+              display: block;
+              width: 422px;
+              height: 421px;
+              margin: 106px auto 0;
+            }
+          }
+
+          //高级搜索
+          .high-level-block {
+            width: 728px;
+            margin: 20px auto 0;
+            background-color: #fff;
+            justify-content: center;
+
+            .high-item {
+              width: 728px;
+              line-height: 30px;
+              padding: 20px 0;
+              border-bottom: 1px solid #f0f0f0;
+              font-size: 14px;
+              display: flex;
+
+              .item-tit {
+                min-width: 80px;
+                padding-right: 18px;
+                color: #999;
+                text-align: right;
+              }
+
+              .classify-list {
+
+                //   display: flex;
+                .classify-item {
+                  margin-right: 25px;
+                  color: #666;
+                  cursor: pointer;
+                }
+
+                .actived {
+                  color: #409eff;
+                  font-weight: 700;
+                }
+              }
+            }
+
+            .high-item-select {
+              width: 728px;
+              line-height: 30px;
+              padding: 14px 0;
+              align-items: center;
+              display: flex;
+
+              label {
+                min-width: 80px;
+                margin-left: 66px;
+                padding-right: 20px;
+                font-size: 14px;
+                color: #999;
+                text-align: right;
+              }
+
+              label:first-child {
+                margin-left: 0;
+              }
+            }
+
+            .high-it {
+              width: 728px;
+              line-height: 30px;
+              padding: 0 0 20px 0;
+              border-bottom: 1px solid #f0f0f0;
+              display: flex;
+              font-size: 14px;
+
+              label {
+                min-width: 80px;
+                padding-right: 18px;
+                color: #999;
+                text-align: right;
+              }
+
+              .classify-list {
+                .el-input {
+                  position: relative;
+                  font-size: 14px;
+                  display: inline-block;
+                  width: 100%;
+
+                  .el-input__inner {
+                    width: 335px;
+                    height: 34px;
+                    line-height: 34px;
+                  }
+                }
+              }
+            }
+
+            .portrayal {
+              padding: 12px 0 10px 4px;
+              font-size: 14px;
+              border: none !important;
+              width: 728px;
+              line-height: 30px;
+              display: flex;
+              .tit1{
+                  flex: 1;
+                  margin-left: 18px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

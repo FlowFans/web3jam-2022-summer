@@ -1,0 +1,190 @@
+.content-wrapper {
+  box-sizing: border-box;
+
+  .router-content {
+    position: relative;
+    width: 100%;
+    min-height: 82vh;
+    z-index: 10;
+
+    .detactionaccount {
+      .detaction-account {
+        .group {
+          margin: 20px;
+          display: flex;
+
+
+
+
+          .left {
+            width: 100%;
+            display: flex;
+
+            .default {
+              font-size: 16px;
+              height: 21px;
+              margin-top: 10px;
+              line-height: 21px;
+              margin-right: 48px;
+
+              i {
+                font-style: normal;
+                color: #ff7f5d;
+                margin-right: 8px;
+                font-size: 14px;
+              }
+
+              span {
+                color: #222;
+                font-weight: 700;
+              }
+            }
+
+            .tagList {
+              width: 77%;
+              display: flex;
+              flex-wrap: wrap;
+              overflow: hidden;
+              transition: height .5s;
+
+              .tagItem {
+                position: relative;
+                height: 28px;
+                box-sizing: border-box;
+                padding: 2px 10px;
+                margin: 9px 10px 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                display: flex;
+                justify-content: center;
+                cursor: pointer;
+                min-width: 84px;
+                color: #777;
+
+                span {
+                  font-size: 14px;
+                  font-weight: 400;
+                }
+
+              }
+
+              .active {
+                background: #077aff;
+                border-color: #077aff;
+                color: #fff;
+              }
+            }
+          }
+
+          .twoBth {
+            display: flex;
+            padding-top: 10px;
+
+            .one {
+              background: #077aff;
+              border: #077aff;
+              color: #fff;
+            }
+
+            .two {
+              background: #fff;
+              color: #777;
+              border-color: #ccc;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .dcc_loading {
+    margin: 20px auto;
+    position: relative;
+    width: 42px;
+    height: 30px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 16px;
+    animation: dccload .6s ease-in-out 0s infinite alternate;
+
+    p {
+      margin: 0;
+      display: block;
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 30px;
+      height: 18px;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 9px;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 9px;
+      background-color: #fff;
+
+      span:first-child {
+        left: 3px;
+        height: 9px;
+        animation: dccmove .6s ease-in-out 0s infinite alternate;
+      }
+
+      span:nth-child(2) {
+        left: 12px;
+        height: 12px;
+        animation: dccmove .6s ease-in-out .6s infinite alternate;
+      }
+
+      span:nth-child(3) {
+        display: inline-block;
+        position: absolute;
+        left: 21px;
+        bottom: 3px;
+        width: 6px;
+        height: 7px;
+        border-radius: 2.5px;
+        background-image: -webkit-linear-gradient(top, #ff2d64, #ff4b7d);
+        animation: dccmove .6s ease-in-out .3s infinite alternate;
+      }
+
+      span:first-child,
+      span:nth-child(2) {
+        display: inline-block;
+        position: absolute;
+        bottom: 3px;
+        width: 6px;
+        border-radius: 2.5px;
+        background-image: -webkit-linear-gradient(top, #ff2d64, #ff4b7d);
+      }
+    }
+
+  }
+
+  .dcc_loading,
+  .dcc_loading:before {
+    display: block;
+    background-image: -webkit-linear-gradient(top left, #00daff 0, #0daeff);
+  }
+}
+
+.notdetacion {
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-size: 14px;
+      font-family: PingFang SC;
+      font-weight: 400;
+      color: #666;
+    }
+  }
+}

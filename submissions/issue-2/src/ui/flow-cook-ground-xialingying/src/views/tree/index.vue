@@ -1,0 +1,394 @@
+<template>
+  <div class="app-container">
+
+    <el-form :inline="true"  class="demo-form-inline">
+      <div  v-for="item in item_prob">
+        <el-form-item label="Item name">
+          <el-input v-model="item.name" disabled placeholder="name like ipad" />
+        </el-form-item>
+        <el-form-item label="Item prob">
+          <el-input v-model="item.prob" disabled placeholder="prob like 0.1, [0,1]" />
+        </el-form-item>
+        <br/>
+      </div>
+
+    </el-form>
+
+    <hr/>
+
+    <br/>
+
+    <br/>
+
+    <el-form :model="result_form" label-width="120px"
+             v-loading="loading"
+             element-loading-text="sealing......"
+             element-loading-spinner="el-icon-loading"
+             element-loading-background="rgba(0, 0, 0, 0.8)"
+    >
+      <el-form-item label="block id">
+        <el-input v-model="result_form.block_id" />
+      </el-form-item>
+
+
+      <el-form-item label="transaction id">
+        <el-input v-model="result_form.transaction_id" />
+      </el-form-item>
+
+      <el-form-item label="NFT ID">
+        <el-input v-model="result_form.nft_id" />
+      </el-form-item>
+
+      <el-form-item label="Prize name">
+        <el-input v-model="result_form.prize_name" />
+      </el-form-item>
+
+
+    </el-form>
+
+    <LuckyWheel
+      ref="myLucky"
+      width="300px"
+      height="300px"
+      :prizes="prizes"
+      :blocks="blocks"
+      :buttons="buttons"
+      @start="startCallback"
+      @end="endCallback"
+    />
+
+
+  </div>
+</template>
+
+<script>
+  import { hello,get_url_classify,get_url_match } from '@/api/ins'
+  import * as fcl from '@onflow/fcl'
+  import * as types from '@onflow/types'
+  fcl.config({
+    'discovery.wallet': 'https://fcl-discovery.onflow.org/testnet/authn', // Endpoint set to Testnet
+    'discovery.authn.endpoint': 'https://fcl-discovery.onflow.org/api/testnet/authn',
+    'app.detail.title': 'FCL + VUE',
+    '0xFlowToken': '0x7e60df042a9c0868',
+    '0xProfile': '0xba1132bc08f82fe2',
+    '0xLucycanvasNFT': '0x4c216d104db9ecbe',
+    'app.detail.icon': 'http://placekitten.com/200/300',
+    //'accessNode.api': 'https://access-testnet.onflow.org',
+    'accessNode.api': 'https://rest-testnet.onflow.org',
+  })
+
+  const format = (percentage) => (percentage === 100 ? 'Full' : `${percentage}%`)
+
+
+  async function fetchProfile(address) {
+    if (address == null) return null;
+
+    return fcl
+      .send([
+        fcl.script`
+        import Profile from 0xProfile
+
+        pub fun main(address: Address): Profile.ReadOnly? {
+          return Profile.read(address)
+        }
+      `,
+        fcl.args([fcl.arg(address, types.Address)])
+      ])
+      .then(fcl.decode);
+  }
+
+  async function setUserData(fclUser) {
+    console.log(fclUser)
+    let data = await fetchProfile(fclUser.addr)
+    console.log(data)
+  }
+
+  export default {
+
+  data() {
+    return {
+      loading:false,
+      address:"",//用户地址
+      result_form:{
+        "block_id":"",
+        "transaction_id":"",
+        "nft_id":"",
+        "prize_name":"",
+      },
+      item_prob:[{"name":"纸巾","prob":0.5},
+        {"name":"鼠标","prob":0.3},
+        {"name":"键盘","prob":0.14},
+        {"name":"iPad","prob":0.05},
+        {"name":"Macbook","prob":0.01}],
+      formInline:{},
+      html_text:"",
+      str_re:".*",
+      domain:"",
+      stat_text:"", //正则统计数据
+
+      url_classify_button:false,
+      url_match_button:false,
+      data2: [],
+
+      defaultProps: {
+        children: 'children',
+        label: 'label'
+      },
+
+      blocks: [{ padding: '13px', background: '#617df2' }],
+      prizes: [
+        { background: '#e9e8fe', fonts: [{ text: '纸巾' , top: '10%' }] },
+        { background: '#b8c5f2', fonts: [{ text: '鼠标' , top: '10%' }] },
+        { background: '#e9e8fe', fonts: [{ text: '键盘' , top: '10%' }] },
+        { background: '#b8c5f2', fonts: [{ text: 'iPad' , top: '10%' }] },
+        { background: 'green', fonts: [{ text: 'Macbook', top: '10%' }] },
+      ],
+      buttons: [
+        { radius: '50px', background: '#617df2' },
+        { radius: '45px', background: '#afc8ff' },
+        {
+          radius: '40px', background: '#869cfa',
+          pointer: true,
+          fonts: [{ text: '开始\n抽奖', top: '-20px' }]
+        },
+      ],
+    }
+  },
+
+  created() {
+    //this.fetchData()
+    //this.get_url_classify()
+    fcl.authenticate()
+    fcl.currentUser().subscribe(
+      currentUser=> {
+        this.address = currentUser.addr
+        console.log("The Current User", currentUser)
+        console.log("The Current User address", this.address)
+      }
+    )
+  },
+
+
+  methods: {
+    filterNode(value, data) {
+      if (!value) return true
+      return data.label.indexOf(value) !== -1
+    },
+
+    async get_url_classify() {
+      console.log("hello")
+
+      // const response = await fcl.query({
+      //   cadence: `
+      //   import FlowToken from 0xFlowToken // will be replaced with 0xf233dcee88fe0abe because of the configuration
+      //   pub fun main(): UFix64 {
+      //     return FlowToken.totalSupply  // arbitrary script that can access FlowToken interface
+      //   }
+      // `
+      // })
+      //
+      // console.log(response)
+      // const latestSealedBlock = await fcl
+      //   .send([
+      //     fcl.getBlock(true), // isSealed = true
+      //   ])
+      //   .then(fcl.decode);
+
+      // fcl.query({
+      //   cadence: `
+      //   import FlowToken from 0xFlowToken // will be replaced with 0xf233dcee88fe0abe because of the configuration
+      //   pub fun main(): UFix64 {
+      //     return FlowToken.totalSupply  // arbitrary script that can access FlowToken interface
+      //   }
+      // `
+      // }).then(response=>{
+      //   console.log(response)
+      // })
+
+
+
+      const transactionId = await fcl.mutate({
+        cadence: `
+          import NonFungibleToken from  0x4c216d104db9ecbe
+          import LucycanvasNFT from  0x4c216d104db9ecbe
+          import MetadataViews from  0x4c216d104db9ecbe
+          import FungibleToken from  0x4c216d104db9ecbe
+
+          transaction(
+              recipient_address: Address,
+          ) {
+
+              /// local variable for storing the minter reference
+              let minter: &LucycanvasNFT.NFTMinter
+
+              /// Reference to the receiver's collection
+              let recipientCollectionRef: &{NonFungibleToken.CollectionPublic}
+
+              prepare(signer: AuthAccount) {
+                  //判断是否已经初始化过nft仓库
+                   if signer.borrow<&LucycanvasNFT.Collection>(from: LucycanvasNFT.CollectionStoragePath) == nil {
+                      // Create a new empty collection
+                      let collection <- LucycanvasNFT.createEmptyCollection()
+
+                      // save it to the account
+                      signer.save(<-collection, to: LucycanvasNFT.CollectionStoragePath)
+
+                      // create a public capability for the collection
+                      signer.link<&{NonFungibleToken.CollectionPublic, LucycanvasNFT.LucycanvasNFTCollectionPublic, MetadataViews.ResolverCollection}>(
+                          LucycanvasNFT.CollectionPublicPath,
+                          target: LucycanvasNFT.CollectionStoragePath
+                      )
+                  }
+
+
+                  // borrow a reference to the NFTMinter resource in storage
+                  let public_signer =  getAccount(0x4c216d104db9ecbe)
+
+                  self.minter = public_signer
+                  .getCapability(LucycanvasNFT.MinterPublicPath)
+                  .borrow<&LucycanvasNFT.NFTMinter>()
+                      ?? panic("Account does not store an object at the specified path")
+
+                  // Borrow the recipient's public NFT collection reference
+                  self.recipientCollectionRef = getAccount(recipient_address)
+                      .getCapability(LucycanvasNFT.CollectionPublicPath)
+                      .borrow<&{NonFungibleToken.CollectionPublic}>()
+                      ?? panic("Could not get receiver reference to the NFT Collection")
+              }
+
+              execute {
+                  // Mint the NFT and deposit it to the recipient's collection
+                  self.minter.mintNFT(
+                      recipient: self.recipientCollectionRef,
+                      user_address:recipient_address
+                  )
+              }
+          }
+          `,
+        args: (arg, t) => [arg(this.address, types.Address)],
+        limit: 1000
+      })
+
+      const transaction = await fcl.tx(transactionId).onceSealed()
+      console.log(transaction) // The transactions status and events after being
+      this.result_form.block_id = transaction.blockId
+      var nft_id = 0
+      for (var i=0;i<transaction.events.length;i++ ) {
+        let item = transaction.events[i]
+        if ("A.4c216d104db9ecbe.LucycanvasNFT.Minted"==item.type)
+        {
+          nft_id = item.data.id
+          this.result_form.nft_id = nft_id
+          this.result_form.transaction_id = item.transactionId
+        }
+        console.log(item)
+      }
+      console.log("nft_id", nft_id)
+
+      //获得抽奖物品名称
+      let name = await fcl.query({
+        cadence: `
+          import LucycanvasNFT from  0x4c216d104db9ecbe
+          import MetadataViews from  0x4c216d104db9ecbe
+
+          pub fun main(address: Address, id: UInt64): String {
+              let account = getAccount(address)
+
+              let collection = account
+                  .getCapability(LucycanvasNFT.CollectionPublicPath)
+                  .borrow<&{LucycanvasNFT.LucycanvasNFTCollectionPublic}>()
+                  ?? panic("Could not borrow a reference to the collection")
+
+              let nft = collection.borrowLucycanvasNFT(id: id)!
+
+                  // Get the basic display information for this NFT
+              let view = nft.resolveView(Type<MetadataViews.Display>())!
+
+              let display = view as! MetadataViews.Display
+
+              return display.name
+           }
+      `,
+        args: (arg, t) => [arg(this.address, types.Address), arg(nft_id, types.UInt64)],
+
+      })
+
+      console.log("nft name", name)
+      this.result_form.prize_name = name
+
+      //根据name，获得 index
+      var prize_index_dict = []
+      prize_index_dict['纸巾'] = 0
+      prize_index_dict['鼠标'] = 1
+      prize_index_dict['键盘'] = 2
+      prize_index_dict['iPad'] = 3
+      prize_index_dict['Macbook'] = 4
+
+      let lucky_index = prize_index_dict[name]
+      console.log("lucky_index", lucky_index)
+      return lucky_index
+
+
+    },
+
+    async fetchProfile(address) {
+      if (address == null) return null;
+
+      return fcl
+        .send([
+          fcl.script`
+        import Profile from 0xProfile
+
+        pub fun main(address: Address): Profile.ReadOnly? {
+          return Profile.read(address)
+        }
+      `,
+          fcl.args([fcl.arg(address, t.Address)])
+        ])
+        .then(fcl.decode);
+    },
+
+    get_url_match() {
+        this.url_match_button = true
+
+        get_url_match({domain:this.domain, html:this.html_text, str_re:this.str_re}).then(response => {
+        var data = response
+        this.data2 = data.results.data
+        var stat_data = data.results.stat_data
+        //console.log(this.data2)
+        this.stat_text = "url总数:" + stat_data["url_num"] +
+          "，url匹配数:" + stat_data["match_url_num"] +
+          " | 正文url数:" +  stat_data["content_url_num"] +
+          "， 正文url匹配数:" + stat_data["content_match_url_num"];
+        this.url_match_button = false
+
+        })
+    },
+
+    // 点击抽奖按钮会触发star回调
+    startCallback () {
+      // 调用抽奖组件的play方法开始游戏
+      this.result_form = {
+        "block_id":"",
+          "transaction_id":"",
+          "nft_id":"",
+          "prize_name":"",
+      }
+
+      this.$refs.myLucky.play()
+      this.loading = true
+      this.get_url_classify().then(
+        index=>{
+          this.$refs.myLucky.stop(index)
+          this.loading = false
+        }
+      )
+    },
+
+    // 抽奖结束会触发end回调
+    endCallback (prize) {
+      console.log(prize)
+    },
+  }
+}
+</script>

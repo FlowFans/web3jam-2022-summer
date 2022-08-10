@@ -1,0 +1,128 @@
+.hotlive {
+  .hotlive-title {
+    width: 229px;
+    height: 59px;
+    margin-top: 10px;
+    padding-top: 9px;
+    .hotlive-title-cont {
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+  .hotlive-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(523px, 1fr));
+    grid-gap: 20px;
+    .hotlive-item {
+      width: 523px;
+      height: 178px;
+      background: #fff;
+      border-radius: 9px;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 0 6px 8px 0 rgba(245, 246, 250, 1);
+      .item-marker {
+        width: 61px;
+        height: 61px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .item-cont {
+        margin-top: 39px;
+        padding-left: 29px;
+        display: flex;
+        .item-avatar {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          border: 2px solid #fe2270;
+        }
+
+        .item-message {
+          margin-left: 21px;
+          max-width: 380px;
+          color: #1a1a1a;
+          .user-name {
+            display: flex;
+            align-items: center;
+            height: 22px;
+            color: #1a1a1a;
+            div {
+              font-size: 16px;
+              font-weight: 700;
+              color: #1a1a1a;
+              line-height: 22px;
+              margin-bottom: 8px;
+            }
+
+            .detail_user_blueV,
+            .detail_user_yelllowV {
+              margin: 0 0 5px 1px;
+              line-height: 20px;
+            }
+
+            .detail_user_yelllowV {
+              color: #face15;
+            }
+          }
+
+          span {
+            font-size: 14px;
+            font-weight: 500;
+            color: #666;
+            opacity: .4;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: block;
+            padding-right: 20px;
+          }
+
+          .item-slogan {
+            color: #1a1a1a;
+            font-size: 13px;
+            margin-top: 18px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: block;
+            padding-right: 20px;
+          }
+
+          .item-time {
+            height: 25px;
+            border: 1px solid rgba(255, 178, 45, .5);
+            border-radius: 12px;
+            margin-top: 12px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0 12.5px;
+            background: rgba(255, 178, 45, .1);
+            float: left;
+
+            i {
+              color: #ffb22d;
+              margin-right: 5px;
+              width: 16px;
+              height: 15px;
+            }
+          }
+
+          div {
+            span {
+              color: #ffb22d;
+              font-size: 16px;
+              opacity: 1;
+              display: block;
+              text-align: center;
+              height: 16px;
+              line-height: 19px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

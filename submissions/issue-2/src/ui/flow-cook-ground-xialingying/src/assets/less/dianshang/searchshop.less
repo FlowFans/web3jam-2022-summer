@@ -1,0 +1,174 @@
+.content-wrapper {
+  box-sizing: border-box;
+  .router-content {
+    position: relative;
+    width: 100%;
+    min-height: 82vh;
+    z-index: 10;
+    .search {
+      display: block;
+      padding: 20px;
+      .el-card {
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .wrapper {
+          width: 1000px;
+          .bigTitle {
+            font-size: 30px;
+            font-weight: 900;
+            text-align: center;
+          }
+
+          .input-search {
+            display: flex;
+            margin-bottom: 20px;
+
+            .el-input {
+              margin-right: 10px;
+            }
+          }
+
+          .vsear {
+            .vipSearch {
+              display: block;
+
+              .btns {
+                text-align: center;
+                margin-top: 50px;
+
+                .clearBtn {
+                  width: 120px;
+                  background: #fff;
+                  color: #fff;
+                  border-color: #ddd;
+                }
+
+                .vipSearchBtn {
+                  width: 120px;
+                  background: #077aff;
+                  border-color: #077aff;
+                }
+              }
+
+              .person {
+                display: flex;
+                flex-flow: wrap;
+                margin-bottom: 20px;
+                padding: 20px 0;
+                border-bottom: 1px solid rgba(0, 0, 0, .1);
+
+                .content {
+                  display: -webkit-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  width: 90%;
+                  height: 30px;
+
+
+                }
+
+                .two {
+                  height: 60px;
+                }
+
+                .label {
+                  width: 64px;
+                  font-size: 14px;
+                  font-weight: 400;
+                  color: #333;
+                  flex-shrink: 0;
+                  color: #222;
+                }
+
+                .shopLabel {
+                  width: 130px;
+                }
+
+                .classtion {
+                  display: flex;
+                  width: 90%;
+                  height: 90px;
+                }
+              }
+
+              .cis {
+                display: flex;
+                flex-flow: wrap;
+                min-height: 20px;
+              }
+
+              .el-radio {
+                margin-right: 15px;
+                margin-bottom: 8px;
+                width: 107px;
+              }
+            }
+          }
+        }
+      }
+
+      .searchBtn {
+        background: #077aff;
+        color: #fff;
+        border: 1px solid #077aff;
+        border-radius: 0;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+    }
+  }
+
+  .bottom {
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+
+    .my-home.el-button--text {
+      color: #077aff;
+    }
+
+    .el-button+.el-button {
+      margin-left: 10px;
+    }
+  }
+}
+
+.el-dialog__wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  margin: 0;
+}
+
+.el-dialog {
+  border-radius: 5px;
+}
+
+.el-dialog {
+  position: relative;
+  margin: 0 auto 50px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
+}
+
+.el-dialog__headerbtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 0;
+  background: 0 0;
+  border: none;
+  outline: 0;
+  cursor: pointer;
+  font-size: 16px;
+}

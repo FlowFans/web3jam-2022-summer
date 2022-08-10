@@ -1,0 +1,64 @@
+.router-content {
+  position: relative;
+  width: 100%;
+  min-height: 82vh;
+  z-index: 10;
+
+  .up-point {
+    padding: 20px;
+
+    .a-classify {
+      display: flex;
+      margin-bottom: 20px;
+
+      .label {
+        width: 50px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #333;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+      }
+
+      .content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-flow: wrap;
+        flex-flow: wrap;
+
+        .item {
+          min-width: 80px;
+          text-align: center;
+          font-size: 14px;
+          font-weight: 400;
+          color: #666;
+          margin-right: 10px;
+          margin-bottom: 4px;
+          padding: 3px 0;
+          border: 1px solid #fff;
+          cursor: pointer;
+          height: 22px;
+          line-height: 25px;
+        }
+
+        .active {
+          background: #ff5e60 !important;
+          border-radius: 5px;
+          color: #fff;
+        }
+      }
+    }
+
+    .el-table {
+      th>.cell {
+        position: relative;
+        word-wrap: normal;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+      }
+    }
+
+  }
+
+}
