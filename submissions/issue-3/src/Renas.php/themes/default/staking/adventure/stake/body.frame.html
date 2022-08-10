@@ -1,0 +1,149 @@
+<div class="cardFrame adventure-cardFrame">
+    <div class="cardTitle adventure-cardDeco">
+        <div class="cardTitleCol">
+            <img src="{?!dirImg?}ico.adventure.png">
+            {?$adventureName?}
+        </div>
+        <div class="cardTitleCol adventure-type colorGrey1">
+            {?$adventureType?}
+        </div>
+    </div>
+    <div class="cardContainer adventure-cardContainer">
+        <div class="adventure-coverImage">
+            <img src="{?$coverImage?}">
+        </div>
+        <div class="adventure-addon">
+            <div class="adventure-addonRow">
+                <div class="adventure-addonHeader">
+                    {?common.staking?}
+                </div>
+                <div class="adventure-addon-content">
+                    {?common.staking.currentStaked?} <b>{?$staking.myStaked?}</b> {?common.staking.mine?} {?common.slash?} <b>{?$staking.totalStaked?}</b> {?common.staking.overall?}
+                </div>
+                <div class="adventure-addon-content">
+                    {?common.staking.stakeNextEpoch?} <b>{?$staking.myStaking?}</b> {?common.staking.mine?} {?common.slash?} <b>{?$staking.totalStaking?}</b> {?common.staking.overall?}
+                </div>
+            </div>
+            <div class="adventure-addonRow">
+                <div class="adventure-addonHeader">
+                    {?common.adventure.ownership?}
+                </div>
+                <div class="adventure-addon-content {?$hideNoneOwner?}">{?common.none?}</div>
+                <div class="adventure-addon-content {?$hideOwner?}">{?common.adventure.owners?} {?$ownerCount?}</div>
+                <div class="adventure-addon-content {?$hideOwner?}">{?common.adventure.topOwners?} {?$ownership?}</div>
+            </div>
+            <div class="adventure-addonRow">
+                <div class="adventure-addonHeader">
+                    {?common.adventure.statistics?}
+                </div>
+                <div class="adventure-addon-content">{?common.adventure.statistics.total?} {?$adventures.total?}</div>
+                <div class="adventure-addon-content">{?common.adventure.statistics.lastEpoch?} {?$adventures.lastEpoch?}</div>
+            </div>
+            <div class="adventure-addonRow">
+                <div class="adventure-addonHeader">
+                    {?common.adventure.requirement?}
+                </div>
+                <div class="adventure-addon-content">{?$requirement.team?}</div>
+                <div class="adventure-addon-content">{?$requirement.strength?}</div>
+                <div class="adventure-addon-content">{?$requirement.apCost?}</div>
+            </div>
+            <div class="adventure-addonRow">
+                <div class="adventure-addonHeader">
+                    {?common.adventure.duration?}
+                </div>
+                <div class="adventure-addon-content">{?$duration?}</div>
+                <div class="adventure-addon-content">{?common.adventure.durationNote?}</div>
+            </div>
+            <div class="adventure-addonRow">
+                <div class="adventure-addonHeader">
+                    {?common.adventure.lootList?}
+                </div>
+                <div class="adventure-addon-content {?$hideNoneLoot?}">{?common.none?}</div>
+                {?$lootList?}
+            </div>
+            <!-- <div class="adventure-addonRow">
+                <div class="adventure-addonHeader">
+                    {?common.adventure.previousLog?}
+                </div>
+                <div class="adventure-addon-content {?$hideNoneLog?}">{?common.none?}</div>
+                <div class="adventure-addon-content">{?common.adventure.prviousLogNote?}</div>
+                {?$previousLogs?}
+            </div> -->
+            <div class="adventure-addonRow">
+                <div class="adventure-addonHeader">
+                    {?common.adventure.desc?}
+                </div>
+                <pre class="adventure-addon-desc">{?$description?}
+                </pre>
+            </div>
+            <!-- <div class="adventure-addonRow">
+                {?$debugInfo?}
+            </div> -->
+        </div>
+    </div>
+</div>
+
+<div class="nzContainer widthFill nzNote bgOpaWhite1">
+    <div class="widthFill">
+        <div class="chart-staking-container bgSemiBlue3 borderRadiusN">
+            <div class="chart-staking-myRatio colorWhite1 fontSizeS">{?common.stake.mine?}</div>
+            <div class="chart-staking-total colorWhite1 fontSizeS">{?common.stake.total?}</div>
+            <div class="flex flexRow chart-staking-mine widthFill">
+                <div class="chart-staking-myStaked" style="width: {?$myStakedRatio?}%;"></div>
+                <!-- <div class="chart-staking-myStaking" style="width: {?$myStakingRatio?}%;"></div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<details class="bgOpaWhite1 noPadding nzDetails padding-bottom-n padding-left-n padding-right-n widthFill" open>
+    <summary class="padding-bottom-n padding-top-n">{?header.stakeAndUnstake?}</summary>
+    <div class="flex flexRow widthFill">
+        <form class="nzForm noMargin staking-container widthFill" method="post" action="?name={?$name?}" enctype="multipart/form-data">
+            <input type="hidden" name="confirm" value="{?$confirm?}">
+            <div class="nzContainer noMargin widthFill">
+                <label>
+                    <span>{?label.staking.unstake?}</span>
+                </label>
+                <div class="noPadding">
+                    <input type="number" name="unstakeAmount" value="" min="0" max="{?$maxUnstake?}" step="0.01" oninput="if(value<0)value=0;if(value>{?$maxUnstake?})value={?$maxUnstake?};"/>
+                </div>
+            </div>
+            <!-- buttons -->
+            <div class="fontSizeLLL noMargin nzFormRow widthFill">
+                <input type="submit" class="bgBrighterBlur2 bgOpaRed1 colorWhite1 nzButton noMargin" name="unstake" value="{?button.unstake?}">
+            </div>
+        </form>
+
+        <form class="nzForm noMargin staking-container widthFill" method="post" action="?name={?$name?}" enctype="multipart/form-data">
+            <input type="hidden" name="confirm" value="{?$confirm?}">
+            <div class="nzContainer noMargin widthFill">
+                <label>
+                    <span>{?label.staking.stake?}</span>
+                </label>
+                <div class="noPadding">
+                    <input type="number" name="stakeAmount" value="" min="0" max="{?$maxStake?}" step="0.01" oninput="if(value<0)value=0;if(value>{?$maxStake?})value={?$maxStake?};"/>
+                </div>
+            </div>
+            <!-- buttons -->
+            <div class="fontSizeLLL noMargin nzFormRow widthFill">
+                <input type="submit" class="bgBrighterBlur2 bgOpaGreen1 colorWhite1 nzButton noMargin" name="stake" value="{?button.stake?}">
+            </div>
+        </form>
+    </div>
+    <div class="flexrow nzContainer prewrap widthFill">{?common.staking.desc?}</div>
+</details>
+
+<details class="bgOpaWhite1 noPadding nzDetails padding-bottom-n padding-left-n padding-right-n widthFill" open>
+    <summary class="padding-bottom-n padding-top-n">{?header.stake.yieldHistory?}</summary>
+    <table class="widthFill nzTable">
+        <tr>
+            <td>{?common.epoch?}</td>
+            <td>{?common.adventures?}</td>
+            <td>{?common.staked?}</td>
+            <td>{?common.reward?}</td>
+            <td>{?common.yield?}</td>
+        </tr>
+        {?$history?}
+    </table>
+</details>

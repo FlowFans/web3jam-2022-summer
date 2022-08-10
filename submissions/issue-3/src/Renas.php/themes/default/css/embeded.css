@@ -1,0 +1,13 @@
+
+body {
+    background: transparent;
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    /* padding: var(--margin-n); */
+    /* height: max-content; */
+}
+

@@ -1,0 +1,40 @@
+<div class="bgOpaWhite1 borderradiusl nzContainer shadow1 widthFill">
+    <form class="nzForm widthFill" method="post" action="edit.php">
+        <input type="hidden" name="originalName" value="{?$originalName?}">
+        <input type="hidden" name="originalLang" value="{?$originalLang?}">
+
+        <!-- Character name -->
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.language.name?}</span>
+            </label>
+            <input type="text" name="name" value="{?$name?}">
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.language.languageCode?}</span>
+            </label>
+            <select name="lang" {?$langDisabled?}>
+                {?$langCodeOptions?}
+            </select>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.language.content?}</span>
+            </label>
+            <textarea type="text" name="content" rows="4">{?$content?}</textarea>
+        </div>
+
+        <!-- buttons -->
+        <div class="fontSizeLLL nzFormRow widthFill">
+            <a href="index.php" class="widthFill">
+                <div class="bgBrighterBlur2 bgOpaBlue2 colorWhite1 nzButton">
+                    {?button.cancel?}
+                </div>
+            </a>
+            <input type="submit" class="bgBrighterBlur2 bgOpaGreen1 colorWhite1 nzButton" name="submit" value="{?button.submit?}">
+        </div>
+    </form>
+</div>

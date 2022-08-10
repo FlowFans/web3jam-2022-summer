@@ -1,0 +1,23 @@
+<div class="nzContainer widthFill">
+    {?$characterSheet?}
+</div>
+
+<div class="nzContainer widthFill">
+    {?$enhance?}
+    
+    <details class="nzDetails widthFill noPadding bgOpaWhite1" open>
+        <summary class="padding-bottom-n padding-top-n">{?label.character.equipment?}</summary>
+        <div class="colorGrey1 padding-bottom-l textCenter widthfill {?$equipmentEmpty?}">{?common.empty?}</div>
+        <div class="common-cardList padding-left-s padding-right-s padding-bottom-n">
+            {?$equipment?}
+        </div>
+    </details>
+
+    <details class="nzDetails widthFill noPadding bgOpaWhite1" open>
+        <summary class="padding-bottom-n padding-top-n">{?label.character.carrying?}</summary>
+        <div class="colorGrey1 padding-bottom-l textCenter widthfill {?$carryingEmpty?}">{?common.empty?}</div>
+        <div class="common-cardList padding-left-s padding-right-s padding-bottom-n">
+            {?$carrying?}
+        </div>
+    </details>
+</div>

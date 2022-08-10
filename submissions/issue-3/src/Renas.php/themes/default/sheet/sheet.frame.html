@@ -1,0 +1,161 @@
+<div class="cardFrame cardFrame-character {?--frameCss?}">
+    <div class="cardTitle cardDeco-character">
+        <div class="cardTitleCol character-cardTitleCol">
+            <img src="{?!dirImg?}ico.character.{?--charType?}.png">
+            <a href="{?--viewerUrl?}">{?--charName?}</a>
+        </div>
+        <div class="cardTitleCol characterScoreStrength colorGrey1">
+            {?term.score.potentiality?} {?--pp?} | {?term.score.strength?} {?--st?}
+        </div>
+    </div>
+    <div class="cardContainer cardContainer-character">
+        <div class="character-stat {?--statCss?}">{?--stat?}</div>
+        <div class="characterPortrait">
+            <img src="{?--portrait?}" class="{?--css?}">
+            <div class="characterControllerContainer">
+                {?$controller?}
+            </div>
+        </div>
+        <div class="characterScoreContainer">
+            <div class="characterScoreRow">
+                <!--Attr Score-->
+                <div class="characterAttrContainer tooltip" datainfo="score-attr.{?--detail.m?}.score.attr.might">
+                    <div class="characterAttrName">{?term.score.attr.might?}</div>
+                    <div class="characterAttrMain">{?--mTotal?}</div>
+                    <!-- <div class="characterAttrTotal">{?term.score.total?}({?--mTotal?})</div> -->
+                    <div class="character-scoreBarContainer">
+                        <div class="character-scoreBar-num">{?--mCurrent?} / {?--mTotal?}</div>
+                        <div class="character-scoreBar colorWhite1" style="width:{?--mBar?};"></div>
+                    </div>
+                </div>
+                <div class="characterAttrContainer tooltip" datainfo="score-attr.{?--detail.a?}.score.attr.agility">
+                    <div class="characterAttrName">{?term.score.attr.agility?}</div>
+                    <div class="characterAttrMain">{?--aTotal?}</div>
+                    <!-- <div class="characterAttrTotal">{?term.score.total?}({?--aTotal?})</div> -->
+                    <div class="character-scoreBarContainer">
+                        <div class="character-scoreBar-num">{?--aCurrent?} / {?--aTotal?}</div>
+                        <div class="character-scoreBar" style="width:{?--aBar?};"></div>
+                    </div>
+                </div>
+                <div class="characterAttrContainer tooltip" datainfo="score-attr.{?--detail.s?}.score.attr.spirit">
+                    <div class="characterAttrName">{?term.score.attr.spirit?}</div>
+                    <div class="characterAttrMain">{?--sTotal?}</div>
+                    <!-- <div class="characterAttrTotal">{?term.score.total?}({?--sTotal?})</div> -->
+                    <div class="character-scoreBarContainer">
+                        <div class="character-scoreBar-num">{?--sCurrent?} / {?--sTotal?}</div>
+                        <div class="character-scoreBar colorWhite1" style="width:{?--sBar?};"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="characterScoreRow">
+                <!--Protection Score-->
+                <div class="characterAttrContainer tooltip" datainfo="{?--scoreType.t?}.{?--detail.t?}.score.protection.toughness">
+                    <div class="characterAttrName">{?term.score.protection.toughness?}</div>
+                    <div class="characterAttrMain {?--hideIp?}">{?--tTotal?}</div>
+                    <div class="characterImmune {?--showIp?}">{?--ip?}</div>
+                </div>
+                <div class="characterAttrContainer tooltip" datainfo="{?--scoreType.e?}.{?--detail.e?}.score.protection.endurance">
+                    <div class="characterAttrName">{?term.score.protection.endurance?}</div>
+                    <div class="characterAttrMain {?--hideIe?}">{?--eTotal?}</div>
+                    <div class="characterImmune {?--showIe?}">{?--ie?}</div>
+                </div>
+                <div class="characterAttrContainer tooltip" datainfo="{?--scoreType.r?}.{?--detail.r?}.score.protection.resistance">
+                    <div class="characterAttrName">{?term.score.protection.resistance?}</div>
+                    <div class="characterAttrMain {?--hideIo?}">{?--rTotal?}</div>
+                    <div class="characterImmune {?--showIo?}">{?--io?}</div>
+                </div>
+            </div>
+            <div class="characterScoreRow">
+                <!--Speed & Range Score-->
+                <div class="characterAttrContainer tooltip" datainfo="score.{?--detail.ms?}.score.movingSpeed">
+                    <div class="characterAttrName">{?term.score.movingSpeed?}</div>
+                    <div class="characterAttrMain">{?--msTotal?}</div>
+                </div>
+                <div class="characterAttrContainer tooltip" datainfo="score.{?--detail.pr?}.score.perceptionRange">
+                    <div class="characterAttrName">{?term.score.perceptionRange?}</div>
+                    <div class="characterAttrMain">{?--prTotal?}</div>
+                </div>
+            </div>
+            <div class="characterScoreRow">
+                <!--Action Points & Carrying Capacity-->
+                <div class="characterAttrContainer tooltip" datainfo="score-attr.{?--detail.ap?}.score.actionPoint">
+                    <div class="characterAttrName">{?term.score.actionPoint?}</div>
+                    <div class="characterAttrMain">{?--apCurrent?}</div>
+                    <div class="character-scoreBarContainer">
+                        <div class="character-scoreBar-num">{?--apCurrent?} / {?--apTotal?}</div>
+                        <div class="character-scoreBar" style="width:{?--apBar?};"></div>
+                    </div>
+                </div>
+                <div class="characterAttrContainer tooltip" datainfo="score-cc.{?--detail.cc?}.score.carryingCapability">
+                    <div class="characterAttrName">{?term.score.carryingCapability?}</div>
+                    <div class="characterAttrMain">{?--ccTotal?}</div>
+                    <div class="character-scoreBarContainer">
+                        <div class="character-scoreBar-num">{?--ccCurrent?} / {?--ccTotal?}</div>
+                        <div class="character-scoreBar" style="width:{?--ccBar?};"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="characterAddon">
+            <div class="characterAddonRow widthFill">
+                <div class="characterAddonHeader">
+                    {?character.features?}
+                </div>
+                <div class="characterAddon-empty {?--featureDisplay?}">
+                    {?common.empty?}
+                </div>
+                {?--features?}
+            </div>
+            <!-- <div class="characterAddonRow">
+                <div class="characterAddonHeader">
+                    {?character.abilities?}
+                </div>
+                {?--abilities?}
+                <pre class="characterAddon-comingSoon">
+                    {?common.comingSoon?}
+                </pre>
+            </div> -->
+
+            <div class="characterAddonRow widthFill">
+                <div class="characterAddonHeader">
+                    {?character.equipment?}
+                </div>
+                <div class="characterAddon-empty {?--equipmentDisplay?}">
+                    {?common.empty?}
+                </div>
+                {?--equipment?}
+            </div>
+
+            <div class="characterAddonRow widthFill">
+                <div class="characterAddonHeader">
+                    {?character.carrying?}
+                </div>
+                <div class="characterAddon-empty {?--inventoryDisplay?}">
+                    {?common.empty?}
+                </div>
+                {?--carrying?}
+            </div>
+
+            <!-- <div class="characterAddonRow widthFill">
+                <div class="characterAddonHeader">
+                    {?common.more?}
+                </div>
+                <pre class="characterAddon-comingSoon">
+                    {?common.comingSoon?}
+                </pre>
+            </div> -->
+            <div class="characterAddonRow">
+                <div class="characterAddonHeader">
+                    {?character.bio?}
+                </div>
+                <pre class="characterAddon-bio">
+                    {?--bio?}
+                </pre>
+            </div>
+            {?--debugInfo?}
+        </div>
+    </div>
+    <div class="cardFooter cardDeco-character">
+        <iframe src="{?!dirRoot?}c/footer.php?id={?--charId?}" loading="lazy"></iframe>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="nzContainer widthFill">
+    <h3 class="textCenter">{?header.items?}</h3>
+    <div class="widthFill fontSizeLLL nzContainer">
+        <a href="edit.php" class="widthFill">
+            <div class="bgBrighterBlur2 bgOpaGreen1 colorWhite1 nzButton textCenter">
+                {?button.editor.item.newItem?}
+            </div>
+        </a>
+    </div>
+    <div class="nzContainer widthFill flexRow flexTop">
+        <div class="nzContainer flexRight">
+            {?$categoryMenu?}
+        </div>
+        <div class="nzContainer flexRight">
+            {?$typeMenu?}
+        </div>
+        <div class="nzContainer widthFill">
+            <form class="nzForm-search widthFill" method="get" action="?category={?$category?}&type={?$type?}">
+                <!-- searchbox -->
+                <!-- <div class="flexRow widthFill"> -->
+                    <input type="text" name="search" value="{?$search?}" class="widthFill">
+                    <input type="hidden" name="category" value="{?$category?}">
+                    <input type="hidden" name="type" value="{?$type?}">
+                    <input type="submit" class="bgBrighterBlur2 bgOpaGreen1 colorWhite1 widthMin" name="action" value="{?button.search?}">
+                <!-- </div> -->
+            </form>
+            {?$pager?}
+            {?$itemList?}
+            {?$pager?}
+        </div>
+    </div>
+</div>

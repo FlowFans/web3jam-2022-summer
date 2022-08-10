@@ -1,0 +1,196 @@
+<div class="nzContainer widthFill noMargin">
+    <details class="bgOpaWhite1 noPadding nzDetails padding-bottom-n padding-left-n padding-right-n widthFill">
+        <summary class="flexBaseline padding-top-n position-relative">
+            [{?--sceneId?}] {?--encounterName?}
+            <a class="position-absolute-right-n widthMin" href="?name={?--adventureName?}&delScene={?--sceneId?}&token={?--token?}">
+                <div class="nzButtonSmall colorRed1">{?button.delete?}</div>
+            </a>
+        </summary>
+        
+        <input type="hidden" name="scene[][encounterName]" value="{?--encounterName?}">
+
+        <!-- Encounter entrance (while adventurers detect the scene) -->
+        <div class=" width100 bgSemiWhite3 textCenter margin-top-l">
+            <h6>{?header.editor.encounter.entrance?}</h6>
+        </div>
+
+        <div class="nzContainer widthFill noPadding noMargin">
+            <label>
+                <span>{?label.editor.encounter.adventureEntrance?}</span>
+            </label>
+            <div class="nzFormRow flexRow noMargin noPadding">
+                <div class="noPadding">
+                    <label>
+                        <span>{?label.editor.adventure.customised?}</span>
+                    </label>
+                    <textarea class="fontSizeS" type="text" name="scene[][adventureEntrance]" rows="4">{?--adventureEntrance?}</textarea>
+                </div>
+                <div class="noPadding">
+                    <label>
+                        <span>{?label.editor.adventure.default?}</span>
+                    </label>
+                    <textarea class="bgOpaWhite3 fontSizeS" type="text" rows="4" readonly>{?adventureEntrance.{?--encounterName?}?}</textarea>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Encounter appoach (while adventurers decided to enter the scene)-->
+        <div class="width100 bgSemiWhite3 textCenter margin-top-l">
+            <h6>{?header.editor.encounter.approach?}</h6>
+        </div>
+
+        <div class="nzContainer widthFill noPadding noMargin">
+            <label>
+                <span>{?label.editor.encounter.encounterApproach?}</span>
+            </label>
+            <div class="nzFormRow flexRow noMargin noPadding">
+                <div class="noPadding">
+                    <label>
+                        <span>{?label.editor.adventure.customised?}</span>
+                    </label>
+                    <textarea class="fontSizeS" type="text" name="scene[][encounterApproach]" rows="4">{?--encounterApproach?}</textarea>
+                </div>
+                <div class="noPadding">
+                    <label>
+                        <span>{?label.editor.adventure.default?}</span>
+                    </label>
+                    <textarea class="bgOpaWhite3 fontSizeS" type="text" rows="4" readonly>{?encounterApproach.{?--encounterName?}?}</textarea>
+                </div>
+            </div>
+        </div>
+
+        <!--Encounter process (while adventurers engage with the encounter)-->
+        <div class=" width100 bgSemiWhite3 textCenter margin-top-l">
+            <h6>{?header.editor.encounter.process?}</h6>
+        </div>
+
+        <div class="nzContainer widthFill noPadding noMargin">
+            <label>
+                <span>{?label.editor.encounter.encounterProcess?}</span>
+            </label>
+            <div class="nzFormRow flexRow noMargin noPadding">
+                <div class="noPadding">
+                    <label>
+                        <span>{?label.editor.adventure.customised?}</span>
+                    </label>
+                    <textarea class="fontSizeS" type="text" name="scene[][encounterProcess]" rows="4">{?--encounterProcess?}</textarea>
+                </div>
+                <div class="noPadding">
+                    <label>
+                        <span>{?label.editor.adventure.default?}</span>
+                    </label>
+                    <textarea class="bgOpaWhite3 fontSizeS" type="text" rows="4" readonly>{?encounterProcess.{?--encounterName?}?}</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="nzContainer widthFill noPadding noMargin">
+            <div class="nzFormRow flexRow noMargin noPadding">
+                <div class="noPadding">
+                    <label>
+                        <span>{?label.editor.adventure.encounterCheckAll?}</span>
+                    </label>
+                    <textarea class="bgOpaWhite3 fontSizeS" type="text" rows="4" readonly>{?--checkAll?}</textarea>
+                </div>
+                <div class="noPadding">
+                    <label>
+                        <span>{?label.editor.adventure.encounterCheckAny?}</span>
+                    </label>
+                    <textarea class="bgOpaWhite3 fontSizeS" type="text" rows="4" readonly>{?--checkAny?}</textarea>
+                </div>
+            </div>
+        </div>
+
+        <!--Encounter result: success-->
+        <div class=" width100 bgSemiWhite3 textCenter margin-top-l">
+            <h6>{?header.editor.encounter.success?}</h6>
+        </div>
+
+        <div class="nzContainer widthFill noPadding noMargin">
+            <label>
+                <span>{?label.editor.encounter.encounterSuccess?}</span>
+            </label>
+            <div class="nzFormRow flexRow noMargin noPadding">
+                <div class="noPadding">
+                    <label>
+                        <span>{?label.editor.adventure.customised?}</span>
+                    </label>
+                    <textarea class="fontSizeS" type="text" name="scene[][encounterSuccess]" rows="4">{?--encounterSuccess?}</textarea>
+                </div>
+                <div class="noPadding">
+                    <label>
+                        <span>{?label.editor.adventure.default?}</span>
+                    </label>
+                    <textarea class="bgOpaWhite3 fontSizeS" type="text" rows="4" readonly>{?encounterSuccess.{?--encounterName?}?}</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="margin-top-l noMargin noPadding nzContainer widthFill">
+            <label>
+                <span>{?label.editor.adventure.encounterSuccess?}</span>
+            </label>
+            <textarea class="bgOpaWhite3 fontSizeS" type="text" name="success" rows="4" readonly>{?--success?}</textarea>
+        </div>
+
+        <!--Encounter result: failure-->
+        <div class=" width100 bgSemiWhite3 textCenter margin-top-l">
+            <h6>{?header.editor.encounter.failure?}</h6>
+        </div>
+
+        <div class="nzContainer widthFill noPadding noMargin">
+            <label>
+                <span>{?label.editor.encounter.encounterFailure?}</span>
+            </label>
+            <div class="nzFormRow flexRow noMargin noPadding">
+                <div class="noPadding">
+                    <label>
+                        <span>{?label.editor.adventure.customised?}</span>
+                    </label>
+                    <textarea class="fontSizeS" type="text" name="scene[][encounterFailure]" rows="4">{?--encounterFailure?}</textarea>
+                </div>
+                <div class="noPadding">
+                    <label>
+                        <span>{?label.editor.adventure.default?}</span>
+                    </label>
+                    <textarea class="bgOpaWhite3 fontSizeS" type="text" rows="4" readonly>{?encounterFailure.{?--encounterName?}?}</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="margin-top-l noMargin noPadding nzContainer widthFill">
+            <label>
+                <span>{?label.editor.adventure.encounterFailure?}</span>
+            </label>
+            <textarea class="bgOpaWhite3 fontSizeS" type="text" name="failure" rows="4" readonly>{?--failure?}</textarea>
+        </div>
+
+        <!-- Encounter next -->
+        <div class=" width100 bgSemiWhite3 textCenter margin-top-l">
+            <h6>{?header.editor.adventure.next?}</h6>
+        </div>
+
+        <div class="margin-top-l noMargin noPadding nzContainer widthFill">
+            <label>
+                <span>{?label.editor.adventure.nextSuccess?}</span>
+            </label>
+            <textarea class="bgOpaYellow3 fontSizeS" type="text" name="scene[][nextSuccess]" rows="4">{?--nextSuccess?}</textarea>
+        </div>
+
+        <div class="margin-top-l noMargin noPadding nzContainer widthFill">
+            <label>
+                <span>{?label.editor.adventure.nextFailure?}</span>
+            </label>
+            <textarea class="bgOpaYellow3 fontSizeS" type="text" name="scene[][nextFailure]" rows="4">{?--nextFailure?}</textarea>
+        </div>
+
+        <div class="margin-top-l noMargin noPadding nzContainer widthFill">
+            <label>
+                <span>{?label.editor.adventure.nextDefault?}</span>
+            </label>
+            <textarea class="bgOpaYellow3 fontSizeS" type="text" name="scene[][nextDefault]" rows="4">{?--nextDefault?}</textarea>
+        </div>
+        
+    </details>
+</div>

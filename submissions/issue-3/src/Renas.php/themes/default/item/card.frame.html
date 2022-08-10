@@ -1,0 +1,66 @@
+<div class="cardFrame common-cardFrame item-cardFrame {?--css?} cardInfo" datainfo="item.{?--itemCode?}">
+    <div class="cardTitle item-cardDeco">
+        <div class="cardTitleCol common-cardTitleCol item-cardTitleCol">
+            <img src="{?!dirImg?}ico.item.{?--itemIcon?}.png">
+            <span>{?--itemName?}</span>
+        </div>
+        <!-- <div class="cardTitleCol characterScoreStrength colorGrey1">
+            {?term.score.potentiality?} {?--pp?} | {?term.score.strength?} {?--st?}
+        </div> -->
+    </div>
+    <div class="cardContainer common-cardContainer">
+        <div class="item-amount {?--displayAmount?}">{?common.item.amountSymbol?} {?--itemAmount?}</div>
+        <div class="cardImage">
+            <img src="{?--itemImage?}">
+            <div class="common-cardAddonContainer">
+                <div class="item-cardControllContainer">
+                    {?$controller?}
+                </div>
+                <div class="common-cardInfoContainer">
+                    <div class="common-cardInfo">
+                        <span class="common-cardInfo-title colorGrey1">{?common.item.type?}</span> <span class="common-cardInfo-content colorGrey1">{?$itemTypes?}</span>
+                    </div>
+                
+                    <div class="common-cardInfo">
+                        <span class="common-cardInfo-title colorGrey1">{?common.item.loads?}</span> <span class="common-cardInfo-content colorGrey1">{?$itemLoads?}</span>
+                    </div>
+                
+                    <div class="common-cardInfo-modifier widthFill {?$modEquipDisplay?}">
+                        <span>{?common.item.equipSlot?}</span>
+                
+                        <hr>
+                
+                        <h5 class="common-cardInfo-title colorgrey1">{?common.item.equipEfx?}</h5>
+                        {?$equipModifiers?}
+                    </div>
+                    <div class="common-cardInfo-modifier widthFill {?$modCarryDisplay?}">
+                        <h5 class="common-cardInfo-title colorgrey1">{?common.item.carryEfx?}</h5>
+                        {?$carryModifiers?}
+                    </div>
+                    <div class="common-cardInfo-modifier widthFill {?$modUsageDisplay?}">
+                        <h5 class="common-cardInfo-title colorgrey1">{?common.item.usage?}</h5>
+                        <div class="fontSizeS colorBlack3 fontWeight600">
+                            {?$useEffects?}
+                        </div>
+                        <div class="fontSizeS colorGrey1 fontWeight400 {?$showCheckAll?}">
+                            <hr>
+                            <span class="fontWeight600 colorGrey1">{?common.item.usage.checkAll?}</span>
+                            {?$useCheckAll?}
+                        </div>
+                        <div class="fontSizeS colorGrey1 fontWeight400 {?$showCheckAny?}">
+                            <hr>
+                            <span class="fontWeight600 colorGrey1">{?common.item.usage.checkAny?}</span>
+                            {?$useCheckAny?}
+                        </div>
+                    </div>
+                    <div class="common-cardInfo-desc widthFill">
+                        {?$desc?}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="cardFooter cardDeco-character">
+        <iframe src="{?!dirRoot?}c/footer.php?id={?--charId?}" loading="lazy"></iframe>
+    </div> -->
+</div>

@@ -1,0 +1,37 @@
+<div class="nzContainer widthFill">
+    <h3 class="textCenter">{?header.ranking?}</h3>
+    
+    <div class="nzContainer widthFill flexRow flexTop">
+        <div class="nzContainer flexRight sticky">
+            {?$rankingMenu?}
+        </div>
+        <div class="borderRadiusN nzContainer shadow1 widthFill bgSemiWhite1">
+            <table class="nzTable widthFill borderRadiusN noMargin padding-top-l padding-bottom-n padding-left-n padding-right-n v-middle">
+                <tr>
+                    <td colspan="3">
+                        <h5 class="textCenter">{?header.ranking.{?$rankType?}?}</h5>
+                        <div class="colorGrey1 widthFill textCenter">{?header.ranking.periodTimeSpan?}</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        {?$pager?}
+                    </td>
+                </tr>
+                <tr class="fontWeight900">
+                    <td class="v-middle padding-left-l padding-right-l">
+                        {?common.hashtag?}
+                    </td>
+                    <td class="v-middle padding-left-n">
+                        {?common.player?}
+                    </td>
+                    <td class="v-middle textRight">
+                        {?common.ranking.adventures?}
+                    </td>
+                </tr>
+                {?$list?}
+            </table>
+            {?$pager?}
+        </div>
+    </div>
+</div>

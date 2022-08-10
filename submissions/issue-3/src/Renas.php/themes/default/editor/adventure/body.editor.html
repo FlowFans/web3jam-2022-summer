@@ -1,0 +1,113 @@
+<div class="bgOpaWhite1 borderRadiusL nzContainer shadow1 widthFill">
+    <form class="nzForm widthFill" method="post" action="edit.php" enctype="multipart/form-data">
+        <input type="hidden" name="editName" value="{?$editName?}" readonly>
+        <input type="hidden" name="token" value="{?$token?}" readonly>
+
+        <!-- Adventure Name -->
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.adventure.name?}</span>
+            </label>
+            <input type="text" name="name" value="{?$name?}" onkeyup="this.value=this.value.replace(/[^\w_\-]/g,'');" {?$nameReadonly?}>
+        </div>
+
+        <!-- Metadata -->
+        <div class="nzContainer widthFill noPadding noMargin">
+            <div class="nzFormRow flexRow">
+                <div>
+                    <label>
+                        <span>{?label.editor.adventure.strengthMin?}</span>
+                    </label>
+                    <input type="number" name="strengthMin" value="{?$strengthMin?}" step="1" min="0">
+                </div>
+                <div>
+                    <label>
+                        <span>{?label.editor.adventure.strengthMax?}</span>
+                    </label>
+                    <input class="textRight" type="number" name="strengthMax" value="{?$strengthMax?}" step="1" min="0">
+                </div>
+            </div>
+        </div>
+
+        <div class="nzContainer widthFill noPadding noMargin">
+            <div class="nzFormRow flexRow">
+                <div>
+                    <label>
+                        <span>{?label.editor.adventure.teamMin?}</span>
+                    </label>
+                    <input type="number" name="teamMin" value="{?$teamMin?}" step="1" min="0">
+                </div>
+                <div>
+                    <label>
+                        <span>{?label.editor.adventure.teamMax?}</span>
+                    </label>
+                    <input class="textRight" type="number" name="teamMax" value="{?$teamMax?}" step="1" min="0">
+                </div>
+            </div>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.adventure.apCost?}</span>
+            </label>
+            <input type="number" name="apCost" value="{?$apCost?}" min="0" step="1">
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.adventure.duration?}</span>
+            </label>
+            <input type="number" name="duration" value="{?$duration?}" min="0" step="1">
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.adventure.probabilityModifier?}</span>
+            </label>
+            <input type="number" name="probabilityModifier" value="{?$probabilityModifier?}" min="0" step="1">
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.adventure.type?}</span>
+            </label>
+            <textarea type="text" name="type" rows="4">{?$type?}</textarea>
+        </div>
+
+        <!-- adventureName -->
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.adventure.adventureName?}</span>
+            </label>
+            <input type="text" name="adventureName" value="{?$adventureName?}">
+        </div>
+
+        <!-- adventureDesc -->
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.adventure.adventureDesc?}</span>
+            </label>
+            <textarea type="text" name="adventureDesc" rows="4">{?$adventureDesc?}</textarea>
+        </div>
+
+        <!-- adventureProlog -->
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.adventure.adventureProlog?}</span>
+            </label>
+            <textarea type="text" name="adventureProlog" rows="4">{?$adventureProlog?}</textarea>
+        </div>
+
+        <!-- adventureEpilog -->
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.adventure.adventureEpilog?}</span>
+            </label>
+            <textarea type="text" name="adventureEpilog" rows="4">{?$adventureEpilog?}</textarea>
+        </div>
+
+        {?$encounters?}
+
+        <input type="submit" class="bgBrighterBlur2 bgOpaGreen1 colorWhite1 nzButton textCenter" name="submit" value="{?button.submit?}">
+    </form>
+</div>

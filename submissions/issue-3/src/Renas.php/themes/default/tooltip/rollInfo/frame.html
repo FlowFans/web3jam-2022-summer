@@ -1,0 +1,30 @@
+<div class="nzContainer nzTooltip widthFill">
+    <div class="tooltip-rollInfo-main widthFill">
+        {?tooltip.rollInfo.result?}
+        <div class="tooltip-rollInfo-total widthFill">
+            <div>{?$rolls?}</div>
+            <div class="tooltip-rollInfo-totalResult">{?$result?}</div>
+        </div>
+    </div>
+
+    <div class="tooltip-rollInfo-results widthFill">
+        <div class="tooltip-rollInfo-summary widthFill {?$show.pt?}">
+            <p>{?common.diceRoll.pt?}</p>
+            {?$roll.pt?} {?$dice.pt?} {?common.equal?} {?$total.pt?}
+            <div class="tooltip-rollInfo-detail widthFill">
+                {?$detail.pt?}
+            </div>
+        </div>
+        <div class="tooltip-rollInfo-summary widthFill {?$show.num?}">
+            <p>{?common.diceRoll.num?}</p>
+            {?$roll.num?} {?$dice.num?} {?common.equal?} {?$total.num?}
+            <div class="tooltip-rollInfo-detail widthFill">
+                {?$detail.num?}
+            </div>
+        </div>
+        <div class="tooltip-rollInfo-summary widthFill {?$show.baseAmount?}">
+            <p>{?common.diceRoll.baseAmount?}</p>
+            {?$total.baseAmount?}
+        </div>
+    </div>
+</div>

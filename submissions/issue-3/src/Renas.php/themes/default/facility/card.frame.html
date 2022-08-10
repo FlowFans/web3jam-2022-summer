@@ -1,0 +1,74 @@
+<div class="cardFrame common-cardFrame facility-cardFrame {?--css?} cardInfo" datainfo="facility.{?--facilityCode?}">
+    <div class="cardTitle facility-cardDeco">
+        <div class="cardTitleCol common-cardTitleCol facility-cardTitleCol">
+            <img src="{?!dirImg?}ico.facility.png">
+            <span>{?--facilityName?}</span>
+        </div>
+        <!-- <div class="cardTitleCol characterScoreStrength colorGrey1">
+            {?term.score.potentiality?} {?--pp?} | {?term.score.strength?} {?--st?}
+        </div> -->
+    </div>
+    <div class="cardContainer common-cardContainer">
+        <div class="facility-level {?--displayLevel?}">{?common.facility.levelSymbol?} {?--facilityLevel?}</div>
+        <div class="cardImage">
+            <img src="{?--facilityImage?}">
+            <div class="common-cardAddonContainer">
+                <div class="facility-cardControllContainer">
+                    <!--countdown-->
+                    <div class="adventure-countdown bgBrighterBlur1 bgTransWhite1 {?--showCountdown?}"> 
+                        {?common.facility.building?} <span class="padding-left-ss" data-countdown="{?--countdown?}"></span>
+                    </div>
+                    {?$controller?}
+                </div>
+                <div class="common-cardInfoContainer">
+                    <div class="common-cardInfo-modifier widthFill">
+                        <h5 class="common-cardInfo-title colorgrey1">{?common.facility.efx?}</h5>
+                        {?$facilityEfx?}
+                    </div>
+                    <div class="common-cardInfo-modifier widthFill bgTransYellow2 {?$nextLevelDisplay?}">
+                        <span class="fontWeight400 colorGrey1">{?common.facility.nextlevel?}</span>
+                        <h5 class="common-cardInfo-title colorgrey1">{?common.facility.nextLevelEfx?}</h5>
+                        <div class="fontSizeS colorBlack3 fontWeight600">
+                            {?$facilityUpgradeEfx?}
+                        </div>
+                        <div class="fontSizeS colorGrey1 fontWeight400">
+                            <hr>
+                            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.time?}</span>
+                            {?$facilityUpgradeTime?}
+                        </div>
+                        <div class="fontSizeS colorGrey1 fontWeight400 {?$css.upgradeChar?}">
+                            <hr>
+                            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.char?}</span>
+                            {?$facilityUpgradeChar?}
+                        </div>
+                        <div class="fontSizeS colorGrey1 fontWeight400">
+                            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.ap?}</span>
+                            {?$facilityUpgradeAP?}
+                        </div>
+                        <div class="fontSizeS colorGrey1 fontWeight400 {?$showNextLevelMaterial?}">
+                            <hr>
+                            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.material?}</span>
+                            {?$facilityUpgradeMaterial?}
+                        </div>
+                        <div class="fontSizeS colorGrey1 fontWeight400 {?$showNextLevelCheckAll?}">
+                            <hr>
+                            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.checkAll?}</span>
+                            {?$facilityUpgradeCheckAll?}
+                        </div>
+                        <div class="fontSizeS colorGrey1 fontWeight400 {?$showNextLevelCheckAny?}">
+                            <hr>
+                            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.checkAny?}</span>
+                            {?$facilityUpgradeCheckAny?}
+                        </div>
+                    </div>
+                    <div class="common-cardInfo-desc widthFill">
+                        {?$desc?}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="cardFooter cardDeco-character">
+        <iframe src="{?!dirRoot?}c/footer.php?id={?--charId?}" loading="lazy"></iframe>
+    </div> -->
+</div>

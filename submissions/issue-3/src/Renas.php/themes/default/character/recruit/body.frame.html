@@ -1,0 +1,23 @@
+<!--Displays the character-->
+<div class="cardList cardList-character">
+    <h3 class="textCenter">{?header.characterRecruitConfirmation?}</h3>
+    {?$characterPreview?}
+</div>
+
+<div class="nzContainer widthFill flexRow">
+    <!-- buttons -->
+    <div class="fontSizeLLL nzFormRow widthFill">
+        <a href="{?!back?}" class="widthFill">
+            <div class="bgBrighterBlur2 bgOpaBlue2 colorWhite1 nzButton">
+                {?button.cancel?}
+            </div>
+        </a>
+        <a href="{?$recruitUrl?}" class="widthFill">
+            <div class="{?$recruit.disable?} bgBrighterBlur2 bgOpaGreen1 colorWhite1 nzButton">
+                {?button.recruit?}
+                <span class="nzButtonDesc colorYellow1">{?button.recruit.cpCost?}</span>
+                <span class="nzButtonDesc colorWhite1">{?$slots?}</span>
+            </div>
+        </a>
+    </div>
+</div>

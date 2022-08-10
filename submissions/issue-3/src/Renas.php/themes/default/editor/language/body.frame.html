@@ -1,0 +1,32 @@
+<div class="nzContainer widthFill">
+    <h3 class="textCenter">{?header.languages?}</h3>
+    <div class="widthFill fontSizeLLL nzContainer">
+        <a href="edit.php?lang={?$lang?}" class="widthFill">
+            <div class="bgBrighterBlur2 bgOpaGreen1 colorWhite1 nzButton textCenter">
+                {?button.editor.language.newLanguage?}
+            </div>
+        </a>
+    </div>
+    <div class="nzContainer widthFill flexRow flexTop">
+        <div class="nzContainer flexRight">
+            {?$langCodeMenu?}
+        </div>
+        <div class="nzContainer flexRight">
+            {?$typeMenu?}
+        </div>
+        <div class="nzContainer widthFill">
+            <form class="nzForm-search widthFill" method="get" action="">
+                <!-- searchbox -->
+                <!-- <div class="flexRow widthFill"> -->
+                    <input type="text" name="search" value="{?$search?}" class="widthFill">
+                    <input type="hidden" name="lang" value="{?$lang?}">
+                    <input type="hidden" name="prefix" value="{?$prefix?}">
+                    <input type="submit" class="bgBrighterBlur2 bgOpaGreen1 colorWhite1 widthMin" name="action" value="{?button.search?}">
+                <!-- </div> -->
+            </form>
+            {?$pager?}
+            {?$languageList?}
+            {?$pager?}
+        </div>
+    </div>
+</div>

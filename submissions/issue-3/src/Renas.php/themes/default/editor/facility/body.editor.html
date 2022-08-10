@@ -1,0 +1,104 @@
+<div class="bgOpaWhite1 borderRadiusL nzContainer shadow1 widthFill">
+    <form class="nzForm widthFill" method="post" action="edit.php" enctype="multipart/form-data">
+        <input type="hidden" name="editName" value="{?$editName?}" readonly>
+        <input type="hidden" name="editLevel" value="{?$editLevel?}" readonly>
+        <input type="hidden" name="token" value="{?$token?}" readonly>
+
+        <!-- Facility image -->
+        <div class="nzContainer widthFill">
+            <details class="nzDetails">
+                <summary>{?label.editor.facility.imageSelector?}</summary>
+                <iframe loading="lazy" src="selector.image.php?token={?$token?}"></iframe>
+            </details>
+        </div>
+
+        <!-- Facility Name -->
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.facility.name?}</span>
+            </label>
+            <input type="text" name="name" value="{?$name?}" onkeyup="this.value=this.value.replace(/[^\w_\-]/g,'');" {?$nameReadonly?}>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.facility.level?}</span>
+            </label>
+            <input type="number" name="level" value="{?$level?}" step="1" min="1" oninput="if(value<1)value=1" {?$levelReadonly?}>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.facility.translation?}</span>
+            </label>
+            <input type="text" name="translation" value="{?$translation?}">
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.facility.desc?}</span>
+            </label>
+            <textarea type="text" name="description" rows="4">{?$description?}</textarea>
+        </div>
+
+        <div class="nzBlock width100 bgSemiWhite3 textCenter ">
+            <h4>{?header.editor.facility.build?}</h4>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.facility.buildTime?}</span>
+            </label>
+            <input type="number" name="buildTime" value="{?$buildTime?}" min="0" step="1">
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.facility.buildChar?}</span>
+            </label>
+            <input type="number" name="buildChar" value="{?$buildChar?}" min="1" step="1">
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.facility.buildAP?}</span>
+            </label>
+            <input type="number" name="buildAP" value="{?$buildAP?}" step="1" min="0" oninput="if(value<0)value=0">
+        </div>
+        
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.facility.build.checkAll?}</span>
+            </label>
+            <textarea type="text" name="buildCheckAll" rows="4">{?$buildCheckAll?}</textarea>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.facility.build.checkAny?}</span>
+            </label>
+            <textarea type="text" name="buildCheckAny" rows="4">{?$buildCheckAny?}</textarea>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.facility.build.material?}</span>
+            </label>
+            <textarea type="text" name="buildMaterial" rows="4">{?$buildMaterial?}</textarea>
+        </div>
+
+        <div class="nzBlock width100 bgSemiWhite3 textCenter ">
+            <h4>{?header.editor.facility.efx?}</h4>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.facility.effects?}</span>
+            </label>
+            <textarea type="text" name="facilityEfx" rows="4">{?$facilityEfx?}</textarea>
+        </div>
+
+
+        <input type="submit" class="bgBrighterBlur2 bgOpaGreen1 colorWhite1 nzButton textCenter" name="submit" value="{?button.submit?}">
+    </form>
+</div>

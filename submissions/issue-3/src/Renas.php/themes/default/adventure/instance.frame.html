@@ -1,0 +1,44 @@
+<div class="cardFrame adventure-cardFrame">
+    <div class="cardTitle adventure-cardDeco {?--sealed?}">
+        <div class="cardTitleCol">
+            <img src="{?!dirImg?}ico.adventure.png">
+            {?--adventureName?}
+        </div>
+        <div class="cardTitleCol adventure-type colorGrey1">
+            {?--adventureType?}
+        </div>
+    </div>
+    <div class="cardContainer adventure-cardContainer">
+        <div class="adventure-coverImage">
+            <img src="{?--coverImage?}" class="{?--sealed?}">
+            <div class="adventure-ControllerContainer">
+                <!--countdown-->
+                <div class="adventure-countdown bgBrighterBlur1 bgTransWhite1 {?--showCountdown?}"> 
+                    {?common.adventure.countdown?} <span data-countdown="{?--countdown?}"></span>
+                </div>
+                {?$controller?}
+            </div>
+        </div>
+        <div class="adventure-addon {?--sealed-bg?}">
+            <div class="adventure-addonRow">
+                <div class="adventure-addonHeader">
+                    {?common.adventure.team?}
+                </div>
+                {?--team?}
+            </div>
+            <div class="adventure-addonRow {?--showItemFound?}">
+                <div class="adventure-addonHeader">
+                    {?common.adventure.itemFound?}
+                </div>
+                {?--itemFound?}
+            </div>
+            <div class="adventure-addonRow">
+                <div class="adventure-addonHeader">
+                    {?common.adventure.desc?}
+                </div>
+                <pre class="adventure-addon-desc">{?--description?}
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>

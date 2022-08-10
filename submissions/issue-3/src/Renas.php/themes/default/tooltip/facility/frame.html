@@ -1,0 +1,91 @@
+<!-- <div class="tooltip-rarity flexRight {?$rarityStyle?}">
+    {?$rarity?} {?$debug?}
+</div> -->
+<div class="nzContainer nzTooltip widthFill">
+    <div class="common-cardInfo-header widthFill">
+        <img src="{?!siteRoot?}{?!relDirImg?}ico.facility.png">
+            <span>{?--facilityName?}</span>
+    </div>
+
+    <div class="common-cardInfo fontSizeSS">
+        <span class="common-cardInfo-title colorGrey1">{?common.facility.levelSymbol?}</span> <span class="common-cardInfo-content colorGrey1">{?--facilityLevel?}</span>
+    </div>
+    <!--current level-->
+    <div class="common-cardInfo-modifier widthFill {?$currentLevelDisplay?}">
+        <h5 class="common-cardInfo-title colorgrey1">{?common.facility.currentLevelEfx?}</h5>
+        <div class="fontSizeS colorBlack3 fontWeight600">
+            {?$facilityEfx?}
+        </div>
+        <div class="fontSizeS colorGrey1 fontWeight400">
+            <hr>
+            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.time?}</span>
+            {?$facilityBuildTime?}
+        </div>
+        <div class="fontSizeS colorGrey1 fontWeight400 {?$css.buildChar?}">
+            <hr>
+            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.char?}</span>
+            {?$facilityBuildChar?}
+        </div>
+        <div class="fontSizeS colorGrey1 fontWeight400">
+            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.ap?}</span>
+            {?$facilityBuildAP?}
+        </div>
+        <div class="fontSizeS colorGrey1 fontWeight400 {?$showCurrentLevelMaterial?}">
+            <hr>
+            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.material?}</span>
+            {?$facilityBuildMaterial?}
+        </div>
+        <div class="fontSizeS colorGrey1 fontWeight400 {?$showCurrentLevelCheckAll?}">
+            <hr>
+            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.checkAll?}</span>
+            {?$facilityBuildCheckAll?}
+        </div>
+        <div class="fontSizeS colorGrey1 fontWeight400 {?$showCurrentLevelCheckAny?}">
+            <hr>
+            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.checkAny?}</span>
+            {?$facilityBuildCheckAny?}
+        </div>
+    </div>
+    <!-- next level -->
+    <div class="common-cardInfo-modifier widthFill bgTransYellow2 {?$nextLevelDisplay?}">
+        <span class="fontWeight400 colorGrey1">{?common.facility.nextlevel?}</span>
+        <h5 class="common-cardInfo-title colorgrey1">{?common.facility.nextLevelEfx?}</h5>
+        <div class="fontSizeS colorBlack3 fontWeight600">
+            {?$facilityUpgradeEfx?}
+        </div>
+        <div class="fontSizeS colorGrey1 fontWeight400">
+            <hr>
+            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.time?}</span>
+            {?$facilityUpgradeTime?}
+        </div>
+        <div class="fontSizeS colorGrey1 fontWeight400 {?$css.upgradeChar?}">
+            <hr>
+            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.char?}</span>
+            {?$facilityUpgradeChar?}
+        </div>
+        <div class="fontSizeS colorGrey1 fontWeight400">
+            <hr>
+            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.ap?}</span>
+            {?$facilityUpgradeAP?}
+        </div>
+        <div class="fontSizeS colorGrey1 fontWeight400 {?$showNextLevelMaterial?}">
+            <hr>
+            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.material?}</span>
+            {?$facilityUpgradeMaterial?}
+        </div>
+        <div class="fontSizeS colorGrey1 fontWeight400 {?$showNextLevelCheckAll?}">
+            <hr>
+            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.checkAll?}</span>
+            {?$facilityUpgradeCheckAll?}
+        </div>
+        <div class="fontSizeS colorGrey1 fontWeight400 {?$showNextLevelCheckAny?}">
+            <hr>
+            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.checkAny?}</span>
+            {?$facilityUpgradeCheckAny?}
+        </div>
+    </div>
+
+    <div class="common-cardInfo-desc widthFill">
+        {?$desc?}
+    </div>
+</div>

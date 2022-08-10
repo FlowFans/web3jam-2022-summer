@@ -1,0 +1,56 @@
+<!--user's assets-->
+<div class="nzNavbarMenu colorWhite2 {?--parentCurrent?}">
+
+    <img class="nzNavbarAssetIcon" src="{?!dirImg?}ico.cp.png">
+    {?$cp?}
+
+    <div class="nzNavbarSubContainer bgSemiBlack1 bgBlur1">
+        <!--Top up-->
+        <a class="widthFill" href="{?!dirRoot?}token/deposit">
+            <div class="nzNavbarSub colorWhite2">
+                {?pageTitle.token.topUp?}
+            </div>
+        </a>
+
+        <!--Withdraw-->
+        <a class="widthFill" href="{?!dirRoot?}token/withdraw">
+            <div class="nzNavbarSub colorWhite2">
+                {?pageTitle.token.withdraw?}
+            </div>
+        </a>
+    </div>
+</div>
+
+<!--user name & avatar-->
+<div class="nzNavbarFunc colorBlue1">
+    <div class="nzNavbarProfileInfo">
+        <img class="nzNavbarAvatar" src="{?$useravatar?}">
+        {?$navbar.userInfo.unreadMessageIndicator?}
+    </div>
+    {?$username?}
+
+    <div class="nzNavbarSubContainer-right bgSemiBlack1 bgBlur1">
+        <!--unread message-->
+        <a class="widthFill" href="{?!dirRoot?}message/">
+            <div class="nzNavbarSub colorWhite2">
+                {?button.messages?} <span class="nzNavbarSub-unreadMessages {?$noUnreads?}">{?$unreadMessages?}</span>
+            </div>
+        </a>
+
+        <!--Wallets-->
+        <a class="widthFill" href="{?!dirRoot?}profile/wallet">
+            <div class="nzNavbarSub colorWhite2">
+                {?button.wallets?}
+            </div>
+        </a>
+
+        <!--sign out link-->
+        <a class="widthFill" href="{?!dirRoot?}logout.php">
+            <div class="nzNavbarSub colorWhite1">
+                {?button.signOut?}
+            </div>
+        </a>
+    </div>
+    
+</div>
+

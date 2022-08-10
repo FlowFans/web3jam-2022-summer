@@ -1,0 +1,18 @@
+<!--Displays the character-->
+<div class="cardList cardList-character">
+    <h3 class="textCenter">{?header.characterExpelConfirmation?}</h3>
+    {?$characterPreview?}
+</div>
+
+<form class="nzContainer widthFill flexRow" method="post" action="">
+    <input type="hidden" value="{?$charId?}" name="id">
+    <!-- buttons -->
+    <div class="fontSizeLLL nzFormRow widthFill">
+        <a href="{?!back?}" class="widthFill">
+            <div class="bgBrighterBlur2 bgOpaBlue2 colorWhite1 nzButton">
+                {?button.cancel?}
+            </div>
+        </a>
+        <input type="submit" class="bgBrighterBlur2 bgOpaRed1 colorWhite1 nzButton widthFill" name="submit" value="{?button.expel?}">
+    </div>
+</form>

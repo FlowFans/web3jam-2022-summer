@@ -1,0 +1,25 @@
+<div class="nzContainer widthFill nzNote preline bgOpaWhite1 preline">
+    <h4>{?header.character.upgrade.featureSelect?}</h4>
+    {?common.character.upgrade.0.2.0.description?}
+</div>
+
+<div class="cardList cardList-character">
+    {?$preview?}
+</div>
+
+<div class="nzContainer widthFill flexRow">
+    <!-- buttons -->
+    <div class="fontSizeLLL nzFormRow widthFill">
+        <a href="{?!back?}" class="widthFill">
+            <div class="bgBrighterBlur2 bgOpaBlue2 colorWhite1 nzButton">
+                {?button.cancel?}
+            </div>
+        </a>
+        <a href="{?$reRollUrl?}" class="widthFill">
+            <div class="{?$reRoll.disable?} bgBrighterBlur2 bgOpaGreen1 colorWhite1 nzButton">
+                {?button.characterUpgrade.0.2.0.randomize?}
+                <span class="nzButtonDesc colorYellow1">{?button.characterUpgrade.0.2.0.cpCost?}</span>
+            </div>
+        </a>
+    </div>
+</div>

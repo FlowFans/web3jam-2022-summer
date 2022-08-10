@@ -1,0 +1,26 @@
+<!--Displays the character-->
+<div class="nzContainer widthFill">
+    <h3 class="textCenter">{?header.characterGenerated?}</h3>
+    {?$characterPreview?}
+</div>
+
+<!--Take it or leave it-->
+<div class="fontSizeLLL nzContainer widthFill flexRow">
+    <a href="{?$new.url?}" class="widthFill">
+        <div class="{?$new.disable?} bgBrighterBlur2 bgOpaBlue2 colorWhite1 nzButton textCenter">
+            {?button.chargen.randomize?}
+            <span class="nzButtonDesc colorYellow1">{?button.chargen.randomize.cpCost?}</span>
+        </div>
+    </a>
+    <a href="{?$accept.url?}" class="widthFill">
+        <div class="{?$accept.disable?} bgBrighterBlur2 bgOpaGreen1 colorWhite1 nzButton textCenter">
+            {?button.chargen.pick?}
+            <span class="nzButtonDesc colorWhite1">{?$slots?}</span>
+        </div>
+    </a>
+</div>
+
+<!--Some hints-->
+<div class="nzContainer widthFill">
+
+</div>

@@ -1,0 +1,19 @@
+<div class="nzNavbarContainer width100 bgSemiBlack1">
+    <!--Site brand-->
+    <a href="{?!dirRoot?}" class="nzNavbarLogo">
+        <div>
+            <img src="{?!dirCommonImg?}{?!siteLogo?}">
+            <div class="nzNavbarVersion colorWhite3">{?!siteVersion?}</div>
+        </div>
+    </a>
+
+    <!--Menu-->
+    <div class="nzNavbarMenuContainer widthFill">
+        {?$navbar.menuItems?}
+    </div>
+
+    <!--User profile-->
+    <div class="nzNavbarProfile">
+        {?$navbar.userInfo?}
+    </div>
+</div>

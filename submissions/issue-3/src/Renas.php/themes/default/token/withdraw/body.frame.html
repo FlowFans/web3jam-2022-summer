@@ -1,0 +1,61 @@
+<div class="nzContainer widthFill">
+    <h3 class="textCenter">{?header.token.withdraw?}</h3>
+</div>
+
+<div class="bgOpaWhite1 borderradiusl nzContainer shadow1 widthFill">
+    <form class="nzForm widthFill" method="post" action="">
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.token.withdraw.address?}</span>
+            </label>
+            <input type="text" name="withdrawAddress" value="{?$walletAddress?}"></input>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.token.withdraw.amount?}</span>
+            </label>
+            <input type="number" name="withdrawAmount" min="1" max="{?$withdrawMax?}" step="0.0001" value="0" oninput="if(value<0)value=0;if(value>{?$withdrawMax?})value={?$withdrawMax?};"></input>
+        </div>
+
+        <div class="nzContainer widthFill flexBaseline">
+            <label>
+                <span>{?label.token.withdraw.network?}</span>
+            </label>
+            {?$networks?}
+        </div>
+
+
+        <!-- buttons -->
+        <div class="fontSizeLLL nzFormRow widthFill">
+            <input type="submit" class="bgBrighterBlur2 bgOpaGreen1 colorWhite1 nzButton" name="submit" value="{?button.withdraw?}">
+        </div>
+    </form>
+</div>
+
+<details class="bgOpaWhite1 noPadding nzDetails padding-bottom-n padding-left-n padding-right-n widthFill" open>
+    <summary class="padding-bottom-n padding-top-n">{?header.token.withdrawHistory?}</summary>
+    <div class="nzContainer widthFill flexRow flexTop">
+        <div class="nzContainer flexRight sticky">
+            {?$networkMenu?}
+        </div>
+        <div class="nzContainer widthFill">
+            <table class="widthFill nzTable noMargin {?$displayHistory?}">
+                <tr>
+                    <td colspan="3">
+                        {?$pager?}
+                    </td>
+                </tr>
+                <tr>
+                    <td>{?common.time?}</td>
+                    <td>{?common.tx?}</td>
+                    <td>{?common.amount?}</td>
+                </tr>
+                {?$history?}
+            </table>
+            {?$nonHistory?}
+            {?$pager?}
+        </div>
+    </div>
+</details>

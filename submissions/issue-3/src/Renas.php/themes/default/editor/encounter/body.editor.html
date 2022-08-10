@@ -1,0 +1,128 @@
+<div class="bgOpaWhite1 borderRadiusL nzContainer shadow1 widthFill">
+    <form class="nzForm widthFill" method="post" action="edit.php" enctype="multipart/form-data">
+        <input type="hidden" name="editName" value="{?$editName?}" readonly>
+        <input type="hidden" name="token" value="{?$token?}" readonly>
+
+        <!-- Encounter Name -->
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.encounter.name?}</span>
+            </label>
+            <input type="text" name="name" value="{?$name?}" onkeyup="this.value=this.value.replace(/[^\w_\-]/g,'');" {?$nameReadonly?}>
+        </div>
+
+        <!-- Metadata -->
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.encounter.intensity?}</span>
+            </label>
+            <input type="number" name="intensity" value="{?$intensity?}" min="0" step="1">
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.encounter.duration?}</span>
+            </label>
+            <input type="number" name="duration" value="{?$duration?}" min="0" step="1">
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.encounter.probabilityModifier?}</span>
+            </label>
+            <input type="number" name="probabilityModifier" value="{?$probabilityModifier?}" min="0" step="1">
+        </div>
+
+        <!-- Encounter entrance (while adventurers detect the scene) -->
+        <div class="nzBlock width100 bgSemiWhite3 textCenter ">
+            <h4>{?header.editor.encounter.entrance?}</h4>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.encounter.adventureEntrance?}</span>
+            </label>
+            <textarea type="text" name="adventureEntrance" rows="4">{?$adventureEntrance?}</textarea>
+        </div>
+
+        <!-- Encounter appoach (while adventurers decided to enter the scene)-->
+        <div class="nzBlock width100 bgSemiWhite3 textCenter ">
+            <h4>{?header.editor.encounter.approach?}</h4>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.encounter.encounterApproach?}</span>
+            </label>
+            <textarea type="text" name="encounterApproach" rows="4">{?$encounterApproach?}</textarea>
+        </div>
+
+        <!--Encounter process (while adventurers engage with the encounter)-->
+        <div class="nzBlock width100 bgSemiWhite3 textCenter ">
+            <h4>{?header.editor.encounter.process?}</h4>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.encounter.encounterProcess?}</span>
+            </label>
+            <textarea type="text" name="encounterProcess" rows="4">{?$encounterProcess?}</textarea>
+        </div>
+
+        <!--Mechanics: checkAll-->
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.encounter.checkAll?}</span>
+            </label>
+            <textarea class="bgTransYellow1" type="text" name="checkAll" rows="4">{?$checkAll?}</textarea>
+        </div>
+
+        <!--Mechanics: checkAny-->
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.encounter.checkAny?}</span>
+            </label>
+            <textarea class="bgTransYellow1" type="text" name="checkAny" rows="4">{?$checkAny?}</textarea>
+        </div>
+
+        <!--Encounter result: success-->
+        <div class="nzBlock width100 bgSemiWhite3 textCenter ">
+            <h4>{?header.editor.encounter.success?}</h4>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.encounter.encounterSuccess?}</span>
+            </label>
+            <textarea type="text" name="encounterSuccess" rows="4">{?$encounterSuccess?}</textarea>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.encounter.success?}</span>
+            </label>
+            <textarea class="bgTransYellow1" type="text" name="success" rows="4">{?$success?}</textarea>
+        </div>
+
+        <!--Encounter result: failure-->
+        <div class="nzBlock width100 bgSemiWhite3 textCenter ">
+            <h4>{?header.editor.encounter.failure?}</h4>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.encounter.encounterFailure?}</span>
+            </label>
+            <textarea type="text" name="encounterFailure" rows="4">{?$encounterFailure?}</textarea>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.encounter.failure?}</span>
+            </label>
+            <textarea class="bgTransYellow1" type="text" name="failure" rows="4">{?$failure?}</textarea>
+        </div>
+
+        <input type="submit" class="bgBrighterBlur2 bgOpaGreen1 colorWhite1 nzButton textCenter" name="submit" value="{?button.submit?}">
+    </form>
+</div>

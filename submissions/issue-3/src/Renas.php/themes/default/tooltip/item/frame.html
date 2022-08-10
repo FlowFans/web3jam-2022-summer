@@ -1,0 +1,52 @@
+<!-- <div class="tooltip-rarity flexRight {?$rarityStyle?}">
+    {?$rarity?} {?$debug?}
+</div> -->
+<div class="nzContainer nzTooltip widthFill">
+    <div class="common-cardInfo-header widthFill">
+        <img src="{?!siteRoot?}{?!relDirImg?}ico.item.{?--itemIcon?}.png">{?$itemName?}
+    </div>
+
+    <div class="common-cardInfo fontSizeSS">
+        <span class="common-cardInfo-title colorGrey1">{?common.item.type?}</span> <span class="common-cardInfo-content colorGrey1">{?$itemTypes?}</span>
+    </div>
+
+    <div class="common-cardInfo fontSizeSS">
+        <span class="common-cardInfo-title colorGrey1">{?common.item.loads?}</span> <span class="common-cardInfo-content colorGrey1">{?$itemLoads?}</span>
+    </div>
+
+    <div class="common-cardInfo-modifier widthFill {?$modEquipDisplay?}">
+        <span class="fontSizeS">{?common.item.equipSlot?}</span>
+
+        <hr>
+
+        <h5 class="common-cardInfo-title fontSizeS colorgrey1">{?common.item.equipEfx?}</h5>
+        {?$equipModifiers?}
+    </div>
+    <div class="common-cardInfo-modifier widthFill {?$modCarryDisplay?}">
+        <h5 class="common-cardInfo-title fontSizeS colorgrey1">{?common.item.carryEfx?}</h5>
+        {?$carryModifiers?}
+    </div>
+
+    <div class="common-cardInfo-modifier widthFill {?$modUsageDisplay?}">
+        <h5 class="common-cardInfo-title fontSizeS colorgrey1">{?common.item.usage?}</h5>
+        <div class="fontSizeS colorBlack3 fontWeight600">
+            {?$useEffects?}
+        </div>
+        <div class="fontSizeS colorGrey1 fontWeight400 {?$showCheckAll?}">
+            <hr>
+            <span class="fontWeight600 colorGrey1">{?common.item.usage.checkAll?}</span>
+            {?$useCheckAll?}
+        </div>
+        <div class="fontSizeS colorGrey1 fontWeight400 {?$showCheckAny?}">
+            <hr>
+            <span class="fontWeight600 colorGrey1">{?common.item.usage.checkAny?}</span>
+            {?$useCheckAny?}
+        </div>
+    </div>
+
+    
+
+    <div class="common-cardInfo-desc widthFill">
+        {?$desc?}
+    </div>
+</div>

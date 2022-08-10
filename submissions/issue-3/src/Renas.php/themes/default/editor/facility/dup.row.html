@@ -1,0 +1,15 @@
+<div class="bgSemiWhite1 nzContainer nzList shadow1 borderRadiusN widthFill tooltip" datainfo="facility.{?--name?}.{?--level?}">
+    <div class="nzListRow widthFill">
+        <div class="nzEditorList-item">
+            <img src={?!dirImg?}ico.facility.png> {?--name?} {?--level?}
+        </div>
+        <div class="flexRight flex">
+            <a href="delete.php?name={?--name?}&level={?--level?}">
+                <div class="nzButtonSmall bgRed1 colorWhite1">{?button.delete?}</div>
+            </a>
+            <a href="edit.php?name={?--name?}&level={?--level?}">
+                <div class="nzButtonSmall bgGreen1 colorWhite1">{?button.edit?}</div>
+            </a>
+        </div>
+    </div>
+</div>

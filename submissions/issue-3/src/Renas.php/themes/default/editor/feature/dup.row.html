@@ -1,0 +1,20 @@
+<div class="bgSemiWhite1 nzContainer nzList shadow1 borderRadiusN widthFill tooltip" datainfo="feature.{?--type?}.{?--name?}">
+    <div class="nzListRow widthFill">
+        <div class="nzEditorList-item">
+            <img src={?!dirImg?}/ico.feature.{?--type?}.png> {?--name?}
+            <!-- <div class="nzEditorList-item-info nzContainer colorGrey1">{?editor.strengthScore?} {?--strength?}</div>
+            <div class="nzEditorList-item-info nzContainer colorGrey1">{?editor.probabilityModifier?} {?--probabilityModifier?}</div> -->
+        </div>
+        <div class="flexRight flex">
+            <a href="delete.php?type={?--type?}&name={?--name?}">
+                <div class="nzButtonSmall bgRed1 colorWhite1">{?button.delete?}</div>
+            </a>
+            <a href="edit.php?type={?--type?}&name={?--name?}">
+                <div class="nzButtonSmall bgGreen1 colorWhite1">{?button.edit?}</div>
+            </a>
+        </div>
+    </div>
+    <pre class="nzListRow nzEditorList-item-info widthFill">
+        {?editor.strengthScore?} {?--strength?} / {?editor.probabilityModifier?} {?--probabilityModifier?}
+    </pre>
+</div>

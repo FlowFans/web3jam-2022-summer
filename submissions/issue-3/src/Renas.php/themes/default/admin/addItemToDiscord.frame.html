@@ -1,0 +1,41 @@
+<!--Displays the character-->
+<div class="cardList cardList-character">
+    <h3 class="textCenter">{?header.admin.addItemToDiscord?}</h3>
+</div>
+<div class="bgOpaWhite1 borderradiusl nzContainer shadow1 widthFill">
+    <form class="nzForm widthFill" method="post" action="">
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.admin.addItemToDiscord.discord?}</span>
+            </label>
+            <textarea type="text" name="discordId"></textarea>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.admin.addItemToDiscord.itemCode?}</span>
+            </label>
+            <input type="text" name="itemCode">
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.admin.addItemToDiscord.amount?}</span>
+            </label>
+            <input type="number" name="amount" step="1" min="1">
+        </div>
+
+        <div class="nzContainer widthFill {?$showError?}">
+            <label>
+                <span>{?label.admin.addItemToDiscord.error?}</span>
+            </label>
+            <textarea type="text" name="error" rows="4">{?$error?}</textarea>
+        </div>
+
+        <!-- buttons -->
+        <div class="fontSizeLLL nzFormRow widthFill">
+            <input type="submit" class="bgBrighterBlur2 bgOpaGreen1 colorWhite1 nzButton" name="submit" value="{?button.submit?}">
+        </div>
+    </form>
+</div>

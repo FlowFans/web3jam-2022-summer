@@ -1,0 +1,142 @@
+<div class="cardFrame characterLite-cardFrame {?--frameCss?}">
+    <!--portrait-->
+    <div class="characterLite-portrait">
+        <div class="characterLite-stat {?--statCss?}">{?--stat?}</div>
+        <img src="{?--portrait?}" class="{?--css?}">
+        <div class="characterLite-controllerContainer">
+            {?$controller?}
+        </div>
+        <div class="characterLite-actionPointContainer bgOpaBlack1">
+            <div class="characterLite-actionPointNum">{?term.scoreShort.ap?} {?--apCurrent?} / {?--apTotal?}</div>
+            <div class="characterLite-actionPoint" style="width:{?--apBar?};"></div>
+        </div>
+    </div>
+    <div class="cardContainer characterLite-cardContainer widthFill">
+        <div class="characterLite-cardTitle cardDeco-character">
+            <div class="characterLite-titleCol">
+                <!-- {?--charName?} -->
+                <!-- <img src="{?!dirImg?}ico.character.{?--charType?}.png"> -->
+                <a href="{?--viewerUrl?}">{?--charName?}</a>
+            </div>
+            <div class="cardTitleCol characterScoreStrength colorGrey1">
+                {?term.score.strength?} {?--st?}
+            </div>
+        </div>
+        <div class="characterLite-detailContainer">
+            <div class="characterLite-detail-score">
+                <div class="characterLite-colContainer">
+                    <div class="characterLite-scoreContainerAttr">
+                        <div class="characterLite-attrName">{?term.score.attr.might?}</div>
+                        <div class="characterLite-score">{?--mCurrent?} / {?--mTotal?}</div>
+                    </div>
+                    <div class="characterLite-scoreContainerAttr">
+                        <div class="characterLite-attrName">{?term.score.protection.toughness?}</div>
+                        <div class="characterLite-score {?--hideIp?}">{?--tTotal?}</div>
+                        <div class="characterLite-score {?--showIp?}">{?--ip?}</div>
+                    </div>
+                    <div class="characterLite-scoreContainerAttr">
+                        <div class="characterLite-attrName">{?term.score.movingSpeed?}</div>
+                        <div class="characterLite-score">{?--msTotal?}</div>
+                    </div>
+                </div>
+                <div class="characterLite-colContainer">
+                    <div class="characterLite-scoreContainerAttr">
+                        <div class="characterLite-attrName">{?term.score.attr.agility?}</div>
+                        <div class="characterLite-score">{?--aCurrent?} / {?--aTotal?}</div>
+                    </div>
+                    <div class="characterLite-scoreContainerAttr">
+                        <div class="characterLite-attrName">{?term.score.protection.endurance?}</div>
+                        <div class="characterLite-score {?--hideIp?}">{?--eTotal?}</div>
+                        <div class="characterLite-score {?--showIp?}">{?--ie?}</div>
+                    </div>
+                    <div class="characterLite-scoreContainerAttr">
+                        <div class="characterLite-attrName">{?term.score.perceptionRange?}</div>
+                        <div class="characterLite-score">{?--prTotal?}</div>
+                    </div>
+                </div>
+                <div class="characterLite-colContainer">
+                    <div class="characterLite-scoreContainerAttr">
+                        <div class="characterLite-attrName">{?term.score.attr.spirit?}</div>
+                        <div class="characterLite-score">{?--sCurrent?} / {?--sTotal?}</div>
+                    </div>
+                    <div class="characterLite-scoreContainerAttr">
+                        <div class="characterLite-attrName">{?term.score.protection.resistance?}</div>
+                        <div class="characterLite-score {?--hideIp?}">{?--rTotal?}</div>
+                        <div class="characterLite-score {?--showIp?}">{?--io?}</div>
+                    </div>
+                    <div class="characterLite-scoreContainerAttr">
+                        <div class="characterLite-attrName">{?term.score.carryingCapability?}</div>
+                        <div class="characterLite-score">{?--ccCurrent?} / {?--ccTotal?}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="characterLite-detail-addon">
+                <div class="characterAddonRow widthFill">
+                    <div class="characterAddonHeader">
+                        {?character.features?}
+                    </div>
+                    <div class="characterAddon-empty {?--featureDisplay?}">
+                        {?common.empty?}
+                    </div>
+                    {?--features?}
+                </div>
+
+                <div class="characterAddonRow widthFill">
+                    <div class="characterAddonHeader">
+                        {?character.equipment?}
+                    </div>
+                    {?--equipment?}
+                </div>
+
+                <div class="characterAddonRow widthFill">
+                    <div class="characterAddonHeader">
+                        {?character.carrying?}
+                    </div>
+                    <div class="characterAddon-empty {?--inventoryDisplay?}">
+                        {?common.empty?}
+                    </div>
+                    {?--carrying?}
+                </div>
+            </div>
+        </div>
+        
+        <!--div class="characterAddon">
+            <div class="characterAddonRow widthFill">
+                <div class="characterAddonHeader">
+                    {?character.features?}
+                </div>
+                {?--features?}
+            </div>
+            <div class="characterAddonRow">
+                <div class="characterAddonHeader">
+                    {?character.abilities?}
+                </div>
+                {?--abilities?}
+                <pre class="characterAddon-comingSoon">
+                    {?common.comingSoon?}
+                </pre>
+            </div>
+
+            <div class="characterAddonRow widthFill">
+                <div class="characterAddonHeader">
+                    {?common.more?}
+                </div>
+                <pre class="characterAddon-comingSoon">
+                    {?common.comingSoon?}
+                </pre>
+            </div>
+            <div class="characterAddonRow">
+                <div class="characterAddonHeader">
+                    {?character.bio?}
+                </div>
+                <pre class="characterAddon-bio">
+                    {?--bio?}
+                </pre>
+            </div>
+            {?--debugInfo?}
+        </div-->
+    </div>
+    <!-- <div class="cardFooter cardDeco-character">
+        <iframe src="{?!dirRoot?}c/footer.php?id={?--charId?}" loading="lazy"></iframe>
+    </div> -->
+</div>

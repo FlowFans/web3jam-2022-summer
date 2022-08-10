@@ -1,0 +1,22 @@
+<div class="bgOpaWhite1 borderradiusl nzContainer shadow1 widthFill">
+    <form class="nzForm widthFill flexRow" method="post" action="?token={?$stageToken?}" enctype="multipart/form-data">
+        <input type="hidden" value="{?$stageToken?}" name="token">
+        <div class="cardImage">
+            <img src="{?$image?}">
+        </div>
+        <!-- Upload -->
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.item.imageUpload?}</span>
+            </label>
+            <div class="noPadding">
+                <div class="noPadding">
+                    <input type="file" name="image" value="" accept="image/png, image/jpg, image/jpeg"/>
+                </div>
+                <div class="noPadding">
+                    <input type="submit" class="bgBrighterBlur2 bgOpaGreen1 colorWhite1 nzButtonInline" name="preview" value="{?button.editor.item.updateImage?}">    
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

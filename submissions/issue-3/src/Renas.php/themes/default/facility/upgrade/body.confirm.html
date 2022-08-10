@@ -1,0 +1,52 @@
+<div class="nzContainer widthFill">
+    <h3 class="textCenter">{?header.upgradeFacility?}</h3>
+</div>
+
+<div class="nzContainer widthFill flexRow flexTop noMargin">
+    <div class="nzContainer flexRight noMargin">
+        {?$facilityCard?}
+    </div>
+    <div class="nzContainer facility-upgradeInfoContainer bgOpaWhite1 shadow1 widthFill">
+        <h4>{?common.facility.upgradeInfo?}</h4>
+        <div class=" colorGrey1 fontWeight400">
+            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.time?}</span>
+            {?$facilityUpgradeTime?}
+        </div>
+        <div class=" colorGrey1 fontWeight400 {?$css.upgradeChar?}">
+            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.char?}</span>
+            {?$facilityUpgradeChar?}
+            <div>{?$builderList?}</div>
+            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.ap?}</span>
+            {?$facilityUpgradeAP?}
+        </div>
+        <div class=" colorGrey1 fontWeight400 {?$showNextLevelMaterial?}">
+            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.material?}</span>
+            {?$facilityUpgradeMaterial?}
+        </div>
+        <div class=" colorGrey1 fontWeight400 {?$showNextLevelCheckAll?}">
+            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.checkAll?}</span>
+            {?$facilityUpgradeCheckAll?}
+        </div>
+        <div class=" colorGrey1 fontWeight400 {?$showNextLevelCheckAny?}">
+            <span class="fontWeight600 colorGrey1">{?common.facility.upgrade.checkAny?}</span>
+            {?$facilityUpgradeCheckAny?}
+        </div>
+    </div>
+</div>
+
+<div class="nzContainer widthFill nzNote bgOpaWhite1">
+    <h4>{?header.facility.teamUp?}</h4>
+    {?common.facility.selectBuilder?}
+    <div class="nzContainer widthFill">
+        <a href="{?$url?}" class="widthFill">
+            <div class="bgBrighterBlur2 nzButton colorWhite1 {?$constructable?}">{?button.facility.upgrade?}</div>
+        </a>
+    </div>
+</div>
+
+<div class="cardList characterLite-charList">
+    {?$pager?}
+    {?$charList?}
+    {?$pager?}
+</div>
+

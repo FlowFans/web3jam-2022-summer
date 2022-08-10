@@ -1,0 +1,653 @@
+<div class="bgOpaWhite1 borderRadiusL nzContainer shadow1 widthFill">
+    <form class="nzForm widthFill" method="post" action="edit.php" enctype="multipart/form-data">
+        <input type="hidden" name="editName" value="{?$editName?}" readonly>
+        <input type="hidden" name="token" value="{?$token?}" readonly>
+        <!-- Item type -->
+        <div class="nzContainer widthFill">
+            <details class="nzDetails">
+                <summary>{?label.editor.item.typeSelector?}</summary>
+                <iframe loading="lazy" src="selector.itemType.php?token={?$token?}"></iframe>
+            </details>
+        </div>
+
+        <!-- Item icon -->
+        <div class="nzContainer widthFill">
+            <details class="nzDetails">
+                <summary>{?label.editor.item.iconSelector?}</summary>
+                <iframe loading="lazy" src="selector.itemIcon.php?token={?$token?}"></iframe>
+            </details>
+        </div>
+
+        <!-- Item image -->
+        <div class="nzContainer widthFill">
+            <details class="nzDetails">
+                <summary>{?label.editor.item.imageSelector?}</summary>
+                <iframe loading="lazy" src="selector.image.php?token={?$token?}"></iframe>
+            </details>
+        </div>
+        <!-- <div class="nzContainer widthFill">
+            <div><img src="{?$imgUrl?}"></div>
+            <label>
+                <span>{?label.editor.item.image?}</span>
+            </label>
+            <div class="nzFormRow noPadding">
+                <div class="noPadding">
+                    <input type="file" name="image" value="" accept="image/png, image/jpg, image/jpeg"/>
+                </div>
+                <div class="noPadding">
+                    <input type="submit" class="bgBrighterBlur2 bgOpaWhite3 colorGrey3 colorWhite1 nzButtonInline" name="preview" value="{?button.editor.item.updateImage?}">    
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Item Name -->
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.item.name?}</span>
+            </label>
+            <input type="text" name="name" value="{?$name?}" onkeyup="this.value=this.value.replace(/[^\w_\-]/g,'');" {?$nameReadonly?}>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.item.translation?}</span>
+            </label>
+            <input type="text" name="translation" value="{?$translation?}">
+        </div>
+
+        <!-- <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.feature.probabilityModifier?}</span>
+            </label>
+            <input type="number" name="probabilityModifier" value="{?$probabilityModifier?}">
+        </div> -->
+
+        <!-- <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.item.stackable?}</span>
+            </label>
+            <input type="radio" name="stackable" value="{?$probabilityModifier?}">
+        </div> -->
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.item.loads?}</span>
+            </label>
+            <input type="number" name="loads" value="{?$loads?}" step="0.0001">
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.item.desc?}</span>
+            </label>
+            <textarea type="text" name="description" rows="4">{?$description?}</textarea>
+        </div>
+
+        <!-- Occupancy -->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?label.editor.item.occupancy?}</span>
+                </label>
+                <select name="occupancy">
+                    {?$occupancyOptions?}
+                </select>
+            </div>
+            <div>
+                <label>
+                    <span>{?label.editor.item.occupancySlots?}</span>
+                </label>
+                <input class="textRight" type="number" name="occupancySlots" value="{?$occupancySlots?}" step="1" min="0">
+            </div>
+        </div>
+
+        <!-- Equiping mod -->
+        <!-- attr mod -->
+        <div class="nzBlock width100 bgSemiWhite3 textCenter ">
+            <h4>{?header.editor.item.equip.attribute?}</h4>
+        </div>
+
+        <!--might-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.attr.might?} {?label.editor.item.score.modifierEquip?}</span>
+                </label>
+                <input type="number" name="mModifierEquip" value="{?$mModifierEquip?}" max="{?$maxModifier.attr?}" oninput="if(value>{?$maxModifier.attr?})value={?$maxModifier.attr?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.attr.might?} {?label.editor.item.score.multiplierEquip?}</span>
+                </label>
+                <input class="textRight" type="number" name="mMultiplierEquip" value="{?$mMultiplierEquip?}" step="0.01" min="0.0" max="{?$maxMultiplier.attr?}" oninput="if(value>{?$maxMultiplier.attr?})value={?$maxMultiplier.attr?}">
+            </div>
+        </div>
+
+        <!--agility-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.attr.agility?} {?label.editor.item.score.modifierEquip?}</span>
+                </label>
+                <input type="number" name="aModifierEquip" value="{?$aModifierEquip?}" max="{?$maxModifier.attr?}" oninput="if(value>{?$maxModifier.attr?})value={?$maxModifier.attr?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.attr.agility?} {?label.editor.item.score.multiplierEquip?}</span>
+                </label>
+                <input class="textRight" type="number" name="aMultiplierEquip" value="{?$aMultiplierEquip?}" step="0.01" min="0.0" max="{?$maxMultiplier.attr?}" oninput="if(value>{?$maxMultiplier.attr?})value={?$maxMultiplier.attr?}">
+            </div>
+        </div>
+
+        <!--spirit-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.attr.spirit?} {?label.editor.item.score.modifierEquip?}</span>
+                </label>
+                <input type="number" name="sModifierEquip" value="{?$sModifierEquip?}" max="{?$maxModifier.attr?}" oninput="if(value>{?$maxModifier.attr?})value={?$maxModifier.attr?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.attr.spirit?} {?label.editor.item.score.multiplierEquip?}</span>
+                </label>
+                <input class="textRight" type="number" name="sMultiplierEquip" value="{?$sMultiplierEquip?}" step="0.01" min="0.0" max="{?$maxMultiplier.attr?}" oninput="if(value>{?$maxMultiplier.attr?})value={?$maxMultiplier.attr?}">
+            </div>
+        </div>
+
+        <!-- protection mod -->
+        <div class="nzBlock width100 bgSemiWhite3 textCenter ">
+            <h4>{?header.editor.item.equip.protection?}</h4>
+        </div>
+
+        <!--toughness-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.protection.toughness?} {?label.editor.item.score.modifierEquip?}</span>
+                </label>
+                <input type="number" name="tModifierEquip" value="{?$tModifierEquip?}" max="{?$maxModifier.protect?}" oninput="if(value>{?$maxModifier.protect?})value={?$maxModifier.protect?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.protection.toughness?} {?label.editor.item.score.multiplierEquip?}</span>
+                </label>
+                <input class="textRight" type="number" name="tMultiplierEquip" value="{?$tMultiplierEquip?}" step="0.01" min="0.0" max="{?$maxMultiplier.protect?}" oninput="if(value>{?$maxMultiplier.protect?})value={?$maxMultiplier.protect?}">
+            </div>
+        </div>
+
+        <!--endurance-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.protection.endurance?} {?label.editor.item.score.modifierEquip?}</span>
+                </label>
+                <input type="number" name="eModifierEquip" value="{?$eModifierEquip?}" max="{?$maxModifier.protect?}" oninput="if(value>{?$maxModifier.protect?})value={?$maxModifier.protect?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.protection.endurance?} {?label.editor.item.score.multiplierEquip?}</span>
+                </label>
+                <input class="textRight" type="number" name="eMultiplierEquip" value="{?$eMultiplierEquip?}" step="0.01" min="0.0" max="{?$maxMultiplier.protect?}" oninput="if(value>{?$maxMultiplier.protect?})value={?$maxMultiplier.protect?}">
+            </div>
+        </div>
+
+        <!--resistance-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.protection.resistance?} {?label.editor.item.score.modifierEquip?}</span>
+                </label>
+                <input type="number" name="rModifierEquip" value="{?$rModifierEquip?}" max="{?$maxModifier.protect?}" oninput="if(value>{?$maxModifier.protect?})value={?$maxModifier.protect?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.protection.resistance?} {?label.editor.item.score.multiplierEquip?}</span>
+                </label>
+                <input class="textRight" type="number" name="rMultiplierEquip" value="{?$rMultiplierEquip?}" step="0.01" min="0.0" max="{?$maxMultiplier.protect?}" oninput="if(value>{?$maxMultiplier.protect?})value={?$maxMultiplier.protect?}">
+            </div>
+        </div>
+
+        <!--immunity-->
+        <div class="nzFormRow flexRow">
+            <!--physical-->
+            <label class="nzCheckbox">
+                {?term.score.immunity.physical?}
+                <input type="checkbox" name="ipCheckEquip" {?$ipCheckEquip?}>
+                <span class="nzToggle"></span>
+            </label>
+
+            <!--erosive-->
+            <label class="nzCheckbox">
+                {?term.score.immunity.erosive?}
+                <input type="checkbox" name="ieCheckEquip" {?$ieCheckEquip?}>
+                <span class="nzToggle"></span>
+            </label>
+
+            <!--occult-->
+            <label class="nzCheckbox">
+                {?term.score.immunity.occult?}
+                <input type="checkbox" name="ioCheckEquip" {?$ioCheckEquip?}>
+                <span class="nzToggle"></span>
+            </label>
+        </div>
+
+        <!-- other score mod -->
+        <div class="nzBlock width100 bgSemiWhite3 textCenter ">
+            <h4>{?header.editor.item.equip.others?}</h4>
+        </div>
+
+        <!--action point-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.actionPoint?} {?label.editor.item.score.modifierEquip?}</span>
+                </label>
+                <input type="number" name="apModifierEquip" value="{?$apModifierEquip?}" max="{?$maxModifier.ap?}" oninput="if(value>{?$maxModifier.ap?})value={?$maxModifier.ap?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.actionPoint?} {?label.editor.item.score.multiplierEquip?}</span>
+                </label>
+                <input class="textRight" type="number" name="apMultiplierEquip" value="{?$apMultiplierEquip?}" step="0.01" min="0.0" max="{?$maxMultiplier.ap?}" oninput="if(value>{?$maxMultiplier.ap?})value={?$maxMultiplier.ap?}">
+            </div>
+        </div>
+
+        <!--carrying capability-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.carryingCapability?} {?label.editor.item.score.modifierEquip?}</span>
+                </label>
+                <input type="number" name="ccModifierEquip" value="{?$ccModifierEquip?}" max="{?$maxModifier.cc?}" oninput="if(value>{?$maxModifier.cc?})value={?$maxModifier.cc?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.carryingCapability?} {?label.editor.item.score.multiplierEquip?}</span>
+                </label>
+                <input class="textRight" type="number" name="ccMultiplierEquip" value="{?$ccMultiplierEquip?}" step="0.01" min="0.0" max="{?$maxMultiplier.cc?}" oninput="if(value>{?$maxMultiplier.cc?})value={?$maxMultiplier.cc?}">
+            </div>
+        </div>
+
+        <!--perception range-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.perceptionRange?} {?label.editor.item.score.modifierEquip?}</span>
+                </label>
+                <input type="number" name="prModifierEquip" value="{?$prModifierEquip?}" max="{?$maxModifier.pr?}" oninput="if(value>{?$maxModifier.pr?})value={?$maxModifier.pr?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.perceptionRange?} {?label.editor.item.score.multiplierEquip?}</span>
+                </label>
+                <input class="textRight" type="number" name="prMultiplierEquip" value="{?$prMultiplierEquip?}" step="0.01" min="0.0" max="{?$maxMultiplier.pr?}" oninput="if(value>{?$maxMultiplier.pr?})value={?$maxMultiplier.pr?}">
+            </div>
+        </div>
+
+        <!--moving speed-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.movingSpeed?} {?label.editor.item.score.modifierEquip?}</span>
+                </label>
+                <input type="number" name="msModifierEquip" value="{?$msModifierEquip?}" max="{?$maxModifier.ms?}" oninput="if(value>{?$maxModifier.ms?})value={?$maxModifier.ms?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.movingSpeed?} {?label.editor.item.score.multiplierEquip?}</span>
+                </label>
+                <input class="textRight" type="number" name="msMultiplierEquip" value="{?$msMultiplierEquip?}" step="0.01" min="0.0" max="{?$maxMultiplier.ms?}" oninput="if(value>{?$maxMultiplier.ms?})value={?$maxMultiplier.ms?}">
+            </div>
+        </div>
+
+        <!-- Carrying mod -->
+        <!-- attr mod -->
+        <div class="nzBlock width100 bgSemiWhite3 textCenter ">
+            <h4>{?header.editor.item.carry.attribute?}</h4>
+        </div>
+
+        <!--might-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.attr.might?} {?label.editor.item.score.modifierCarry?}</span>
+                </label>
+                <input type="number" name="mModifierCarry" value="{?$mModifierCarry?}" max="{?$maxModifier.attr?}" oninput="if(value>{?$maxModifier.attr?})value={?$maxModifier.attr?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.attr.might?} {?label.editor.item.score.multiplierCarry?}</span>
+                </label>
+                <input class="textRight" type="number" name="mMultiplierCarry" value="{?$mMultiplierCarry?}" step="0.01" min="0.0" max="{?$maxMultiplier.attr?}" oninput="if(value>{?$maxMultiplier.attr?})value={?$maxMultiplier.attr?}">
+            </div>
+        </div>
+
+        <!--agility-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.attr.agility?} {?label.editor.item.score.modifierCarry?}</span>
+                </label>
+                <input type="number" name="aModifierCarry" value="{?$aModifierCarry?}" max="{?$maxModifier.attr?}" oninput="if(value>{?$maxModifier.attr?})value={?$maxModifier.attr?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.attr.agility?} {?label.editor.item.score.multiplierCarry?}</span>
+                </label>
+                <input class="textRight" type="number" name="aMultiplierCarry" value="{?$aMultiplierCarry?}" step="0.01" min="0.0" max="{?$maxMultiplier.attr?}" oninput="if(value>{?$maxMultiplier.attr?})value={?$maxMultiplier.attr?}">
+            </div>
+        </div>
+
+        <!--spirit-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.attr.spirit?} {?label.editor.item.score.modifierCarry?}</span>
+                </label>
+                <input type="number" name="sModifierCarry" value="{?$sModifierCarry?}" max="{?$maxModifier.attr?}" oninput="if(value>{?$maxModifier.attr?})value={?$maxModifier.attr?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.attr.spirit?} {?label.editor.item.score.multiplierCarry?}</span>
+                </label>
+                <input class="textRight" type="number" name="sMultiplierCarry" value="{?$sMultiplierCarry?}" step="0.01" min="0.0" max="{?$maxMultiplier.attr?}" oninput="if(value>{?$maxMultiplier.attr?})value={?$maxMultiplier.attr?}">
+            </div>
+        </div>
+
+        <!-- protection mod -->
+        <div class="nzBlock width100 bgSemiWhite3 textCenter ">
+            <h4>{?header.editor.item.carry.protection?}</h4>
+        </div>
+
+        <!--toughness-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.protection.toughness?} {?label.editor.item.score.modifierCarry?}</span>
+                </label>
+                <input type="number" name="tModifierCarry" value="{?$tModifierCarry?}" max="{?$maxModifier.protect?}" oninput="if(value>{?$maxModifier.protect?})value={?$maxModifier.protect?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.protection.toughness?} {?label.editor.item.score.multiplierCarry?}</span>
+                </label>
+                <input class="textRight" type="number" name="tMultiplierCarry" value="{?$tMultiplierCarry?}" step="0.01" min="0.0" max="{?$maxMultiplier.protect?}" oninput="if(value>{?$maxMultiplier.protect?})value={?$maxMultiplier.protect?}">
+            </div>
+        </div>
+
+        <!--endurance-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.protection.endurance?} {?label.editor.item.score.modifierCarry?}</span>
+                </label>
+                <input type="number" name="eModifierCarry" value="{?$eModifierCarry?}" max="{?$maxModifier.protect?}" oninput="if(value>{?$maxModifier.protect?})value={?$maxModifier.protect?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.protection.endurance?} {?label.editor.item.score.multiplierCarry?}</span>
+                </label>
+                <input class="textRight" type="number" name="eMultiplierCarry" value="{?$eMultiplierCarry?}" step="0.01" min="0.0" max="{?$maxMultiplier.protect?}" oninput="if(value>{?$maxMultiplier.protect?})value={?$maxMultiplier.protect?}">
+            </div>
+        </div>
+
+        <!--resistance-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.protection.resistance?} {?label.editor.item.score.modifierCarry?}</span>
+                </label>
+                <input type="number" name="rModifierCarry" value="{?$rModifierCarry?}" max="{?$maxModifier.protect?}" oninput="if(value>{?$maxModifier.protect?})value={?$maxModifier.protect?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.protection.resistance?} {?label.editor.item.score.multiplierCarry?}</span>
+                </label>
+                <input class="textRight" type="number" name="rMultiplierCarry" value="{?$rMultiplierCarry?}" step="0.01" min="0.0" max="{?$maxMultiplier.protect?}" oninput="if(value>{?$maxMultiplier.protect?})value={?$maxMultiplier.protect?}">
+            </div>
+        </div>
+
+        <!--immunity-->
+        <div class="nzFormRow flexRow">
+            <!--physical-->
+            <label class="nzCheckbox">
+                {?term.score.immunity.physical?}
+                <input type="checkbox" name="ipCheckCarry" {?$ipCheckCarry?}>
+                <span class="nzToggle"></span>
+            </label>
+
+            <!--erosive-->
+            <label class="nzCheckbox">
+                {?term.score.immunity.erosive?}
+                <input type="checkbox" name="ieCheckCarry" {?$ieCheckCarry?}>
+                <span class="nzToggle"></span>
+            </label>
+
+            <!--occult-->
+            <label class="nzCheckbox">
+                {?term.score.immunity.occult?}
+                <input type="checkbox" name="ioCheckCarry" {?$ioCheckCarry?}>
+                <span class="nzToggle"></span>
+            </label>
+        </div>
+
+        <!-- other score mod -->
+        <div class="nzBlock width100 bgSemiWhite3 textCenter ">
+            <h4>{?header.editor.item.carry.others?}</h4>
+        </div>
+
+        <!--action point-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.actionPoint?} {?label.editor.item.score.modifierCarry?}</span>
+                </label>
+                <input type="number" name="apModifierCarry" value="{?$apModifierCarry?}" max="{?$maxModifier.ap?}" oninput="if(value>{?$maxModifier.ap?})value={?$maxModifier.ap?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.actionPoint?} {?label.editor.item.score.multiplierCarry?}</span>
+                </label>
+                <input class="textRight" type="number" name="apMultiplierCarry" value="{?$apMultiplierCarry?}" step="0.01" min="0.0" max="{?$maxMultiplier.ap?}" oninput="if(value>{?$maxMultiplier.ap?})value={?$maxMultiplier.ap?}">
+            </div>
+        </div>
+
+        <!--carrying capability-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.carryingCapability?} {?label.editor.item.score.modifierCarry?}</span>
+                </label>
+                <input type="number" name="ccModifierCarry" value="{?$ccModifierCarry?}" max="{?$maxModifier.cc?}" oninput="if(value>{?$maxModifier.cc?})value={?$maxModifier.cc?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.carryingCapability?} {?label.editor.item.score.multiplierCarry?}</span>
+                </label>
+                <input class="textRight" type="number" name="ccMultiplierCarry" value="{?$ccMultiplierCarry?}" step="0.01" min="0.0" max="{?$maxMultiplier.cc?}" oninput="if(value>{?$maxMultiplier.cc?})value={?$maxMultiplier.cc?}">
+            </div>
+        </div>
+
+        <!--perception range-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.perceptionRange?} {?label.editor.item.score.modifierCarry?}</span>
+                </label>
+                <input type="number" name="prModifierCarry" value="{?$prModifierCarry?}" max="{?$maxModifier.pr?}" oninput="if(value>{?$maxModifier.pr?})value={?$maxModifier.pr?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.perceptionRange?} {?label.editor.item.score.multiplierCarry?}</span>
+                </label>
+                <input class="textRight" type="number" name="prMultiplierCarry" value="{?$prMultiplierCarry?}" step="0.01" min="0.0" max="{?$maxMultiplier.pr?}" oninput="if(value>{?$maxMultiplier.pr?})value={?$maxMultiplier.pr?}">
+            </div>
+        </div>
+
+        <!--moving speed-->
+        <div class="nzFormRow flexRow">
+            <div>
+                <label>
+                    <span>{?term.score.movingSpeed?} {?label.editor.item.score.modifierCarry?}</span>
+                </label>
+                <input type="number" name="msModifierCarry" value="{?$msModifierCarry?}" max="{?$maxModifier.ms?}" oninput="if(value>{?$maxModifier.ms?})value={?$maxModifier.ms?}">
+            </div>
+            <div>
+                <label>
+                    <span>{?term.score.movingSpeed?} {?label.editor.item.score.multiplierCarry?}</span>
+                </label>
+                <input class="textRight" type="number" name="msMultiplierCarry" value="{?$msMultiplierCarry?}" step="0.01" min="0.0" max="{?$maxMultiplier.ms?}" oninput="if(value>{?$maxMultiplier.ms?})value={?$maxMultiplier.ms?}">
+            </div>
+        </div>
+
+        <!-- available feature -->
+        <div class="nzBlock width100 bgSemiWhite3 textCenter ">
+            <h4>{?header.editor.feature.availibility?}</h4>
+        </div>
+        
+        <div class="nzContainer widthFill">
+            <details class="nzDetails">
+                <summary>{?label.editor.feature.availableFeature.ethnicity?}</summary>
+                <iframe loading="lazy" src="selector.feature.php?token={?$token?}&featureType=ethnicity&containerCategory=availableFeature&container=ethnicity"></iframe>
+            </details>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <details class="nzDetails">
+                <summary>{?label.editor.feature.availableFeature.faction?}</summary>
+                <iframe loading="lazy" src="selector.feature.php?token={?$token?}&featureType=faction&containerCategory=availableFeature&container=faction"></iframe>
+            </details>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <details class="nzDetails">
+                <summary>{?label.editor.feature.availableFeature.gender?}</summary>
+                <iframe loading="lazy" src="selector.feature.php?token={?$token?}&featureType=gender&containerCategory=availableFeature&container=gender"></iframe>
+            </details>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <details class="nzDetails">
+                <summary>{?label.editor.feature.availableFeature.size?}</summary>
+                <iframe loading="lazy" src="selector.feature.php?token={?$token?}&featureType=size&containerCategory=availableFeature&container=size"></iframe>
+            </details>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <details class="nzDetails">
+                <summary>{?label.editor.feature.availableFeature.form?}</summary>
+                <iframe loading="lazy" src="selector.feature.php?token={?$token?}&featureType=form&containerCategory=availableFeature&container=form"></iframe>
+            </details>
+        </div>
+
+        <!-- gifted feature -->
+        <div class="nzBlock width100 bgSemiWhite3 textCenter ">
+            <h4>{?header.editor.feature.addFeature?}</h4>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <details class="nzDetails">
+                <summary>{?label.editor.feature.addFeature.ethnicity?}</summary>
+                <iframe loading="lazy" src="selector.feature.php?token={?$token?}&featureType=ethnicity&containerCategory=addFeature&container=ethnicity"></iframe>
+            </details>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <details class="nzDetails">
+                <summary>{?label.editor.feature.addFeature.faction?}</summary>
+                <iframe loading="lazy" src="selector.feature.php?token={?$token?}&featureType=faction&containerCategory=addFeature&container=faction"></iframe>
+            </details>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <details class="nzDetails">
+                <summary>{?label.editor.feature.addFeature.gender?}</summary>
+                <iframe loading="lazy" src="selector.feature.php?token={?$token?}&featureType=gender&containerCategory=addFeature&container=gender"></iframe>
+            </details>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <details class="nzDetails">
+                <summary>{?label.editor.feature.addFeature.size?}</summary>
+                <iframe loading="lazy" src="selector.feature.php?token={?$token?}&featureType=size&containerCategory=addFeature&container=size"></iframe>
+            </details>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <details class="nzDetails">
+                <summary>{?label.editor.feature.addFeature.form?}</summary>
+                <iframe loading="lazy" src="selector.feature.php?token={?$token?}&featureType=form&containerCategory=addFeature&container=form"></iframe>
+            </details>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <details class="nzDetails">
+                <summary>{?label.editor.feature.addFeature.perception?}</summary>
+                <iframe loading="lazy" src="selector.feature.php?token={?$token?}&featureType=perception&containerCategory=addFeature&container=perception"></iframe>
+            </details>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <details class="nzDetails">
+                <summary>{?label.editor.feature.addFeature.perceptionPoor?}</summary>
+                <iframe loading="lazy" src="selector.feature.php?token={?$token?}&featureType=perception&containerCategory=addFeature&container=perceptionPoor"></iframe>
+            </details>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <details class="nzDetails">
+                <summary>{?label.editor.feature.addFeature.mobility?}</summary>
+                <iframe loading="lazy" src="selector.feature.php?token={?$token?}&featureType=mobility&containerCategory=addFeature&container=mobility"></iframe>
+            </details>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <details class="nzDetails">
+                <summary>{?label.editor.feature.addFeature.mobilityPoor?}</summary>
+                <iframe loading="lazy" src="selector.feature.php?token={?$token?}&featureType=mobility&containerCategory=addFeature&container=mobilityPoor"></iframe>
+            </details>
+        </div>
+        
+        <!-- gifted ability -->
+        <div class="nzBlock width100 bgSemiWhite3 textCenter ">
+            <h4>{?header.editor.feature.addAbility?}</h4>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.feature.addAbility?}</span>
+            </label>
+            <textarea type="text" name="addAbility" rows="4">{?$addAbility?}</textarea>
+        </div>
+
+        <!-- Effects on use -->
+        <div class="nzBlock width100 bgSemiWhite3 textCenter ">
+            <h4>{?header.editor.item.usage?}</h4>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.item.use.checkAll?}</span>
+            </label>
+            <textarea type="text" name="useCheckAll" rows="4">{?$useCheckAll?}</textarea>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.item.use.checkAny?}</span>
+            </label>
+            <textarea type="text" name="useCheckAny" rows="4">{?$useCheckAny?}</textarea>
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.editor.item.use.effects?}</span>
+            </label>
+            <textarea type="text" name="useEfx" rows="4">{?$useEfx?}</textarea>
+        </div>
+
+
+        <input type="submit" class="bgBrighterBlur2 bgOpaGreen1 colorWhite1 nzButton textCenter" name="submit" value="{?button.submit?}">
+    </form>
+</div>

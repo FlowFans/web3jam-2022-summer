@@ -1,0 +1,109 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+		"NonFungibleToken": {
+			"source": "./contracts/NonFungibleToken.cdc",
+			"aliases": {
+				"testnet": "0x631e88ae7f1d7c20",
+				"mainnet": "0x1d7e57aa55817448"
+			}
+		},
+		"MetadataViews": {
+			"source": "./contracts/MetadataViews.cdc",
+			"aliases": {
+				"testnet": "0x631e88ae7f1d7c20",
+				"mainnet": "0x1d7e57aa55817448"
+			}
+		},
+		"FungibleToken": {
+			"source": "./contracts/FungibleToken.cdc",
+			"aliases": {
+				"emulator": "0xee82856bf20e2aa6",
+				"testnet": "0x9a0766d93b6608b7",
+				"mainnet": "0xf233dcee88fe0abe"
+			}
+		},
+		"CaaArts": "./contracts/CaaArts.cdc",
+		"CaaPass": "./contracts/CaaPass.cdc",
+		"SwapTrader": "./contracts/SwapTrader.cdc",
+		"ContributionPoint": "./contracts/ContributionPoint.cdc",
+		"Pausable": "./contracts/Pausable.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"testnet": "access.devnet.nodes.onflow.org:9000",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "41580f910db3779bcbd82739b3eb5a642ceb50a37b188bbfc6befae4e8cb5556"
+		},
+		"admin-testnet": {
+			"address": "a8b1239250f8d342",
+			"keys": [
+				{
+					"type": "hex",
+					"index": 0,
+					"signatureAlgorithm": "ECDSA_secp256k1",
+					"hashAlgorithm": "SHA3_256",
+					"context": {
+						"privateKey": "74911f91945d6b6648f02cbafcd353e857f1d2967ba9c252e2dc761d24f0f403"
+					}
+				}
+			]
+		},
+		"user-testnet": {
+			"address": "bee546a1c9fcd923",
+			"keys": [
+				{
+					"type": "hex",
+					"index": 0,
+					"signatureAlgorithm": "ECDSA_secp256k1",
+					"hashAlgorithm": "SHA3_256",
+					"context": {
+						"privateKey": "b7c15c43f9c3f394809cc2c5c5be7aef5bd17dbbdb60be41ca89c57e6bb45fab"
+					}
+				}
+			]
+		},
+		"admin-mainnet-local": {
+			"fromFile": "./flow.mainnet.json"
+		}
+	},
+	"deployments": {
+		"emulator": {
+			"emulator-account": [
+				"NonFungibleToken",
+				"CaaArts",
+				"CaaPass",
+				"SwapTrader",
+				"Pausable",
+				"ContributionPoint"
+			]
+		},
+		"testnet": {
+			"admin-testnet": [
+				"CaaArts",
+				"CaaPass",
+				"SwapTrader",
+				"Pausable",
+				"ContributionPoint"
+			]
+		},
+		"mainnet": {
+			"admin-mainnet-local": [
+				"CaaArts",
+				"CaaPass",
+				"SwapTrader",
+				"Pausable",
+				"ContributionPoint"
+			]
+		}
+	}
+}

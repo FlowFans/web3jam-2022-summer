@@ -1,0 +1,50 @@
+<!--Displays the character-->
+<div class="cardList cardList-character">
+    <h3 class="textCenter">{?header.characterEdit?}</h3>
+    {?$characterPreview?}
+</div>
+<div class="bgOpaWhite1 borderradiusl nzContainer shadow1 widthFill">
+    <form class="nzForm widthFill" method="post" action="?id={?$charId?}&_back={?$backUrl?}" enctype="multipart/form-data">
+        <input type="hidden" value="{?$charId?}" name="id">
+        <!-- Character name -->
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.chargen.name?}</span>
+            </label>
+            <input type="text" name="name" value="{?$name?}" {?$nameReadonly?}>
+        </div>
+
+        <!-- Upload -->
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.chargen.portrait?}</span>
+            </label>
+            <div class="nzFormRow noPadding">
+                <div class="noPadding">
+                    <input type="file" name="portrait" value="" accept="image/png, image/jpg, image/jpeg"/>
+                </div>
+                <div class="noPadding">
+                    <input type="submit" class="bgBrighterBlur2 bgOpaWhite3 colorGrey3 colorWhite1 nzButtonInline" name="preview" value="{?button.chargen.updatePortrait?}">    
+                </div>
+            </div>
+            <!-- <input type="text" name="name" value="{?$name?}" onkeyup="this.value=this.value.replace(/[^\w_\-\s]/g,'');" {?$nameReadonly?}> -->
+        </div>
+
+        <div class="nzContainer widthFill">
+            <label>
+                <span>{?label.chargen.bio?}</span>
+            </label>
+            <textarea type="text" name="bio" rows="4">{?$bio?}</textarea>
+        </div>
+
+        <!-- buttons -->
+        <div class="fontSizeLLL nzFormRow widthFill">
+            <a href="{?!back?}" class="widthFill">
+                <div class="bgBrighterBlur2 bgOpaBlue2 colorWhite1 nzButton">
+                    {?button.cancel?}
+                </div>
+            </a>
+            <input type="submit" class="bgBrighterBlur2 bgOpaGreen1 colorWhite1 nzButton" name="submit" value="{?button.submit?}">
+        </div>
+    </form>
+</div>

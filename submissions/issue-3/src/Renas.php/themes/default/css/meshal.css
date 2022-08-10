@@ -1,0 +1,1983 @@
+:root {
+    /* 色板 */
+    --BgCharacter: rgba(247, 244, 240, 0.9);
+    --BgCharacterDeco: rgba(230, 229, 218, 0.9);
+    --BgAdventure: rgba(254, 249, 245, 0.9);
+    --BgAdventureDeco: rgb(240, 231, 225, 0.9);
+
+    --BgItem: rgb(240, 245, 247, 0.9);
+    --BgItemDeco: rgba(190, 210, 237, 0.9);
+
+    --BgFacility: rgba(240, 247, 243, 0.9);
+    --BgFacilityDeco: rgba(194, 224, 201, 0.9);
+
+    /* Size */
+    --widthUnit: 57px;
+    --heightUnit: 87px;
+    --cardScale: 5;
+    --cardScale-lite: 2.5;
+    --cardWidth: calc(var(--widthUnit) * var(--cardScale));
+    --cardHeight: calc(var(--heightUnit) * var(--cardScale));
+    --cardWidth-lite: calc(var(--widthUnit) * var(--cardScale-lite));
+    --cardHeight-lite: calc(var(--heightUnit) * var(--cardScale-lite));
+    --cardTitleHeight: 32px;
+    --cardFooterHeight: 24px;
+}
+
+.guideBanner-container {
+    background-repeat: no-repeat;
+    height: 240px;
+    width: -webkit-fill-available;
+    border-radius: var(--radius-n);
+    position: relative;
+    padding: 0 32px;
+    margin: 16px;
+}
+    .guideBanner-container a {
+        position: absolute;
+        bottom: 0;
+        margin: 24px;
+    }
+
+.cardList {
+    /* padding: var(--margin-ss); */
+    width: calc(100% - var(--margin-ss) * 2);
+    display: flex;
+    min-width: 480px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+    .cardList-character {
+        width: var(--maxWidth);
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    
+
+.cardContainer {
+    max-height: calc(var(--cardHeight) - var(--cardTitleHeight));
+}
+
+.cardFrame {
+    border-radius: var(--radius-l);
+    padding: 0;
+    margin: 8px;
+    break-inside: avoid;
+    /* overflow: hidden; */
+    min-width: var(--cardWidth);
+    min-height: var(--cardHeight);
+    box-shadow: var(--shadow);
+    z-index: 0;
+    box-shadow: 0 0 4px var(--colorTransBlack1);
+    transition: box-shadow .3s;
+    position: relative;
+}
+
+    .cardFrame:hover{
+        z-index: 5;
+        box-shadow: 0 0 8px var(--colorTransBlack1);
+        transition: box-shadow .3s;
+    }
+
+.cardTitle {
+    font-weight: 600;
+    padding: .25em .5em;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    height: var(--cardTitleHeight);
+    align-items: center;
+    border-radius: var(--radius-l) var(--radius-l) 0 0;
+}
+
+    .cardTitleCol {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .cardTitleCol img {
+        height: 24px;
+        margin: 0 8px 0 0;
+    }
+
+    .cardTitleCol a, .cardTitleCol span{
+        transition: filter .3s;
+        width: var(--cardWidth);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .cardTitleCol a:hover {
+        filter: drop-shadow(0 0 2px var(--colorBlue1));
+        transition: filter .3s;
+    }
+
+.cardImage {
+    padding: 0;
+    max-width: var(--cardWidth);
+    max-height: calc(var(--cardHeight) - var(--cardTitleHeight));
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 0 var(--radius-l);
+    position: relative;
+    z-index: 3;
+}
+    .cardImage img {
+        max-width: var(--cardWidth);
+        transition: filter .5s ease-out;
+        /* height: calc(var(--cardHeight) - var(--cardTitleHeight)); */
+    }
+
+    .cardFrame:hover .cardImage img {
+        filter: grayscale(0.5) brightness(0.5) blur(1px);
+        transition: filter .5s ease-out;
+    }
+
+.cardFooter {
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    height: var(--cardFooterHeight);
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: -webkit-fill-available;
+    z-index: 1;
+    border-radius: 0 0 var(--radius-l) var(--radius-l);
+    backdrop-filter: blur(12px);
+    overflow: hidden;
+}
+
+
+    .cardFooter iframe {
+        border: none;
+        height: -webkit-fill-available;
+        width: -webkit-fill-available;
+        right: 0;
+    }
+
+    .cardFooterCol {
+        margin-left: var(--margin-n);
+        font-size: var(--fontSize-s);
+    }
+
+    .cardFooterCol img {
+        height: 100%;
+        height: -webkit-fill-available;
+    }
+
+    .cardFooterEmbeded {
+        width: -webkit-fill-available;
+        height: -webkit-fill-available;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 var(--margin-ss);
+    }
+/* Common card*/
+.common-cardList {
+    display: flex;
+    width: 100%;
+    width: -webkit-fill-available;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+
+.common-cardFrame {
+    min-height: unset !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    /* min-width: var(--cardWidth); */
+    width: var(--cardWidth);
+    height: var(--cardHeight);
+    overflow: hidden;
+}
+
+.common-cardTitleCol a, .common-cardTitleCol span{
+    transition: filter .3s;
+    width: calc(var(--cardWidth) - 40px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.common-cardContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: relative;
+    width: var(--cardWidth);
+    height: calc(var(--cardHeight) - var(--cardTitleHeight));
+    align-content: flex-end;
+    justify-content: flex-end;
+}
+
+.common-cardAddonContainer {
+    position: absolute;
+    bottom: 0;
+    width: -webkit-fill-available;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 4px 4px 8px 4px;
+}
+
+.common-cardControllContainer {
+    bottom: var(--margin-s);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    align-content: center;
+    width: 100%;
+    width: -webkit-fill-available;
+    overflow-y: scroll;
+    /* position: absolute; */
+}
+
+    .common-controller {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        margin: var(--margin-ss);
+        padding: var(--margin-ss) var(--margin-n) !important;
+        border: 0;
+        font-size: var( --fontSize-n);
+        border-radius: var( --radius-l);
+        transition: box-shadow .3s;
+        display: none;
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        font-weight: 900;
+        box-shadow: 0 2px 4px var( --colorSemiBlack1);
+        line-height: 1.5em;
+        box-sizing: content-box;
+        /* width: -webkit-fill-available; */
+        /* display: flex; */
+    }
+
+        .common-controller:hover {
+            box-shadow: 0 4px 8px rgb(0 0 0 / 50%);
+            transition: box-shadow .3s;
+            cursor: pointer;
+        }
+
+        .common-controller-alwaysShow {
+            display: flex !important;
+        }
+
+        .common-cardFrame:hover .common-controller {
+            display: flex;
+        }
+
+    .common-cardInfoContainer {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        padding: 8px;
+        box-shadow: 0 0 2px rgb(0 0 0 / 25%);
+        border-radius: var(--radius-n);
+        width: -webkit-fill-available;
+        background-color: var(--colorOpaWhite1);
+        /* overflow: hidden; */
+        /* max-height: calc(var(--heightUnit) * 1.5); */
+        max-height: var(--heightUnit);
+        flex-direction: column;
+        align-items: stretch;
+        overflow-y: scroll;
+        transition: max-height .5s ease-out, background-color .5s ease-out;
+    }
+
+        .cardFrame:hover .common-cardInfoContainer {
+            max-height: 50%;
+            background-color: var(--colorWhite1);
+            transition: max-height .5s ease-out, background-color .5s ease-out;
+        }
+
+    .common-cardInfo {
+        display: flex;
+        font-size: var(--fontSize-s);
+        /* width: 100%; */
+        /* width: -webkit-fill-available; */
+    }
+
+    .common-cardInfo-title {
+        font-size: var(--fontSize-s);
+        font-weight: 900;
+    }
+    
+    .common-cardInfo-header {
+        font-size: var(--fontSize-n);
+        font-weight: 900;
+        display: flex;
+    }
+        .common-cardInfo-header img {
+            height: 24px;
+            margin: 0 8px 0 0;
+        }
+    
+    .common-cardInfo-content {
+        font-size: var(--fontSize-s);
+        margin-left: .5em;
+    }
+
+    .common-cardinfo-list {
+        padding-inline-start: 0.5em;
+        font-size: var(--fontSize-s);
+        margin-left: .5em;
+        font-weight: inherit;
+        color: inherit;
+    }
+
+        .common-cardinfo-list li {
+            font-size: inherit;
+            color: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+        }
+
+    .common-cardInfo-type {
+        color: var(--colorGrey2);
+        font-size: var(--fontSize-s);
+        display: flex;
+        width: 100%;
+        width: -webkit-fill-available;
+        justify-content: flex-start;
+    }
+    
+    .common-cardInfo-modifier {
+        font-size: inherit;
+        color: var(--colorBlack2);
+        background: var(--colorTransWhite1);
+        padding: 4px 8px;
+        border-radius: var(--radius-n);
+        box-shadow: inset 0 0 4px var(--colorTransBlack1);
+        margin-top: 12px;
+        font-weight: 600;
+    }
+        .common-cardInfo-modifier span, .common-cardInfo-modifier div {
+            font-size: var(--fontSize-s);
+        }
+
+        .common-cardInfo-modifier hr {
+            border: none;
+            border-top: 1px dotted var(--colorWhite3);
+        }
+    
+    .common-cardInfo-desc {
+        font-size: var(--fontSize-s);
+        color: var(--colorGrey2);
+        text-align: justify;
+        white-space: pre-line;
+    }
+
+/* Item card */
+.item-cardFrame {
+    background-color: var(--BgItem);
+}
+
+.item-cardDeco {
+    background-color: var(--BgItemDeco);
+}
+
+.item-amount {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    font-size: var(--fontSize-ss);
+    font-weight: 900;
+    line-height: 15px;
+    padding: 0 8px;
+    border-radius: 0 0 var(--radius-n);
+    border: 1px solid var(--BgCharacter);
+    border-top: none;
+    border-left: none;
+    background-color: var(--BgItemDeco);
+    color: var(--colorGrey3);
+}
+
+/* .common-cardControllContainer {
+    bottom: var(--margin-s);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    align-content: center;
+    width: 100%;
+    width: -webkit-fill-available;
+    max-height: 50%;
+    overflow-y: scroll;
+} */
+
+.item-charConfirmContainer {
+    margin-top: 16px;
+    height: calc(var(--cardHeight) - 8px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 8px 8px 8px;
+    border-radius: var(--radius-l);
+}
+
+/* facility card */
+.facility-cardFrame {
+    background-color: var(--BgFacility);
+}
+
+.facility-cardDeco {
+    background-color: var(--BgFacilityDeco);
+}
+
+.facility-level {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    font-size: var(--fontSize-ss);
+    font-weight: 900;
+    line-height: 15px;
+    padding: 0 8px;
+    border-radius: 0 0 var(--radius-n);
+    border: 1px solid var(--BgCharacter);
+    border-top: none;
+    border-left: none;
+    background-color: var(--BgFacilityDeco);
+    color: var(--colorGrey3);
+}
+
+.facility-upgradeCheckContainer {
+    margin-top: 16px;
+    height: calc(var(--cardHeight) - 8px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 8px 8px 8px;
+    border-radius: var(--radius-l);
+}
+
+.facility-upgradeInfoContainer {
+    height: calc(var(--cardHeight) - 32px);
+    border-radius: var(--radius-l);
+    margin: 8px;
+    break-inside: avoid;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 16px;
+}
+    .facility-upgradeInfoContainer > div {
+        padding: 8px 0;
+    }
+
+/* Character Sheet */
+.cardFrame-character {
+    background-color: var(--BgCharacter);
+    width: 100%;
+    width: -webkit-fill-available;
+    min-height: unset !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    min-width: max-content;
+    max-width: var(--maxWidth);
+}
+
+.character-cardTitleCol a{
+    transition: filter .3s;
+    width: calc(var(--cardWidth) * 2 - 40px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.cardDeco-character {
+    background-color: var(--BgCharacterDeco);
+}
+
+.cardContainer-character {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    /* min-width: max-content; */
+}
+
+.characterScoreContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 8px 0 calc(var(--cardFooterHeight) + 8px) 0;
+    align-items: stretch;
+    width: var(--cardWidth);
+    justify-content: space-between;
+    align-content: center;
+    z-index: 2;
+}
+
+    .characterScoreRow {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        align-content: center;
+        padding: 0 0.5em;
+    }
+
+    .characterScoreStrength {
+        font-weight: normal;
+        font-size: var(--fontSize-s);
+        background: inherit;
+        padding: 0 4px;
+        border-radius: var(--radius-n);
+    }
+
+    .characterAttrContainer {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        /* min-width: 92px; */
+        /* min-height: 92px; */
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 4px;
+        box-shadow: 0 0 2px rgb(0 0 0 / 25%);
+        margin: 5px;
+        border-radius: var(--radius-n);
+        width: -webkit-fill-available;
+        background-color: var(--colorSemiWhite1);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .character-scoreBarContainer {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        bottom: 0;
+        width: 100%;
+        width: -webkit-fill-available;
+        justify-content: center;
+        color: var(--colorWhite1);
+        font-weight: 900;
+        font-size: var(--fontSize-sss);
+        height: 12px;
+        background: var(--colorGrey1);
+    }
+
+        .character-scoreBar-num {
+            z-index: 1;
+            color: var(--colorWhite1);
+            font-size: var(--fontSize-ss);
+        }
+
+        .character-scoreBar {
+            display: block;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: rgb(3 132 0);
+            background: linear-gradient(135deg, rgb(100 175 9) 0%, rgb(3 132 0));
+        }
+
+    .characterAttrName {
+        font-size: var(--fontSize-s);
+        color: var(--colorBlack3);
+        text-align: center;
+        width: 100%;
+    }
+
+    .characterAttrMain {
+        font-size: var(--fontSize-lll);
+        line-height: unset;
+        font-weight: 900;
+        width: 100%;
+        text-align: center;
+        padding: 6px 0 10px 0;
+        min-height: 32px;
+    }
+
+    .characterImmune {
+        font-size: var(--fontSize-n);
+        line-height: unset;
+        font-weight: 900;
+        width: 100%;
+        text-align: center;
+        padding: 6px 0;
+        min-height: 32px;
+    }
+
+    .characterAttrTotal {
+        font-size: var(--fontSize-ss);
+    }
+
+.characterPortrait {
+    padding: 0;
+    max-width: var(--cardWidth);
+    max-height: calc(var(--cardHeight) - var(--cardTitleHeight));
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 0 var(--radius-l);
+    position: relative;
+    z-index: 3;
+}
+
+    .characterPortrait img {
+        max-width: var(--cardWidth);
+        height: calc(var(--cardHeight) - var(--cardTitleHeight));
+        transition: filter .5s ease-out;
+        border-radius: 0 0 0 var(--radius-l);
+    }
+
+    .cardFrame:hover .characterPortrait img {
+        filter: grayscale(0.5) brightness(0.5) blur(1px);
+        transition: filter .5s ease-out;
+    }
+
+.character-stat {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    font-size: var(--fontSize-ss);
+    font-weight: 900;
+    line-height: 15px;
+    padding: 0 5px;
+    border-radius: 0 0 var(--radius-n);
+    border: 1px solid var(--BgCharacter);
+    border-top: none;
+    border-left: none;
+}
+
+    .characterStat-resting {
+        background: rgb(3 132 0);
+        background: linear-gradient(135deg, rgb(100 175 9) 0%, rgb(3 132 0));
+        color: var(--colorWhite1);
+    }
+
+    .characterStat-building {
+        background: rgb(105 120 43);
+        background: linear-gradient(135deg, rgb(140 156 119) 0%, rgb(105 119 43));
+        color: var(--colorWhite1);
+    }
+
+    .characterStat-adventure {
+        background: rgb(255, 15, 15);
+        background: linear-gradient(135deg, rgb(221 167 19) 0%, rgb(255 72 0));
+        color: var(--colorWhite1);
+    }
+
+.characterControllerContainer {
+    position: absolute;
+    bottom: var(--margin-s);
+    /* display: none; */
+    width: calc(var(--cardWidth) - 24px);
+}
+    .cardFrame-character:hover .characterControllerContainer {
+        /* display: block; */
+    }
+
+    .characterController {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        margin: var(--margin-ss);
+        padding: var(--margin-ss) var(--margin-n) !important;
+        border: 0;
+        font-size: var( --fontSize-n);
+        border-radius: var( --radius-l);
+        transition: box-shadow .3s;
+        display: none;
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        font-weight: 900;
+        box-shadow: 0 2px 4px var( --colorSemiBlack1);
+        line-height: 1.5em;
+        box-sizing: content-box;
+    }
+
+    .cardFrame-character:hover .characterController {
+        display: flex;
+    }
+
+    .characterController:hover {
+        box-shadow: 0 4px 8px rgb(0 0 0 / 50%);
+        transition: box-shadow .3s;
+        cursor: pointer;
+    }
+
+.characterAddon {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 8px 0 0 0;
+    min-width: 360px;
+    max-width: fit-content;
+    overflow-y: scroll;
+    width: calc(100% - var(--cardWidth) * 2);
+    flex-direction: column;
+}
+
+    .characterAddonRow {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+        justify-content: flex-start;
+        padding-bottom: 1em;
+    }
+
+    .characterAddonHeader {
+        width: 100%;
+        display: block;
+        padding: 0 0 0 0.5em;
+        font-size: var(--fontSize-l);
+        font-weight: 900;
+        color: var(--colorGrey3);
+    }
+
+    .characterAddon-bio {
+        word-break: break-word;
+        padding: 0 var(--fontSize-l) 1em calc(var(--fontSize-l) * .5);
+        text-align: justify;
+        color: var(--colorGrey3);
+        white-space: pre-line;
+        line-height: 1.5em;
+        font-size: var(--fontSize-s);
+    }
+
+    .characterAddon-empty {
+        word-break: break-word;
+        padding: 0 var(--fontSize-l) 1em calc(var(--fontSize-l) * .5);
+        text-align: justify;
+        color: var(--colorGrey3);
+        white-space: pre-line;
+        line-height: 0.5em;
+        font-size: var(--fontSize-s);
+    }
+
+    .characterAddon-comingSoon {
+        word-break: break-word;
+        padding: 0 var(--fontSize-l) 1em calc(var(--fontSize-l) * .5);
+        text-align: justify;
+        color: var(--colorGrey1);
+        white-space: initial;
+        width: 100%;
+        line-height: 1.5em;
+        font-size: var(--fontSize-s);
+    }
+
+.characterLike {
+    padding: 0 var(--margin-n);
+    margin: 0 var(--margin-sss);
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    transition: filter .3s;
+}
+
+.characterLike:hover {
+    color: var(--colorRed1) !important;
+    filter: drop-shadow(0 0 2px var(--colorRed1));
+    transition: filter .3s;
+}
+
+.character-enhance-container {
+    margin: 8px;
+    padding: var( --margin-sss);
+    border: 0;
+    font-size: var(--fontSize-ll);
+    border-radius: var(--radius-l);
+    transition: box-shadow .3s;
+    display: flex;
+    align-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: inset 0 0 8px var(--colorTransBlack1);
+    line-height: 1.5em;
+    box-sizing: content-box;
+    width: -webkit-fill-available;
+}
+
+/* Character Sheet - Lite */
+.characterLite-charList {
+    width: var(--maxWidth);
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.characterLite-cardFrame {
+    background-color: var(--BgCharacter);
+    width: 100%;
+    height: calc(var(--cardHeight-lite) - var(--cardTitleHeight));
+    min-height: unset !important;
+    margin: 8px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    /* max-width: calc(50% - 16px); */
+    overflow: hidden;
+}
+
+    .characterLite-50 {
+        max-width: calc(50% - 16px);
+    }
+
+.characterLite-cardContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: relative;
+    width: -webkit-fill-available;
+}
+
+.characterLite-titleCol {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    white-space: nowrap;
+    width: 0;
+    transition: filter .3s;
+}
+
+    .characterLite-titleCol a:hover {
+        filter: drop-shadow(0 0 2px var(--colorBlue1));
+        transition: filter .3s;
+    }
+
+.characterLite-portrait {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius-l) 0 0 var(--radius-l);
+    position: relative;
+    z-index: 3;
+    height: 100%;
+}
+    .characterLite-portrait img {
+        height: calc(var(--cardHeight-lite) - var(--cardTitleHeight));
+        transition: filter .5s ease-out;
+    }
+
+    .cardFrame:hover .characterLite-portrait img {
+        filter: grayscale(0.5) brightness(0.5) blur(1px);
+        transition: filter .5s ease-out;
+    }
+
+
+.characterLite-stat {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        font-size: var(--fontSize-ss);
+        font-weight: 900;
+        line-height: 15px;
+        padding: 0 8px;
+        border-radius: 0 0 var(--radius-l);
+        border: 1px solid var(--BgCharacter);
+        border-top: none;
+        border-left: none;
+    }
+
+.characterLite-cardTitle {
+    font-weight: 600;
+    padding: 2px 8px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    height: var(--cardTitleHeight);
+    align-items: center;
+}
+
+.characterLite-detailContainer {
+    height: 100%;
+    height: -webkit-fill-available;
+    max-height: calc(var(--cardHeight-lite) - var(--cardTitleHeight) * 2 - 4px);
+}
+
+    .characterLite-detail-score {
+        padding: 0 12px;
+        height: 100%;
+        width: -webkit-fill-available;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .characterLite-detail-addon {
+        display: none;
+        overflow-y: scroll;
+        padding: 0 12px;
+        height: 100%;
+        width: -webkit-fill-available;
+        white-space: normal;
+        word-break: break-all;
+        flex-direction: column;
+        zoom: .75;
+    }
+
+    .characterLite-cardFrame:hover .characterLite-detail-score {
+        display: none;
+    }
+
+    .characterLite-cardFrame:hover .characterLite-detail-addon {
+        display: flex;
+    }
+
+.characterLite-rowContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+}
+
+.characterLite-colContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0 0 0;
+}
+
+.characterLite-scoreContainerAttr {
+    padding: 0 8px;
+    min-width: var(--widthUnit);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 1;
+}
+
+.characterLite-attrName {
+    font-size: var(--fontSize-ss);
+    line-height: 0.5;
+    font-weight: 300;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.characterLite-score {
+    font-size: var(--fontSize-n);
+    font-weight: 600;
+}
+
+.characterLite-actionPointContainer {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    width: -webkit-fill-available;
+    justify-content: center;
+    /* background: var(--colorTransWhite1); */
+    color: var(--colorWhite1);
+    font-weight: 900;
+    font-size: var(--fontSize-sss);
+    height: 16px;
+}
+
+.characterLite-actionPointNum {
+    color: var(--colorWhite1);
+    font-weight: 900;
+    font-size: var(--fontSize-sss);
+    z-index: 2;
+}
+
+.characterLite-actionPoint {
+    display: block;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    border-radius: 0 0 0 var(--radius-l);
+    top: 0;
+    background: rgb(3 132 0);
+    background: linear-gradient(135deg, rgb(100 175 9) 0%, rgb(3 132 0));
+}
+
+.characterLite-controllerContainer {
+    position: absolute;
+    width: -webkit-fill-available;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+}
+    .characterLite-cardFrame:hover .characterLite-controllerContainer {
+        /* display: block; */
+    }
+
+    .characterLite-controller {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        margin: var(--margin-ss);
+        padding: var(--margin-sss) 0 !important;
+        border: 0;
+        font-size: var( --fontSize-s);
+        border-radius: var( --radius-n);
+        transition: box-shadow .3s;
+        display: none;
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        font-weight: 900;
+        box-shadow: 0 2px 4px var( --colorSemiBlack1);
+        line-height: 1.5em;
+        box-sizing: content-box;
+    }
+
+    .characterLite-cardFrame:hover .characterLite-controller {
+        display: flex;
+    }
+
+    .characterLite-controller:hover {
+        box-shadow: 0 4px 8px rgb(0 0 0 / 50%);
+        transition: box-shadow .3s;
+        cursor: pointer;
+    }
+
+    .characterLite-controller-alwaysShow {
+        display: flex !important;
+    }
+
+/* Adventure Card Style */
+.adventure-cardFrame {
+    background-color: var(--BgAdventure);
+    width: 100%;
+    width: -webkit-fill-available;
+    min-height: unset !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    min-width: max-content;
+    max-width: var(--maxWidth);
+}
+
+    .adventure-cardFrame-bg-sealed {
+        backdrop-filter: brightness(0.95) grayscale(1);
+        transition: filter 1s;
+    }
+
+    .adventure-cardFrame-sealed {
+        filter: brightness(0.95) grayscale(1);
+        transition: filter 1s;
+    }
+
+    .adventure-cardFrame:hover .adventure-cardFrame-sealed, 
+    .adventure-cardFrame:hover .adventure-cardFrame-bg-sealed {
+        filter: none;
+        transition: filter 1s;
+    }
+
+.adventure-cardDeco {
+    background-color: var(--BgAdventureDeco);
+}
+
+.adventure-cardContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: relative;
+    max-height: calc(var(--cardWidth) - var(--cardTitleHeight));
+    justify-content: flex-start;
+}
+
+.adventure-countdown {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: var(--margin-ss);
+    padding: var(--margin-ss) var(--margin-n) !important;
+    border: 0;
+    font-size: var( --fontSize-n);
+    border-radius: var( --radius-l);
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    box-shadow: 0 2px 4px var( --colorSemiBlack1);
+    line-height: 1.5em;
+    box-sizing: content-box;
+    display: flex;
+}
+
+.adventure-ControllerContainer {
+    position: absolute;
+    bottom: var(--margin-s);
+    /* display: none; */
+    width: calc(100% - 24px);
+}
+
+.adventure-controller {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: var(--margin-ss);
+    padding: var(--margin-ss) var(--margin-n) !important;
+    border: 0;
+    font-size: var( --fontSize-n);
+    border-radius: var( --radius-l);
+    transition: box-shadow .3s;
+    display: none;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 900;
+    box-shadow: 0 2px 4px var( --colorSemiBlack1);
+    line-height: 1.5em;
+    box-sizing: content-box;
+}
+
+    .adventure-cardFrame:hover .adventure-controller {
+        display: flex;
+    }
+
+    .adventure-controller-alwaysShow {
+        display: flex !important;
+    }
+
+    .adventure-controller:hover {
+        box-shadow: 0 4px 8px rgb(0 0 0 / 50%);
+        transition: box-shadow .3s;
+        cursor: pointer;
+    }
+
+.adventure-coverImage {
+    padding: 0;
+    max-width: var(--cardHeight);
+    max-height: calc(var(--cardWidth));
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 0 var(--radius-l);
+    position: relative;
+    z-index: 3;
+    width: var(--cardHeight);
+}
+
+    .adventure-coverImage img {
+        max-width: var(--cardHeight);
+        height: calc(var(--cardWidth));
+    }
+
+.adventure-type {
+    font-weight: normal;
+    font-size: var(--fontSize-s);
+}
+
+.adventure-addon {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 8px 0 0 0;
+    min-width: 360px;
+    /* max-width: fit-content; */
+    overflow-y: scroll;
+    width: calc(100% - var(--cardHeight));
+    flex-direction: column;
+}
+
+    .adventure-addonRow {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: flex-start;
+        justify-content: flex-start;
+        padding-bottom: 1em;
+        max-width: fit-content;
+    }
+
+    .adventure-addonHeader {
+        width: 100%;
+        display: block;
+        padding: 0 0 0 0.5em;
+        font-size: var(--fontSize-l);
+        font-weight: 900;
+        color: var(--colorGrey3);
+    }
+
+    .adventure-addon-content {
+        width: 100%;
+        word-break: break-word;
+        padding: 0 var(--fontSize-l) 0 calc(var(--fontSize-l) * .5);
+        text-align: justify;
+        color: var(--colorGrey3);
+        line-height: 1.5em;
+        font-size: var(--fontSize-s);
+    }
+
+        .adventure-addon-content td {
+            font-size: var(--fontSize-s);
+            color: var(--colorGrey3);
+        }
+
+    .adventure-addon-itemFound {
+        width: 100%;
+    }
+
+        .adventure-addon-itemFoundList {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-left: 18px;
+            border-left: 1px dotted var(--colorOpaGrey1);
+        }
+
+    .adventure-addon-desc {
+        word-break: break-word;
+        padding: 0 var(--fontSize-l) 1em calc(var(--fontSize-l) * .5);
+        text-align: justify;
+        color: var(--colorGrey3);
+        white-space: pre-line;
+        line-height: 1.5em;
+        font-size: var(--fontSize-s);
+    }
+
+/* RollInfo */
+.diceIcon img {
+    height: calc(1em - 2px);
+    filter: drop-shadow(1px 1px 1px var(--colorSemiBlack1));
+    margin: auto 2px;
+}
+
+/* Adventure log*/
+
+.adventureLog-row {
+    width: 100%;
+    width: -webkit-fill-available;
+    display: block;
+}
+
+    .adventureLog-row ul {
+        padding-inline-start: 8px;
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 1em;
+        margin-inline-end: 0px;
+    }
+
+    .adventureLog-row li {
+        /* line-height: 1em; */
+    }
+
+.adventureLog-row-detail {
+    margin: var(--margin-sss);
+    padding: var( --margin-n);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    border-radius: var(--radius-n);
+    box-shadow: inset 0 0 5px rgb(0 0 0 / 25%);
+    background-color: var(--colorOpaWhite1);
+}
+
+.adventureLog-consequence {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    z-index: 2;
+}
+
+.adventureLog-consequence img {
+    height: 20px;
+    filter: drop-shadow(0 2px 1px rgba(0,0,0,.10));
+}
+
+.adventureLog-check-failed li {
+    color: var(--colorRed3);
+    /* text-decoration: line-through 1px solid var(--colorSemiWhite2); */
+}
+
+.adventureLog-check-succeeded li {
+    color: var(--colorGreen3);
+}
+
+.adventureLog-rollInfo-tooltip {
+    font-size: var(--fontSize-ss);
+    color: var(--colorWhite1);
+    padding: 0 4px;
+    display: inline-block;
+    background-color: var(--colorGrey1);
+    border-radius: var(--radius-n);
+    filter: drop-shadow(0 0 2px var(--colorSemiBlack1));
+    transition: all .5s;
+    line-height: var(--fontSize-n);
+    border: 1px solid var(--colorGrey1);
+}
+
+    .adventureLog-rollInfo-tooltip:hover {
+        filter: drop-shadow(0 2px 4px var(--colorSemiBlack1));
+        transition: all .5s;
+        background-color: var(--colorGrey2);
+        border: 1px solid var(--colorWhite1);
+        cursor: pointer;
+    }
+
+.adventureLog-rollInfo {
+    display: inline;
+    position: relative;
+}
+
+    .adventureLog-rollInfo div {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: max-content;
+        background: var(--colorOpaWhite1);
+        padding: 8px;
+        border-radius: var(--radius-n);
+        box-shadow: 0 0 8px var(--colorTransBlack1);
+    }
+        .adventureLog-rollInfo div ul {
+            padding: 0;
+        }
+
+    .adventureLog-rollInfo:hover div{
+        display: block;
+    }
+
+
+/* Events */
+.event-cardFrame {
+    min-height: unset !important;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    height: var(--cardHeight);
+    border-radius: var(--radius-l);
+    padding: 0;
+    margin: 8px;
+    break-inside: avoid;
+    z-index: 0;
+    box-shadow: 0 0 4px var(--colorTransBlack1);
+    transition: box-shadow .3s;
+    position: relative;
+    overflow: hidden;
+    flex-direction: row;
+    width: 100%;
+    width: -webkit-fill-available;
+}
+
+.event-cardImage {
+    width: var(--cardWidth);
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+    .event-cardImage img {
+        width: 100%;
+        width: -webkit-fill-available;
+    }
+
+.event-cardControllContainer {
+    bottom: var(--margin-s);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    align-content: center;
+    width: 100%;
+    width: -webkit-fill-available;
+    overflow-y: scroll;
+    position: absolute;
+}
+
+.event-detail {
+    display: flex;
+    margin: var(--margin-sss);
+    padding: var( --margin-n);
+    position: relative;
+    overflow-y: scroll;
+    height: 100%;
+    height: -webkit-fill-available;
+    width: 100%;
+    width: -webkit-fill-available;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+    .event-detail p {
+        margin: 1em 0;
+    }
+
+.event-dueTime {
+    border-radius: var(--margin-n);
+    height: var(--margin-l);
+    font-size: var(--fontSize-n);
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4px;
+    box-shadow: inset 0 0 4px var(--colorTransBlack1);
+    padding: 0 12px;
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    font-weight: 600;
+}
+    .event-dueTime-ongoing {
+        background-color: var(--colorSemiGreen1);
+        color: var(--colorWhite1);
+    }
+
+    .event-dueTime-upcoming {
+        background-color: var(--colorSemiBlue1);
+        color: var(--colorWhite1);
+    }
+
+.event-stat {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    font-size: var(--fontSize-ss);
+    font-weight: 900;
+    line-height: 15px;
+    padding: 2px 8px;
+    border-radius: 0 0 var(--radius-n);
+    border: 1px solid var(--BgCharacter);
+    border-top: none;
+    border-left: none;
+}
+
+    .event-ongoing {
+        background: rgb(0 133 15);
+        background: linear-gradient(135deg, rgb(168 228 0) 0%, rgb(2 206 23) 100%);
+        color: var(--colorWhite1);
+    }
+
+    .event-upcoming {
+        background: rgb(0 109 133);
+        background: linear-gradient(135deg, rgb(0 228 225) 0%, rgb(2 99 206) 100%);
+        color: var(--colorWhite1);
+    }
+
+    .event-overdue {
+        background: rgb(122 122 122);
+        background: linear-gradient(135deg, rgb(110 110 110) 0%, rgb(51 51 51) 100%);
+        color: var(--colorWhite1);
+    }
+
+/* Tags */
+.tagLink {
+    vertical-align: middle;
+}
+
+.tag {
+    padding: 0 1em 0 0;
+    border-radius: 12px;
+    font-size: var(--fontSize-s);
+    margin: 0.5em;
+    width: fit-content;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    height: 24px;
+    transition: box-shadow .3s;
+    position: relative;
+    white-space: nowrap;
+}
+
+    .tag:hover {
+        box-shadow: 0 0 8px rgb(0 0 0 / 40%);
+        transition: box-shadow .3s;
+    }
+
+    .tagImg {
+        margin: 0 8px 0 0;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        border-radius: 12px;
+    }
+
+    .tagImg img{
+        height: 22px;
+        margin: 0;
+    }
+
+    .tagUser {
+        background-color: rgb(240 243 244);
+    }
+
+    .tagCharacter {
+        background-color: rgb(255 234 211);
+    }
+
+    .tagFeature {
+        background-color: rgb(241, 209, 255);
+    }
+
+        .tagFeature-poor {
+            border-radius: 100%;
+            height: var(--margin-l);
+            width: var(--margin-l);
+            font-size: 11px;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            color: var(--colorGrey1);
+            margin-left: 4px;
+            box-shadow: inset 0 0 4px var(--colorTransBlack1);
+        }
+
+    .tagAbility {
+        background-color: rgb(255, 227, 157);
+    }
+
+    .tagEquipSlot {
+        background-color: rgb(217 226 238);
+        box-shadow: inset 0 0 4px var(--colorTransBlack3);
+        color: var(--colorGrey1);
+    }
+
+    .tagItem {
+        background-color: rgb(190, 210, 237);
+    }
+
+        .tagItem-amount {
+            border-radius: var(--margin-n);
+            height: var(--margin-l);
+            font-size: 11px;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            color: var(--colorGrey1);
+            margin-left: 4px;
+            box-shadow: inset 0 0 4px var(--colorTransBlack1);
+            padding: 0 4px;
+        }
+
+    .tagAdventure {
+        background-color: rgb(205 222 226);
+    }
+
+        .tagAdventure-title {
+            font-size: var(--fontSize-s);
+            line-height: 8px;
+            max-height: 100%;
+        }
+
+        .tagAdventure-date {
+            zoom: 0.6;
+            line-height: 0;
+            margin-top: 10px;
+            color: var(--colorGrey1);
+        }
+
+
+/* modifiers & multipliers */
+.modPositive {
+    font-size: inherit;
+    color: var(--colorGreen2) !important;
+}
+
+.modNegative {
+    font-size: inherit;
+    color: var(--colorRed2) !important;
+}
+
+.modSpecial {
+    font-size: inherit;
+    color: var(--colorGrey1) !important;
+}
+
+
+/* tooltip styles*/
+.tooltip-title {
+    min-height: var(--cardTitleHeight);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 900;
+    align-content: center;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+    .tooltip-title img{
+        height: 24px;
+        margin: 0 8px 0 0;
+    }
+
+/* Rarity styles*/
+.tooltip-rarity {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 10px;
+    padding: 0 8px;
+    border-radius: 0 var(--radius-n) 0 var(--radius-n);
+    line-height: 12px;
+    font-weight: 900;
+}
+    .rarity-1 {
+        background: rgb(255, 15, 15);
+        background: linear-gradient(135deg, rgb(19, 157, 221) 0%, rgb(255, 15, 203) 70%, rgb(255, 0, 0));
+        color: var(--colorWhite1);
+    }
+
+    .rarity-2 {
+        background: rgb(243, 130, 37);
+        background: linear-gradient(135deg, rgb(243, 130, 37) 0%, rgb(151, 0, 197) 100%);
+        color: var(--colorWhite1);
+    }
+
+    .rarity-3 {
+        background: rgb(151, 0, 197);
+        background: linear-gradient(135deg, rgb(151, 0, 197) 0%, rgb(44, 167, 255) 100%);
+        color: var(--colorWhite1);
+    }
+
+    .rarity-4 {
+        background: rgb(54, 18, 255);
+        color: var(--colorWhite1);
+    }
+
+    .rarity-5 {
+        background: rgb(20, 177, 169);
+        color: var(--colorWhite1);
+    }
+
+    .rarity-6 {
+        background: rgb(8, 120, 8);
+        color: var(--colorWhite1);
+    }
+
+.tooltip-row {
+    display: flex;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.tooltip-info {
+    display: flex;
+}
+
+    .tooltip-info-title {
+        font-size: inherit;
+        font-weight: 900;
+    }
+
+    .tooltip-info-content {
+        font-size: inherit;
+        margin-left: .5em;
+    }
+
+.tooltip-scoreContainer {
+    font-size: var(--fontSize-ss);
+    color: var(--colorBlack2);
+    background: var(--colorTransWhite1);
+    padding: 12px 8px;
+    border-radius: var(--radius-n);
+    box-shadow: inset 0 0 4px var(--colorTransBlack1);
+    font-weight: 600;
+}
+
+    .tooltip-scoreMain {
+        font-size: var(--fontSize-lll);
+        line-height: unset;
+        font-weight: 900;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        min-height: 32px;
+    }
+
+    .tooltip-scoreName {
+        font-size: var(--fontSize-s);
+        color: var(--colorBlack3);
+        text-align: center;
+        width: 100%;
+        line-height: 1em;
+    }
+
+    .tooltip-scoreRecovery {
+        font-size: var(--fontSize-ss);
+        color: var(--colorGrey2);
+        width: -webkit-fill-available;
+        text-align: center;
+    }
+
+/* Tooltip rollInfo */
+.tooltip-rollInfo-main {
+    font-size: var(--fontSize-n);
+    color: var(--colorBlack2);
+    font-weight: 900;
+}
+
+.tooltip-rollInfo-total {
+    color: var(--colorBlack2);
+    background: var(--colorTransWhite1);
+    padding: 12px 8px;
+    border-radius: var(--radius-n);
+    box-shadow: inset 0 0 4px var(--colorTransBlack1);
+    font-weight: 600;
+    text-align: center;
+}
+
+.tooltip-rollInfo-totalResult {
+    border-top: 1px dotted var(--colorSemiGrey1);
+    font-size: var(--fontSize-lll);
+}
+
+.tooltip-rollInfo-results {
+    padding-left: 6px;
+    border-left: 1px dotted var(--colorSemiGrey1);
+    margin-left: 6px;
+}
+
+.tooltip-rollInfo-summary {
+    font-weight: 600;
+    font-size: var(--fontSize-n);
+    color: var(--colorGrey2);
+    padding: 8px 0;
+    border-radius: var(--radius-n);
+}
+    .tooltip-rollInfo-summary p {
+        color: var(--colorGrey1);
+        font-weight: initial;
+        font-size: var(--fontSize-s);
+    }
+
+.tooltip-rollInfo-detail {
+    color: var(--colorGrey1);
+    /* font-weight: 600; */
+    /* border-top: 1px dotted var(--colorSemiGrey1); */
+    /* margin-left: 12px; */
+}
+
+/* Chart styles*/
+.chart-staking-container {
+    display: block;
+    height: 32px;
+    width: -webkit-fill-available;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 0 8px var(--colorSemiBlack1);
+}
+
+.chart-staking-mine {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+.chart-staking-myStaked {
+    height: 100%;
+    background: linear-gradient(90deg, rgb(0 101 197) 0%, rgb(108 218 145) 100%);
+    box-shadow: inset 0 0 8px var(--colorTransBlack1);
+}
+
+.chart-staking-myStaking {
+    height: 100%;
+    background: linear-gradient(90deg, rgb(96 195 90) 0%, rgb(91 241 91) 100%);
+    box-shadow: inset 0 0 8px var(--colorTransBlack1);
+    border-left: 1px solid var(--colorSemiWhite2);
+}
+
+.chart-staking-myRatio {
+    position: absolute;
+    left: 8px;
+    z-index: 1;
+    height: 100%;
+    vertical-align: middle;
+    line-height: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.chart-staking-total {
+    position: absolute;
+    right: 8px;
+    z-index: 1;
+    height: 100%;
+    vertical-align: middle;
+    line-height: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.staking-container {
+    padding: var( --margin-l) 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    align-items: flex-start;
+    border-radius: var(--radius-n);
+    box-shadow: inset 0 0 5px rgb(0 0 0 / 25%);
+    text-align: justify;
+    width: calc(50% - 8px);
+}
+
+.staking-diffAdd {
+    color: var(--colorGreen3);
+}
+
+.staking-diffSub {
+    color: var(--colorRed1);
+}
+
+/* Special styles */
+.sticker {
+    position: absolute;
+    z-index: 3;
+    bottom: 50%;
+    font-size: var(--fontSize-lll);
+    font-weight: 900;
+    transform: rotate(-15deg);
+    padding: 8px;
+    border-radius: var(--radius-n);
+}
+
+/* Transaction styles */
+.transaction-success {
+    color: var(--colorWhite1);
+    background-color: var(--colorGreen1);
+    font-size: var(--fontSize-s);
+    padding: 2px 8px;
+    border-radius: 8px;
+}
+
+.transaction-error {
+    color: var(--colorWhite1);
+    background-color: var(--colorRed1);
+    font-size: var(--fontSize-s);
+    padding: 2px 8px;
+    border-radius: 8px;
+}
+
+.transaction-notSealed {
+    color: var(--colorWhite1);
+    background-color: var(--colorGrey1);
+    font-size: var(--fontSize-s);
+    padding: 2px 8px;
+    border-radius: 8px;
+}
+
+/* Network selector */
+.networkSelector {
+    display: block;
+    padding: 0 !important;
+    margin: var(--margin-sss) 0;
+}
+
+.networkSelector-label {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+}
+
+.networkSelector-networkName {
+    display: block;
+    width: -webkit-fill-available;
+    padding: 0;
+}
+
+.networkSelector-menu {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    font-size: var(--fontSize-l);
+    justify-content: center;
+}

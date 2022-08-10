@@ -1,0 +1,19 @@
+<div class="tooltip-rarity flexRight {?$rarityStyle?}">
+    {?$rarity?} {?$debug?}
+</div>
+<div class="nzContainer nzTooltip widthFill">
+    <div class="common-cardInfo-header widthFill">
+        <img src="{?!siteRoot?}{?!relDirImg?}/ico.feature.{?$featureType?}.png">{?$featureName?}
+    </div>
+
+    <div class="common-cardInfo fontSizeSS">
+        <span class="common-cardInfo-title colorGrey1">{?common.feature.type?}</span> <span class="common-cardInfo-content colorGrey1">{?featureType.{?$featureType?}?}</span>
+    </div>
+
+    <div class="common-cardInfo-modifier widthFill {?$modDisplay?}">
+        {?$modifiers?}
+    </div>
+    <div class="common-cardInfo-desc widthFill">
+        {?$desc?}
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="nzContainer widthFill">
+    <h3 class="textCenter">{?header.transferItem.confirm?}</h3>
+</div>
+
+<div class="nzContainer widthFill flexRow flexTop">
+    <div class="nzContainer flexRight sticky">
+        {?$itemCard?}
+    </div>
+    <div class="nzContainer item-charConfirmContainer bgOpaWhite1 shadow1 widthFill">
+        {?$charSheet?}
+        <form class="nomargin nopadding nzForm widthFill" method="get" action="./">
+            <input type="hidden" name="_back" value="{?$backUrl?}" readonly>
+            <input type="hidden" name="item" value="{?$itemCode?}" readonly>
+            <input type="hidden" name="char" value="{?$charId?}" readonly>
+            <div class="nopadding nzContainer widthFill">
+                <label>
+                    <span>{?label.item.transfer.amount?}</span>
+                </label>
+                <input type="number" name="amount" step="1" value="1" min="1" max="{?$maxStock?}" oninput="if(value>{?$maxStock?})value={?$maxStock?}">
+            </div>
+    
+            <!-- buttons -->
+            <div class="fontSizeLLL nomargin nzFormRow padding-left-sss padding-right-sss widthFill">
+                <a href="{?!back?}" class="widthFill">
+                    <div class="bgBrighterBlur2 bgOpaBlue2 colorWhite1 nzButton">
+                        {?button.cancel?}
+                    </div>
+                </a>
+                <input type="submit" class="bgBrighterBlur2 bgOpaGreen1 colorWhite1 nzButton" name="submit" value="{?button.transfer?}">
+            </div>
+        </form>
+    </div>
+</div>

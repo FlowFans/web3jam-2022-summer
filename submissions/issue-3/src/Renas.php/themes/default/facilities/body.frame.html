@@ -1,0 +1,15 @@
+<div class="nzContainer widthFill">
+    <h3 class="textCenter">{?header.myFacilities?}</h3>
+    {?$pager?}
+    <div class="common-cardList">
+        {?$facilityList?}
+    </div>
+    {?$pager?}
+</div>
+
+<div class="nzContainer widthFill {?$showBuilding?}">
+    <h3 class="textCenter">{?header.myFacilities.building?}</h3>
+    <div class="common-cardList">
+        {?$buildingList?}
+    </div>
+</div>

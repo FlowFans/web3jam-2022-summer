@@ -1,0 +1,83 @@
+<div class="cardFrame adventure-cardFrame adventure-stat-{?--stat?}">
+    <div class="cardTitle adventure-cardDeco">
+        <div class="cardTitleCol">
+            <img src="{?!dirImg?}ico.adventure.png">
+            {?--adventureName?}
+        </div>
+        <div class="cardTitleCol adventure-type colorGrey1">
+            {?--adventureType?}
+        </div>
+    </div>
+    <div class="cardContainer adventure-cardContainer">
+        <div class="adventure-coverImage">
+            <img src="{?--coverImage?}">
+            <div class="adventure-ControllerContainer">
+                <a href="{?--url?}">
+                    <div class="adventure-controller bgBrighterBlur1 bgOpaGreen1 colorWhite1 adventure-controller-alwaysShow">
+                        {?common.adventure.stakeAndUnstake?}
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="adventure-addon">
+            <div class="adventure-addonRow">
+                <div class="adventure-addonHeader">
+                    {?common.staking?}
+                </div>
+                <div class="adventure-addon-content">
+                    {?common.staking.currentStaked?} <b>{?--staking.myStaked?}</b> {?common.staking.mine?} {?common.slash?} <b>{?--staking.totalStaked?}</b> {?common.staking.overall?}
+                </div>
+                <div class="adventure-addon-content">
+                    {?common.staking.stakeNextEpoch?} <b>{?--staking.myStaking?}</b> {?common.staking.mine?} {?common.slash?} <b>{?--staking.totalStaking?}</b> {?common.staking.overall?}
+                </div>
+            </div>
+            <div class="adventure-addonRow">
+                <div class="adventure-addonHeader">
+                    {?common.adventure.ownership?}
+                </div>
+                <div class="adventure-addon-content {?--hideNoneOwner?}">{?common.none?}</div>
+                <div class="adventure-addon-content {?--hideOwner?}">{?common.adventure.owners?} {?--ownerCount?}</div>
+                <div class="adventure-addon-content {?--hideOwner?}">{?common.adventure.topOwners?} {?--ownership?}</div>
+            </div>
+            <div class="adventure-addonRow">
+                <div class="adventure-addonHeader">
+                    {?common.adventure.statistics?}
+                </div>
+                <div class="adventure-addon-content">{?common.adventure.statistics.total?} {?--adventures.total?}</div>
+                <div class="adventure-addon-content">{?common.adventure.statistics.lastEpoch?} {?--adventures.lastEpoch?}</div>
+            </div>
+            <div class="adventure-addonRow">
+                <div class="adventure-addonHeader">
+                    {?common.adventure.requirement?}
+                </div>
+                <div class="adventure-addon-content">{?--requirement.team?}</div>
+                <div class="adventure-addon-content">{?--requirement.strength?}</div>
+                <div class="adventure-addon-content">{?--requirement.apCost?}</div>
+            </div>
+            <div class="adventure-addonRow">
+                <div class="adventure-addonHeader">
+                    {?common.adventure.duration?}
+                </div>
+                <div class="adventure-addon-content">{?--duration?}</div>
+                <div class="adventure-addon-content">{?common.adventure.durationNote?}</div>
+            </div>
+            <div class="adventure-addonRow">
+                <div class="adventure-addonHeader">
+                    {?common.adventure.lootList?}
+                </div>
+                <div class="adventure-addon-content {?--hideNoneLoot?}">{?common.none?}</div>
+                {?--lootList?}
+            </div>
+            <div class="adventure-addonRow">
+                <div class="adventure-addonHeader">
+                    {?common.adventure.desc?}
+                </div>
+                <pre class="adventure-addon-desc">{?--description?}
+                </pre>
+            </div>
+            <!-- <div class="adventure-addonRow">
+                {?--debugInfo?}
+            </div> -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="nzContainer nzTooltip widthFill">
+    <div class="tooltip-title widthFill">
+        {?$term?}
+    </div>
+
+    <div class="tooltip-scoreContainer widthFill flex flexRow">
+        <div class="tooltip-scoreMain">
+            {?$currentScore?}
+            <div class="tooltip-scoreName">
+                {?term.score.currentLoads?}
+            </div>
+        </div>
+        <div class="tooltip-scoreMain">
+            {?$maxScore?}
+            <div class="tooltip-scoreName">
+                {?term.score.total?}
+            </div>
+        </div>
+    </div>
+
+    <div class="tooltip-scoreRecovery widthFill {?$recoverDisplay?}">
+        {?$recoverInfo?}
+    </div>
+
+    <div class="common-cardInfo-modifier widthFill {?$modDisplay?}">
+        {?$base?}
+        {?$modifier?}
+        {?$multiplier?}
+    </div>
+
+    <div class="common-cardInfo-desc widthFill">
+        {?$info?}
+    </div>
+</div>
