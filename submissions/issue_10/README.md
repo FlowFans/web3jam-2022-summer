@@ -78,11 +78,12 @@ SALIGIA has three modes of content distribution.
 3. Users can also find the content they need by using a search keyword or tag.
 
 ### Why flow
-**1. Candence, which allows NFT to have its own type of resources.
+
+1. Candence, which allows NFT to have its own type of resources.
 
 2. Flow is a layer of the public chain for mainstream consumers, its GAS fee is low and can withstand a large influx of mainstream consumers.
 
-3. It is also environmentally friendly and consumes very little energy**
+3. It is also environmentally friendly and consumes very little energy
 
 This coincides with the idea of our product ---- **We not only want to attract native WEB3 users, but we also want to lower the threshold to bring more consumers into the WEB3 world, and hope to redefine the content creation and consumption model together with everyone.** All these determine that the Flow chain is the best choice for us.
 
@@ -93,7 +94,9 @@ This coincides with the idea of our product ---- **We not only want to attract n
 ### Content
 
 The entire SALIGIA platform will have 7 content divisions corresponding to the seven sins.
+
 Gula corresponds to food, store exploration, recipes and other contents. The Pride community, encourages the exchange and sharing of personal strengths and different cultures. The greed community where financial knowledge and cryptocurrency news are delivered. In the slothcommunity, users can share goodies such as DAPP or other products and methods that make our lives easier. In the envy community, users can release their anxiety, insecurities and dreams. In the lust community, we can see all the beautiful content such as makeup, dressing and dancing. In the wrath community, we focus on minority groups, remote areas, women's and children's rights, and other issues that we care about.
+
 At the same time, there will be a separate space for women in the app, which will be curated and governed by female community members.
 
  
@@ -163,10 +166,13 @@ HUMAN will be used as a community governance token and will be distributed in li
 
 **Reader**
 
-Users will be rewarded with SIN tokens for completing the day's interactive tasks.
-When users read content and interact with it by using collect, comments and favorites, they consume ink and the durability of the pen decreases.
+Users will be rewarded with SIN tokens for completing the day's interactive tasks.When users read content and interact with it by using collect, comments and favorites, they consume ink and the durability of the pen decreases.
+
 Users have a certain chance of earning partition badges when interacting.
+
+
 Seven different zone badges can be exchanged for HUMAN coins, and the women's zone badge can be used in place of any zone badge in the synthesis.
+
 
 
 **Advertiser**
