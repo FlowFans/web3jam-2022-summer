@@ -6,6 +6,7 @@
 1. Website: https://www.drizzle33.app/
 2. Walkthrough video: https://drive.google.com/file/d/1sitLXaEgPbySn9AQsr-NUd_X70x5AbJz/view?usp=sharing
 3. Deck: please check /docs/deck.pdf
+4. Source Code: the core contracts are: `Cloud.cdc`, `Mist.cdc`, `Distributors.cdc`, `EligibilityVerifiers.cdc`
 
 ## What’s Drizzle?
 
