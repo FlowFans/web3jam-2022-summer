@@ -54,11 +54,11 @@ In Renas, users can sign up via their familiar Web2 auth methods, e.g. Discord. 
   
 - **Topping up as easy as using mainstream platforms**  
 Once a user needs to top up their tokens, they will be redirected to a service page, then connect their wallet and approve the transaction.  
-Renas will monitor the transaction status and automatically update a user's balance in game.
+Renas will monitor the transaction status and automatically update a user's balance in game.  
 [» See the demo](https://thing.fund/renas_stg/token/deposit/)
 
 - **Withdrawing within one click**
-In most circumstance, users don't need to handle any onchain activities. They only care about the assets they withdrawed from the game and the time they about to receive. In Renas, all they need to do is clicking the withdraw button and checking if the transaction is completed later.
+In most circumstance, users don't need to handle any onchain activities. They only care about the assets they withdrawed from the game and the time they about to receive. In Renas, all they need to do is clicking the withdraw button and checking if the transaction is completed later.  
 [» See the demo](https://thing.fund/renas_stg/token/withdraw/)
 
 <!-- Please list the features and docs you achieved during the event -->
