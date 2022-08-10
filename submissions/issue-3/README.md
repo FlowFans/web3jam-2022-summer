@@ -64,28 +64,28 @@ Regarding the governance right, for example, if someone proposed a revision to e
 The features of Renas we finished during Web3 Jam are:
 
 
-- **Easily signing up and mapping with wallet**  
+### Easily signing up and mapping with wallet
 In Renas, users can sign up via their familiar Web2 auth methods, e.g. Discord. Once logged in, Renas will automatically query Emerald Id to see if there's their Discord<>wallet address mapping data. If so, Renas will create a record for mapping the account with the wallet address. The user would not even notice that until they need to verify their assets in the wallet or withdrawal.  
 [» See the demo](https://thing.fund/renas_stg/profile/wallet/)
 > <img src="https://thing.fund/renas_stg/_design/bind.jpg" width="50%">
 
   
-- **Topping up as easy as using mainstream platforms**  
+### Topping up as easy as using mainstream platforms
 Once a user needs to top up their tokens, they will be redirected to a service page, then connect their wallet and approve the transaction.  
 Renas will monitor the transaction status and automatically update a user's balance in game.  
 [» See the demo](https://thing.fund/renas_stg/token/deposit/)
 > <img src="https://thing.fund/renas_stg/_design/topup.jpg" width="50%">
 
-- **Withdrawing within one click**
+### Withdrawing within one click
 In most circumstance, users don't need to handle any onchain activities. They only care about the assets they withdrawed from the game and the time they about to receive. In Renas, all they need to do is clicking the withdraw button and checking if the transaction is completed later.  
 [» See the demo](https://thing.fund/renas_stg/token/withdraw/)
 > <img src="https://thing.fund/renas_stg/_design/withdraw.jpg" width="50%">
 
-- **Switchable soulbound fungible tokens**
+### Switchable soulbound fungible tokens
 In some scenarios, such as being at the early stage of MVP or purely measuring contribution during the user's lifespan, the fungible tokens should be set to soul-bounded. Once a project goes to the mass market, the same fungible tokens might need to be able to switch to transferrable.  
 Renas' token contract provides the method to turn on/off the transferring so that a project could be customised to fit the needs.
 
-- **Governed by holding both fungible tokens & NFTs**
+### Governed by holding both fungible tokens & NFTs
 A user can vote for the proposals in Renas, such as a revision of an individual gaming item, a global variable change, or a new content submission. To do that, the user should stake the governance tokens and specific NFTs in Renas to gain the voting weight.
 
 <!-- Please list the features and docs you achieved during the event -->
