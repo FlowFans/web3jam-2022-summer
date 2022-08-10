@@ -1,0 +1,54 @@
+{
+  "name": "kitty-items",
+  "version": "1.0.0",
+  "description": "<p align=\"center\"><img width=\"400\" src=\"kitty-items-banner.png\" /></a> </p>",
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "chalk-animation": "^2.0.2",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.0",
+    "fs-jetpack": "^4.3.1",
+    "gradient-string": "^2.0.0",
+    "inquirer": "^8.2.0",
+    "module": "^1.2.5",
+    "ora": "^6.1.0",
+    "pm2": "^5.1.2",
+    "postgresql": "^0.0.1",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "@types/yargs": "^16.0.1",
+    "dotenv-cli": "^5.1.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "kill-port-process": "^3.1.0",
+    "lerna": "^5.1.8",
+    "npm": "^8.5.5"
+  },
+  "scripts": {
+    "preinstall": "node .ki-scripts/version-check.js",
+    "dev:emulator": "npx cross-env CHAIN_ENV=emulator node .ki-scripts/startup.js",
+    "dev:testnet": "npx cross-env CHAIN_ENV=testnet node .ki-scripts/startup.js",
+    "update:emulator": "flow project deploy --update",
+    "update:testnet": "npx dotenv-cli -e .env.testnet -- flow project deploy --network=testnet -f flow.json -f flow.testnet.json --update",
+    "dev:reset": "cross-env node .ki-scripts/reset.js",
+    "postinstall": "npx lerna exec npm install",
+    "heroku-postbuild": "npx lerna exec npm run build",
+    "start": "node api/dist/index.js",
+    "start:worker": "node api/dist/index.js --worker"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onflow/kitty-items.git"
+  },
+  "author": "",
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/onflow/kitty-items/issues"
+  },
+  "homepage": "https://github.com/onflow/kitty-items#readme",
+  "engines": {
+    "node": "16.x"
+  }
+}

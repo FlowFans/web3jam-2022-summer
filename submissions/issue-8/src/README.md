@@ -1,6 +1,8 @@
 <p align="center">
-    <img width="400" src="./src/newonlybadgelogo.jpg" />
+    <img width="400" src="newonlybadgelogo.jpg" />
 </p>
+
+# Project Name
 
 ## Track
 
@@ -31,7 +33,7 @@ The first way (without investing in Fusd): A company can choose to only create a
 #### (4) The user obtains tokens that do not contain Fusd and OnlyBadge platforms in the badge.
 
 <p align="center">
-    <img width="400" src="./src/First-Way.jpg" />
+    <img width="400" src="First-Way.jpg" />
 </p>
 
 ---
@@ -44,7 +46,7 @@ The second way (investing in Fusd): When enterprise A creates badges and tasks, 
 #### (6) The transaction pair composed of Fusd and the token of the OnlyBadge platform obtained by the user will be released linearly over time, as will the voting rights. After the release is complete, the user can vote for the user’s favorite company according to the user’s wishes.
 
 <p align="center">
-    <img width="400" src="./src/Second-Way.jpg" />
+    <img width="400" src="Second-Way.jpg" />
 </p>
 
 ## What was done during Web3 Jam
@@ -58,7 +60,6 @@ The second way (investing in Fusd): When enterprise A creates badges and tasks, 
 - [Pitch Deck](./docs/deck.pdf) <!-- or using online documentation url / ipfs url -->
 - [Demo Video](./docs/demo.mp4) <!-- or using online documentation url / ipfs url -->
 - [Testnet Demo] [https://testnet.onlybadge.life](https://testnet.onlybadge.life) 
-
 
 ## Additional information
 
