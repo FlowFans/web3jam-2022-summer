@@ -1,27 +1,26 @@
 # <Relation Club /Relationlabs>
 
 
-## 赛道选择
-
-请选择一项赛道类型进行报名：
-
-- [ √ ] NFT x DAO/Tools - 组织工具
-
-## 项目描述
-
-### 项目背景（待解决的问题）
+## Track Selection
 
 
-NFT的所有权，理应是一种无需证明的事实。
+- [x] NFT x DAO/Tools - 组织工具
 
-社群是NFT很重要的组成部分，在当前的NFT社群运营工具(如discord)没有原生NFT的集成，社群的身份证明依赖第三方bot的集成，从而产生了安全隐患。随着钓鱼攻击频发，NFT持有者的资产安全受到很大的威胁。
+## Project Description
 
-另一方面，目前的NFT运营体系中社群工具与资产分隔在Web2与Web3，项目方只能看到一个个twitter/discord账号，无法精准的找到Owner用户，这使得运营激励活动活动即不精准也不高效。
-
-Relation Club是基于Relation的服务构建的社群运营工具。Relation是基于Web3构建social graph的社交基础设施，提供统一身份认证、用户个人数据管理工具、web3 IM协议、Web3 social Graph，Data toolkit等工具帮助开发者高效开发及部署DAPP。
+### Project Background 
 
 
-*目标用户*
+NFT ownership is a kind of truth with unconditional trust.
+
+Community building is essential for an NFT project. On the one hand, currently, normal NFT community operation tools, such as Discord, rely on third-party bot to verify members. In this case, frequent phishing attacks and other safety hazards expose user asset security to great danger.
+
+On the other hand, in the current NFT project operation system, Web2 community operation tools are disconnected with Web3 NFT assets. Therefore, it’s impossible to accurately locate real NFT holders in Twitter and Discord, which leaves great barriers on the way of conducting community operation incentive activities accurately and efficiently.
+
+Relation Club is a community operation tool based on Relation social services. Relation is a Web3 social graph infrastructure builder, providing services such as Unified Identity Verification, User Personal Data Management, Web3 IM Protocols, Web3 Social Graph, Data Toolkit, etc, to help developers build and deploy DApps more efficiently.
+
+
+*Target Users*
 
 - NFT创作者或项目方
 - NFT持有者
