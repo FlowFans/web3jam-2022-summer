@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>北京海关信息系统机房监控展示平台</title>
+    <link rel="shortcut icon" href="TemplateData/progressLogo.Dark.png">
+    <link rel="stylesheet" href="TemplateData/style.css">
+	 <link href="dist/video-js.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+	<script src="dist/hls.min.js"></script>
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+	<script src="flv.min.js"></script>
+	
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/cccc.json", {onProgress: UnityProgress});
+	  function quit3D()
+	  {
+			window.location.href="http://10.52.136.39";
+	  }
+	  function changeTitle(title)
+  {
+    var videotitle= document.getElementById("videotitle");
+    videotitle.innerText=title;
+  }
+  function ClickOpenVideo(url)
+  { 
+    var videoBG= document.getElementById("videoBG")
+    videoBG.style.display="block";
+    console.log(url);
+     var player = document.getElementById('videoElement');
+  if( window.flvPlayer){
+	window.flvPlayer.unload(); 
+	window.flvPlayer.detachMediaElement();
+	window.flvPlayer.destroy();
+	window.flvPlayer= null; 
+}
+var newurl=url.replace("http://10.52.136.39:82/Video/","");
+ newurl=newurl.replace("/index.m3u8","");
+ newurl=newurl.replace(/_/g,".");
+var newURL1='http://10.52.136.39:83/live?port=1935&app=live&stream='+newurl;
+console.log(newurl);
+        if (flvjs.isSupported()) {
+		setTimeout(function () {
+                        window.flvPlayer = flvjs.createPlayer({
+                type: 'flv',
+				isLive: true,
+				hasAudio:false,
+                url: newURL1
+            });
+            window.flvPlayer.attachMediaElement(videoElement);
+          window.flvPlayer.load(); //¼Ӕ؍
+			 window.flvPlayer.play();
+                    }, 2000);
+
+       
+        }
+  }
+  
+  function closeVideo()
+  {  
+if( window.flvPlayer){
+  window.flvPlayer.unload(); 
+window.flvPlayer.detachMediaElement();
+window.flvPlayer.destroy();
+ window.flvPlayer= null; 
+}
+    var videoBG= document.getElementById("videoBG");
+    videoBG.style.display="none";
+  }
+    </script>
+  </head>
+  <body>
+     <div class="webgl-content" style="width: 100%; height: 100%">
+      <div id="unityContainer" style="width: 100%; height: 100%"></div>
+    </div>
+    </div>
+	<div id="videoBG" class="videoWarp"  >
+    <div class="videoBG">
+      <div class="videoBar">
+    <image src="./asset/camera.png" class="videoIcon"></image>
+    <div id="videotitle" class="videoTitle">主机房</div>
+    <div class="videoClose" onclick="closeVideo()" ></div>
+    </div>
+    <div class="videoLine"  ></div>
+   <video muted id="videoElement" class="centeredVideo" controls  autoplay  width="640" height="440" poster="asset/摄像头等待图1.png">
+   </video>
+</div>
+</div>
+  </body>
+</html>
