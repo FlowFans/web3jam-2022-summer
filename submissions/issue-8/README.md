@@ -25,8 +25,8 @@ The basic process is as follows:
 
 The first way (without investing in Fusd): A company can choose to only create a badge to motivate B users to participate in the activity. At this time, the badge obtained by the user after completing the task of the enterprise is liquid and can be used as a certificate for participating in the enterprise airdrop in the future.
 
-#### (1) A creates and distributes Badge for the first time to obtain the traffic exposure time of the platform
-#### (2) With the passage of time, the exposure weight gradually decreases. At this time, new badges and tasks can be created to refresh the exposure time. However, the traffic exposure time obtained for the second time will be greatly reduced compared to the first time, and the third refresh time Significantly reduced on the basis of the second
+#### (1) A creates and distributes Badge for the first time to obtain the traffic exposure time of the platform.
+#### (2) With the passage of time, the exposure weight gradually decreases. At this time, new badges and tasks can be created to refresh the exposure time. However, the traffic exposure time obtained for the second time will be greatly reduced compared to the first time, and the third refresh time Significantly reduced on the basis of the second.
 #### (3) In addition, Bribe can also be added to the traffic pool to gain voting weight and exposure time.
 #### (4) The user obtains tokens that do not contain Fusd and OnlyBadge platforms in the badge.
 
