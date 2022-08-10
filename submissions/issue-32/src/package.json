@@ -1,0 +1,17 @@
+{
+  "name": "TaiShangRaceNumber",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/zhenfeng-zhu/TaiShangRaceNumber.git",
+  "author": "zhuzhenfeng.code <zhuzhenfeng.code@bytedance.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev:wallet": "flow dev-wallet",
+    "dev:emulator": "flow emulator",
+    "dev:deploy": "flow project deploy --update",
+    "testnet:deploy": "flow project deploy --update --network=testnet"
+  },
+  "dependencies": {
+    "@onflow/fcl": "^1.2.0"
+  }
+}

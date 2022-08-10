@@ -1,0 +1,1 @@
+flow scripts execute E:\papers\bc\TaiShangRaceNumber\flow\cadence\scripts\GetAllGames.cdc
