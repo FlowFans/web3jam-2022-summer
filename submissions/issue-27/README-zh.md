@@ -5,7 +5,7 @@
 
 请选择一项赛道类型进行报名：
 
-- [ √ ] NFT x DAO/Tools - 组织工具
+- [x] NFT x DAO/Tools - 组织工具
 
 ## 项目描述
 
@@ -106,7 +106,7 @@ Chain Native的特性为Relation Club带来独特的安全性，社群身份验�
 
 *技术架构*
 
-<img width="756" alt="0000" src="https://user-images.githubusercontent.com/91399393/183899995-9f571d0a-6705-437e-af75-586b6b27bc5d.png">
+![Frame 1000003296](https://user-images.githubusercontent.com/91399393/183936212-d234182d-cd59-436d-a39c-4f323835234f.png)
 
 
 
