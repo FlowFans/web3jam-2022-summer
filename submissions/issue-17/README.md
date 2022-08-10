@@ -1,7 +1,7 @@
 # Drizzle
 
 
-# Links
+## Links
 
 1. Website: https://www.drizzle33.app/
 2. Walkthrough video: https://drive.google.com/file/d/1sitLXaEgPbySn9AQsr-NUd_X70x5AbJz/view?usp=sharing
