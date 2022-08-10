@@ -1,0 +1,15 @@
+{
+  "accounts": {
+    "testnet-account": {
+      "address": "0xfee52c2891929ed3",
+      "keys": "5847e0b1b59e7e50c757f24cc762fb81007c9bb867ade209fe7eadf3a6682f01"
+    }
+  },
+  "deployments": {
+    "testnet": {
+      "testnet-account": [
+        "OnlyBadges"
+      ]
+    }
+  }
+}
