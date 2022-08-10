@@ -49,6 +49,8 @@ independent existence.
 - [x] Smart contract. (Cadence, Solidity)
 - [x] UI. (React)
 - [x] AI. (OpenAI)
+- [x] DB. (Amazon DynamoDB)
+- [x] API. (Amazon Lambda + AWS API Gateway)
 - [x] Bot. (Discord Bot)
 - [x] Community. (Discord)
 
