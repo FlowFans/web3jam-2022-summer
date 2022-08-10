@@ -147,7 +147,7 @@ Chain Native的特性为Relation Club带来独特的安全性，社群身份验�
 - 接入FCL，实现Flow身份体系与Relation统一身份认证的打通，使用户Flow地址的签名可以被验证并获得临时session key，作为身份认证。
 - 定义Club Space的web/Html5的UI界面，根据Flow Club Infra定期完成linked page，Club news，Proposal，活跃用户和成员墙的信息展示。
 - 实现聊天扩展程序对Flow NFT的发送及展示支持，Flow Club的UI。
-- 实现Club统计功能的UI及数据分析，Club统计功能将根据用户的聚合身份向合约部署者开放On chain和Relation服务的数据权限。包括平均的持有者、交易均价、每日的独立钱包统计、不同二级市场的销售情况统计、用户每日的活跃、Club聊天的统计、Club成员的资产分析及Club成员的明细。这些统计都将基于用户所有的账户而非仅仅单一的地址。
+- 实现Club统计功能的UI及数据分析，Club统计功能将根据用户的聚合身份向合约部署者开放On chain和Relation服务的数据权限。包括持有者的平均数量、交易均价、每日的独立钱包统计、不同二级市场的销售情况统计、用户每日的活跃、Club聊天的统计、Club成员的资产分析及Club成员的明细。这些统计都将基于用户所有的账户而非仅仅单一的地址。
 - 实现Club社区工具的用例——合影工具，包括Club合影工具的UI、合影房间创建的功能、在线状态检查、以及图片生成与分享的功能。
 
 *交付材料*
