@@ -1,85 +1,77 @@
-# <cryptosharing--devengine>
+<!--
+ * @Author: cryptoSharing
+ * @Date: 2022-08-10 11:54:05
+ * @LastEditTime: 2022-08-10 12:04:31
+ * @LastEditors: cryptoSharing
+ * @Description: 
+-->
+# Project Name
 
-## 赛道选择
+## Track
 
-请选择一项赛道类型进行报名：
+- [x] NFT x DAO/Tools
+- [ ] NFT x Game/Entertainment
+- [ ] NFT x Life/Metaverse
 
-- [x] NFT x DAO/Tools - 组织工具
-- [ ] NFT x Game/Entertainment - 游戏娱乐
-- [ ] NFT x Life/Metaverse - 生活方式
+## Description
 
-## 项目描述
+### Problem statement
 
-### 项目背景（待解决的问题）
+​	If DeFi builds the economic system of the metaverse, then NFT constitutes the asset elements of the metaverse. At present, NFT applications are prosperous and derived, but as the unit price of NFT is wildly hyped in the secondary market, the threshold for users to purchase NFT has been greatly increased. In this context, the market has spawned the demand for NFT leasing.
 
-如果说DeFi 构建了元宇宙的经济体系，那NFT便组成了元宇宙的资产要素。当前NFT应用繁荣衍生，但是随着NFT的单价在二级市场被疯狂炒作，用户购买NFT的门槛大幅提高。在此背景下，市场催生了NFT租赁的需求。
+Pain points in the current rental market
 
-**当前租赁市场的痛点**
+- lender
+  - **take the risk of default**
+  - **Cannot be used for NFT staking**
+  - **Very cumbersome operation process**
+- renter
+  - **Over-collateralization required when leasing**
+  - **Cumbersome operation**
 
-- 出借方
+### Proposed solution
 
-  - **承担违约风险**
+- Product Introduction
 
-  - **NFT** **抵押时不能使用**
+​		In order to match the transactions of both parties as much as possible and improve the liquidity and utilization of NFT, we propose a solution of unsecured leasing.
 
-  - **非常繁琐的操作流程**
+  		1. Implement a lease agreement that can use the original NFT to generate usage rights	
+		2. Implement a rental platform on this basis
+		3. Minimize rental cost (user: rental fee; project party: adaptation cost)
+		4. Maximize service experience (dramatically simplified and user-friendly)
 
-- 租赁者
+- Product Logo (Optional)
 
-  - **租赁时需要超额抵押**
+​		![logo](https://camo.githubusercontent.com/91f97493dd1969fd19ee0879c1c5f5c4d00e1c04ef0d88fe6445686df1b43629/68747470733a2f2f692e706f7374696d672e63632f624a42666b4666542f696d6167652e706e67)
 
-  - **操作繁琐**
+- Technical architecture
 
-### 产品方案
+  ​	In order to solve the pain point of the high mortgage threshold in the rental market, we have created a new type of leasing method in the digital currency field based on the existing ecological structure of the blockchain: - Separating ownership and use rights, and adopting an unsecured leasing scheme.
 
-- 产品介绍
-  为了尽可能撮合双方的交易，提高NFT的流动性和利用率，我们提出无抵押租赁的解决方案。
+  ​	Added user roles and removed many unnecessary operations. Users can transfer their own usage rights.
 
-  - 实现一个租赁协议，可以利用原NFT生成使用权
+  ​	The owner can continue to use it before renting, not after renting.
 
-  - 在此基础上实现一个租赁平台
+  ![Technical architecture](https://camo.githubusercontent.com/00686b45cafb20dc902a9836a9010f0294756cd505e06a64d8b6b9e4bb1430b4/68747470733a2f2f75706c6f61642e63632f69312f323032322f30372f32302f304f32434c6e2e706e67)
 
-  - 最小化租赁成本（用户：租赁费用；项目方：适配成本）
+## What was done during Web3 Jam
 
-  - 最大化服务体验（大幅简化操作，用户友好）
+<!-- Please list the features and docs you achieved during the event -->
 
-- 技术方案
+> Delivery Meterials
 
-  ​	为解决租赁市场抵押门槛高的痛点，我们依据区块链现有生态结构在数字货币领域开创了一种新型租赁方式：—— 将**所有权** 和**使用权** 分离，采用**无抵押租赁** 的方案。
+- [ExampleNFT](./src/cadence/contracts/ExampleNFT.cdc), deployed to Testnet address: 0xb096b656ab049551
 
-  ​	增加了使用者的角色，删去了许多不必要的操作。使用者可以转移他们自己的使用权。
+- [ExampleNFTUser](./src/cadence/contracts/ExampleNFTUser.cdc), deployed to Testnet address: 0xb096b656ab049551
 
-  ​	所有者可以在租用之前继续使用它，出租后不能使用
+- [ExampleRentMarketplace](./src/cadence/contracts/ExampleRentMarketplace.cdc), deployed to Testnet address: 0xb096b656ab049551
 
-  ![](https://upload.cc/i1/2022/07/20/0O2CLn.png)
+  <!-- Optional -->
 
-- 技术创新
+- [Pitch Deck](./docs/deck.pdf) <!-- or using online documentation url / ipfs url -->
 
-  - **提出一种带有使用权的NFT标准**
-  - **实现无抵押租赁**
-  - **对项目方友好，仅需少数操作就能完成升级**
+- [Demo Video](./docs/demo.mp4) <!-- or using online documentation url / ipfs url -->
 
-- 产品Logo
+## Additional information
 
-  ![image-20220720095941876](https://i.postimg.cc/bJBfkFfT/image.png)
-
-## Web3 Jam 期间的开发规划
-
-*Cadence合约*
-
-- [x] cryptosharing核心合约开发
-- [x] 扩展市场合约开发
-- [x] 相关transaction开发
-
-*客户端*
-
-- [x] FCL接入
-- [x] 市场前端开发和部署
-
-## 团队成员
-
-| 姓名 Name |      角色 Role      | 个人经历 Bio                                                 | 联系方式 Contact |
-| --------- | :-----------------: | ------------------------------------------------------------ | ---------------- |
-| Barron    |      Designer       | 浙江大学计算机学院博士，从事区块链研究，在国内外知名学术会议、核心期刊上发表多篇区块链相关学术成果，并被广为引用；其中基于区块链的可信loT管理方案应用于华为无线实验室对6G构架的设计研究；曾任IOTEX技术布道 | 微信:C7121210    |
-| wesley    |    Flow Cadence     | 数据科学硕士，深耕数学与计算机交叉领域，熟悉区块链开发框架、区块链领域爱好者、Uniswap，以太坊生态独特见解者 | github: wvans123 |
-| molei Zhu | Full-Stack Engineer | 河海大学计算机毕业，前端开发经验五年                         | 微信:wxzhushuai  |
+<!-- More information you want the judges to see -->
