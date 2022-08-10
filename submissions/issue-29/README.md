@@ -4,7 +4,7 @@
 
 - [ ] NFT x DAO/Tools
 - [ ] NFT x Game/Entertainment
-- [ ] NFT x Life/Metaverse
+- [√] NFT x Life/Metaverse
 
 ## Description
 
@@ -29,33 +29,44 @@ OVERLU also grants you essential preference of utility.
 
 ### Problem statement
 
-<!--
-Please describe the following
-
-- Target audience
-- Evidence for the need
--->
+Since chainlink proposed the concept of DNFT (Dynamic NFT technology), many projects have started to release their DNFT, such as Moonbirds, the Association, etc.
+Although the changeable shape gives a considerable imagination to the playability of NFT, in our perspective, if the extension of DNFT is limited to changing conditions in appearance, it’s not enough to reflect the value depth of NFT assets. As a result, we have assigned corresponding utilities to the customized components of OVERLU NFT. From then on, variable appearances will be bound to self-selected rights.
 
 ### Proposed solution
 
-<!--
-Please describe the following, including but not limited to:
+We give more choice and playability to the holder through composible appearance components and a set of rights. Holders can unlock changes in NFT appearance with corresponding entitlements by selecting different DNA. This gameplay can increase the scalability and sustainability of the project in the later stage
 
 - Product Introduction
-- Product Logo (Optional)
+  LU is essential that carries information and value. LU not only records changes in appearance but is also proof of the holder's utility in the real world. There are currently five types of LUs, which function in 5 different parts of the model, meanwhile the combination process of each LU and model is irreversible.
+
+  LU not only changes in appearance but also carries utilities.
+  It integrates all the adaptation components of LU.
+  The ability of the model combination with LU depends on its basic attributes.
+  Once the Model NFTs are born, they will be capable of combining with 1 to 3 LUs. Only if the LU after combination with the model can it produce the exact utility (upgrade the appearance components and obtain the corresponding rights).
+
 - Technical architecture
+  Contract + Client
+
 - Operational strategy
--->
+
+  Our strategy in phase 1 is to activate the Flow ecosystem users first. We are confident that as an innovative NFT gameplay project in the Flow ecosystem, we will attract more users through Twitter drainage and interaction with the Flow community
+
+
+
+
 
 ## What was done during Web3 Jam
 
-<!-- Please list the features and docs you achieved during the event -->
+ 1. Finish Model smart contract
+ 2. Finish of DNA smart contract
+ 3. Model and DNA fusion function
+ 4. Finish blind box smart contract
 
-> Delivery Meterials
 
 - [Source Code](./src/), deployed to Testnet address: 0x71455fa86e5dfe73
 <!-- Optional -->
-- [Pitch Deck](./docs/deck.pdf) <!-- or using online documentation url / ipfs url -->
+- [Pitch Deck](./docs/OVERLU_NFT_Project.pdf) ,googledrive url: https://drive.google.com/drive/folders/1HKixaKY53JTh56A-14xB-2U9DkgNiBVb?usp=sharing   
+- [Pitch Deck](./docs/OVERLU.pdf) ,googledrive url: https://drive.google.com/drive/folders/1HKixaKY53JTh56A-14xB-2U9DkgNiBVb?usp=sharing   
 - [Demo Video](./docs/demo.mp4) <!-- or using online documentation url / ipfs url -->
 
 ## Additional information
