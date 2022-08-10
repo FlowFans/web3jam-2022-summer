@@ -69,6 +69,7 @@ The main gameplay of the project can be divided into three steps:\
         - Contracts
         - Transactions
         - Scripts
+<<<<<<< HEAD
     - UI & Web Frontend
 - Logo\
   ![Logo](./TIK8Logo.png "Magic Gardens")
@@ -77,3 +78,13 @@ The main gameplay of the project can be divided into three steps:\
   Users enter the limited-time community with consumption (NFT), and with high interactivity to meet multiple social needs, improve social efficiency and experience, and release the missing social value of traditional ticketing. After entering the long-term community, the growth system and incentive system will increase the repurchase rate and activity.
     * **Users as Channels**\
       Leveraging the expansion of the user's personal network, through the closed loop of marketing from online (ticket purchase, socialization, ticket root collection display) to offline (event experience)
+=======
+    - 前端UI
+- 产品Logo\
+  ![Logo](./TIK8Logo.png "Magic Gardens")
+- 运营策略
+    * **内核优化**\
+  用户凭消费（数字藏品）进入限时性社群, 配合高互动性满足多元社交需求，提高社交效率和体验感, 释放传统票务缺失的社交价值。进入长期社群后, 通过成长体系和激励制度提高复购率和活跃度
+    * **用户即渠道**\
+        利用用户个人关系网扩张, 贯穿从线上（购票、社交、票根收藏展示）到线下（活动体验）的营销闭环
+>>>>>>> 0dec330a89db5f58ea9c7049c49d5e9063ba57e3
