@@ -1,0 +1,114 @@
+.header {
+  // min-width: 1200px;
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .header_head {
+    display: flex;
+    background: #fff;
+    height: 70px;
+    line-height: 70px;
+    // border-bottom: 1px solid #e8ebf1;
+    background-color: rgb(46, 50, 58);
+
+    .head_img {
+      width: 220px;
+      height: 100%;
+
+      img {
+        width: 65%;
+        height: 75%;
+        margin-left: 38px;
+        padding-top: 8px;
+      }
+    }
+
+    .head_nav {
+      flex: 1;
+
+      .nav {
+        height: 100%;
+        display: flex;
+
+        .nav_item {
+          cursor: pointer;
+          padding-left: 10px;
+          padding-right: 10px;
+          margin-left: 10px;
+          margin-right: 10px;
+          box-sizing: border-box;
+          color: rgb(143, 143, 146);
+
+        }
+
+        .nav_item:hover {
+          color: white;
+        }
+
+      }
+    }
+
+    .head_contact {
+      display: flex;
+      align-items: center;
+      margin-right: 30px
+    }
+
+    .head_users {
+      padding: 0 20px 0 0;
+
+      // .users {
+      //   display: inline-block;
+      //   position: relative;
+      //   color: #606266;
+      //   font-size: 14px;
+
+      .user {
+        padding: 0 20px 0 0;
+
+        .el_down {
+          display: inline-block;
+          position: relative;
+          color: #606266;
+          font-size: 14px;
+        }
+
+        .user-info {
+          cursor: pointer;
+
+          .avatar {
+            display: inline-block;
+            width: 37px;
+            height: 37px;
+            border-radius: 50%;
+            // border: 1px solid #e0e0e0;
+            vertical-align: middle;
+          }
+
+        }
+
+        .username {
+          margin: 0 10px 0 15px;
+          color: #8f8f92;
+          font-weight: 500;
+        }
+
+        .el-icon--right {
+          margin-left: 5px;
+        }
+      }
+
+      // }
+    }
+  }
+}
+
+//头部导航
+.active {
+  font-weight: 700;
+  color: white !important;
+  border-bottom: 6px solid white;
+}

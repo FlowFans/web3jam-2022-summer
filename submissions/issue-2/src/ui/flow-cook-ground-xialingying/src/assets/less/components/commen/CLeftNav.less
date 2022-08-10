@@ -1,0 +1,21 @@
+.leftNav{
+    height: 100%;
+
+    .left{
+        overflow-x: hidden;
+        background: #2e323a;
+        border-right: 1px solid #e8ebf1;
+        height: 100%;
+    }
+}
+
+.is_active::before{
+    content: "";
+    position: absolute;
+    width: 3px;
+    left: 0;
+    top: 20%;
+    height: 60%;
+    background: #f87653;
+    display: block;
+}

@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'Glyphicons Halflings';  /* project id 858402 */
+  src: url('//at.alicdn.com/t/font_1520262_ac4imzgs1z.eot');
+  src: url('//at.alicdn.com/t/font_1520262_ac4imzgs1z.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1520262_ac4imzgs1z.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1520262_ac4imzgs1z.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1520262_ac4imzgs1z.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1520262_ac4imzgs1z.svg#iconfont') format('svg');
+}
+.glyphicon {
+  position: relative;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  z-index: 99;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-active                  { &:before { content: "\e77c"; } }
+.glyphicon-head                    { &:before { content: "\e673"; } }
+.glyphicon-zhifubao                { &:before { content: "\e600"; } }
+.glyphicon-weixin                  { &:before { content: "\e739"; } }
+.glyphicon-gonghuo                 { &:before { content: "\e64c"; } }
+.glyphicon-xuanpin                 { &:before { content: "\e64b"; } }

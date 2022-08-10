@@ -1,0 +1,113 @@
+.content-wrapper {
+  box-sizing: border-box;
+
+  .router-content {
+    position: relative;
+    width: 100%;
+    min-height: 82vh;
+    z-index: 10;
+
+    .up-point {
+      padding: 20px;
+
+      .act-top {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 50px;
+      }
+
+      .act-middle {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin: 5px 0;
+
+        p {
+          font-size: 12px;
+          font-weight: 400;
+          color: #666;
+        }
+      }
+
+      .a-classify {
+        display: flex;
+        margin-bottom: 20px;
+
+        .label {
+          width: 50px;
+          font-size: 14px;
+          font-weight: 400;
+          color: #333;
+          -ms-flex-negative: 0;
+          flex-shrink: 0;
+        }
+
+        .content {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-flow: wrap;
+          flex-flow: wrap;
+
+          .item {
+            min-width: 80px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 400;
+            color: #666;
+            margin-right: 10px;
+            margin-bottom: 4px;
+            padding: 0 4px;
+            border: 1px solid #fff;
+            cursor: pointer;
+            height: 22px;
+            line-height: 22px;
+          }
+
+          .active {
+            background: #077aff !important;
+            border-radius: 5px;
+            color: #fff;
+          }
+        }
+      }
+
+      .el-table {
+        th>.cell {
+          position: relative;
+          word-wrap: normal;
+          text-overflow: ellipsis;
+          vertical-align: middle;
+          width: 100%;
+        }
+      }
+
+      .footer-loading {
+        .el-button {
+          font-size: 14px;
+        }
+
+        .up-vip-btn {
+          .el-button--text {
+            color: #077aff;
+          }
+        }
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,140 @@
+.member {
+  position: relative;
+  flex: 1;
+
+  .me_all {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    .me_flex {
+      flex-direction: column;
+      display: flex;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+
+      .me_scroll {
+        text-align: center;
+        position: relative;
+        flex: 1;
+
+        .me_over {
+          overflow-y: scroll;
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+
+          .main {
+            background: #f6f8fa;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+
+            .content {
+              padding: 40px 20px;
+              background: #fff;
+              text-align: left;
+              left: 0;
+              top: 0;
+            //   width: 100%;
+            //   height: 100%;
+
+              .section-title {
+                position: relative;
+                padding: 0 0 0 20px;
+                font-weight: 700;
+              }
+
+              .section-title::before {
+                position: absolute;
+                left: 0;
+                top: 3px;
+                width: 4px;
+                height: 16px;
+                background: #409eff;
+                content: "";
+              }
+
+              .profile-box {
+                .profile-row {
+                  padding: 25px 0;
+                  border-bottom: 1px solid #e8ebf1;
+                  font-size: 14px;
+
+                  .user_info {
+                    align-items: center;
+                    display: flex;
+
+                    .avatar {
+                      width: 35px;
+                      height: 35px;
+                      border-radius: 50%;
+                      background: #eee;
+                      margin-right: 15px;
+                    }
+
+                    .username {
+                      margin-right: 15px;
+                      font-size: 16px;
+                      font-weight: 700;
+                    }
+
+                    .level {
+                      display: inline-block;
+                      height: 24px;
+                      line-height: 24px;
+                      width: 64px;
+                      text-align: center;
+                      border-radius: 4px;
+                      font-size: 12px;
+                      color: #333;
+                      //   background: url(data:image/png;base64,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) no-repeat;
+                      background-size: 100% 100%;
+                    }
+
+                    .vip-btn {
+                      width: 238px;
+                      height: 37px;
+                      margin-left: 40px;
+                      cursor: pointer;
+                    }
+                  }
+
+                  .user-time {
+                    padding: 15px 0 0 50px;
+                    color: #999;
+                    font-size: 14px;
+
+                    span {
+                      margin-left: 15px;
+                    }
+                  }
+
+                  .tit {
+                    display: inline-block;
+                    margin: 0 80px 0 0;
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: #333;
+                  }
+
+                  .btn-edit {
+                    color: #409eff;
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
