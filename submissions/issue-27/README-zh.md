@@ -18,7 +18,7 @@ NFT是一种无需证明的事实权属。
 
 另一方面，目前的NFT运营体系中社群工具与资产分隔在Web2与Web3，项目方只能看到一个个twitter/discord账号，无法精准的找到Owner用户，这使得运营激励活动活动即不精准也不高效。
 
-Relation Club是基于Relation的服务构建的社群运营工具。Relaiton是基于Web3构建social graph的社交基础设施，提供统一身份认证、用户个人数据管理工具、web3 IM协议、Web3 social Graph，Data toolkit等工具帮助开发者高效开发及部署DAPP。
+Relation Club是基于Relation的服务构建的社群运营工具。Relation是基于Web3构建social graph的社交基础设施，提供统一身份认证、用户个人数据管理工具、web3 IM协议、Web3 social Graph，Data toolkit等工具帮助开发者高效开发及部署DAPP。
 
 
 *目标用户*
@@ -82,7 +82,7 @@ Chain Native的特性为Relation Club带来独特的安全性，社群身份验�
 
 - **New Club合约**
 
-    New Club合约是用于创建Club NFT的智能合约。New Club合约遵循自Flow的NFT创建标准，帮助项目方直接通过Relaiton Club的UI直接完成从合约部署、NFT mint到Club上线的全过程。
+    New Club合约是用于创建Club NFT的智能合约。New Club合约遵循自Flow的NFT创建标准，帮助项目方直接通过Relation Club的UI直接完成从合约部署、NFT mint到Club上线的全过程。
 
 
 - **Club统计**
