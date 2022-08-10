@@ -82,7 +82,7 @@ A user can vote for the proposals in Renas, such as a revision of an individual 
 - [Source Code](./src/), deployed to Testnet address: [A.98c9c2e548b84d31.ContributionPoint](https://flowscan.org/contract/A.98c9c2e548b84d31.ContributionPoint/overview)
 <!-- Optional -->
 - [Please see the pitch deck to learn more about Renas](https://thing.fund/renas_stg/_design/theRenas.pitchdeck.pdf)
-- Demo Video is coing soon <!-- or using online documentation url / ipfs url -->
+- Demo Video is coming soon <!-- or using online documentation url / ipfs url -->
 
 ## Additional information
 A playable product has already deployed online, [please see the link here](https://thing.fund/renas_stg/), you'll need to log in via your Discord account.
