@@ -2,9 +2,9 @@
 track selection
 Please select a track type to register:
 
- NFT x DAO/Tools - Organizational Tools
- NFT x Game/Entertainment - Game Entertainment
- NFT x Life/Metaverse - Lifestyle
+- [ ] NFT x DAO/Tools
+- [x] NFT x Game/Entertainment
+- [x] NFT x Life/Metaverse
 project description
 Background of the project
 In addition to digital artworks, NFT has more possibilities. NFTHunter is based on the gameFI's model to mine and explore NFTs. It introduces merchants' rights NFTs and merchant theme competitions to solve GameFI's death spiral problem and help web2 merchants to introduce web3 fields. In addition to token incentives, players can also get lottery NFTs by playing NFTHunter
@@ -40,12 +40,12 @@ An example is as follows (please ask the team to define the specific work accord
 
 Cadence Contract
 
- NFT standard contract implementation
- NFT blind box function
+- [x] standard contract implementation
+ blind box function
 client
 
- FCL access
- NFT blind box purchase
+- [x]  access
+- [x]  game
 team member
 Name Name Role Role Personal Experience Bio Contact Information Contact
 - carsonche - Full-Stack Engineer --- - wechat: chezi26
