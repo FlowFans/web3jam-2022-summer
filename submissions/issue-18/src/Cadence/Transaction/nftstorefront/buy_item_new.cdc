@@ -1,0 +1,172 @@
+import SoulMadeMain from "../../contracts/SoulMadeMain.cdc"
+import SoulMadeComponent from "../../contracts/SoulMadeComponent.cdc"
+import SoulMadePack from "../../contracts/SoulMadePack.cdc"
+import FungibleToken from 0xee82856bf20e2aa6
+import NonFungibleToken from "../../contracts/NonFungibleToken.cdc"
+import FlowToken from 0x0ae53cb6e3f42a79
+import NFTStorefront from "../../contracts/NFTStorefront.cdc"
+
+transaction(listingResourceID: UInt64) {
+    let paymentVault: @FungibleToken.Vault
+    let mainNftCollection: &{NonFungibleToken.Receiver}
+    let componentNftCollection: &{NonFungibleToken.Receiver}
+    let storefront: &NFTStorefront.Storefront{NFTStorefront.StorefrontPublic}
+    let listing: &NFTStorefront.Listing{NFTStorefront.ListingPublic}
+
+    prepare(acct: AuthAccount) {
+        // set up account
+        if acct.borrow<&SoulMadeMain.Collection>(from: SoulMadeMain.CollectionStoragePath) == nil {
+            let collection <- SoulMadeMain.createEmptyCollection()
+            acct.save(<-collection, to: SoulMadeMain.CollectionStoragePath)
+            acct.link<&SoulMadeMain.Collection{SoulMadeMain.CollectionPublic}>(SoulMadeMain.CollectionPublicPath, target: SoulMadeMain.CollectionStoragePath)
+            // todo: double check if we need this PrivatePath at all. I remeber we actually have used it somewhere.
+            acct.link<&SoulMadeMain.Collection>(SoulMadeMain.CollectionPrivatePath, target: SoulMadeMain.CollectionStoragePath)
+        }
+
+        if acct.borrow<&SoulMadeComponent.Collection>(from: SoulMadeComponent.CollectionStoragePath) == nil {
+            let collection <- SoulMadeComponent.createEmptyCollection()
+            acct.save(<-collection, to: SoulMadeComponent.CollectionStoragePath)
+            acct.link<&SoulMadeComponent.Collection{SoulMadeComponent.CollectionPublic}>(SoulMadeComponent.CollectionPublicPath, target: SoulMadeComponent.CollectionStoragePath)
+            acct.link<&SoulMadeComponent.Collection>(SoulMadeComponent.CollectionPrivatePath, target: SoulMadeComponent.CollectionStoragePath)
+        }
+
+        // todo: actually, the uers do not need pack collection, as the pack will automatically be opened
+        if acct.borrow<&SoulMadePack.Collection>(from: SoulMadePack.CollectionStoragePath) == nil {
+            let collection <- SoulMadePack.createEmptyCollection()
+            acct.save(<-collection, to: SoulMadePack.CollectionStoragePath)
+            acct.link<&SoulMadePack.Collection{SoulMadePack.CollectionPublic}>(SoulMadePack.CollectionPublicPath, target: SoulMadePack.CollectionStoragePath)
+            acct.link<&SoulMadePack.Collection>(SoulMadePack.CollectionPrivatePath, target: SoulMadePack.CollectionStoragePath)
+        }
+        
+        let platformAddress: Address = 0xf8d6e0586b0a20c7
+        // let platformAddress: Address = 0xb4187e54e0ed55a8
+        self.storefront = getAccount(platformAddress)
+            .getCapability<&NFTStorefront.Storefront{NFTStorefront.StorefrontPublic}>(NFTStorefront.StorefrontPublicPath).borrow() ?? panic("Could not borrow Storefront from provided address")
+
+        self.listing = self.storefront.borrowListingWithNoID() ?? panic("No Offer with that ID in Storefront")
+            
+        let price = self.listing.getDetails().salePrice
+        let mainFlowVault = acct.borrow<&FlowToken.Vault>(from: /storage/flowTokenVault)
+            ?? panic("Cannot borrow FlowToken vault from acct storage")
+        self.paymentVault <- mainFlowVault.withdraw(amount: price)
+
+        // todo: remember to update all these panic to make it more explicit
+        self.mainNftCollection = acct.borrow<&{NonFungibleToken.Receiver}>(from: SoulMadeMain.CollectionStoragePath) ?? panic("Cannot borrow Main NFT collection receiver from account")
+        self.componentNftCollection = acct.borrow<&{NonFungibleToken.Receiver}>(from: SoulMadeComponent.CollectionStoragePath) ?? panic("Cannot borrow Component NFT collection receiver from account")
+    }
+
+    execute {
+        let pack <- self.listing.purchase(payment: <-self.paymentVault) as! @SoulMadePack.NFT
+        
+        let mainComponentIds = pack.getMainComponentIds()
+
+        // todo: I explictly initialized the dictionary, is it safe to use the force operator?
+        let mainNftIds = mainComponentIds.mainNftIds
+        let componentNftIds = mainComponentIds.componentNftIds
+
+        // todo: I recall there is some kind of "assert"?
+        if(mainNftIds.length > 0 && self.mainNftCollection != nil){
+        for mainNftId in mainNftIds{
+            // todo: doulbe check all this kind of "casting actions"
+            var nft <- pack.withdrawMain(mainNftId: mainNftId)! as @NonFungibleToken.NFT
+            self.mainNftCollection!.deposit(token: <- nft)
+        }
+        } else if mainNftIds.length > 0 && self.mainNftCollection == nil {
+            // todo: do we need this panic? it will just fail, right?
+            panic("reference is null")
+        }
+
+        if(componentNftIds.length > 0 && self.componentNftCollection != nil){
+        for componentNftId in componentNftIds{
+            var nft <- pack.withdrawComponent(componentNftId: componentNftId)! as @NonFungibleToken.NFT
+            self.componentNftCollection!.deposit(token: <- nft)
+        }
+        } else if componentNftIds.length > 0 && self.componentNftCollection == nil {
+            panic("reference is null")
+        }
+        destroy pack
+    }
+}
+
+
+// transaction(listingResourceID: UInt64) {
+//     let paymentVault: @FungibleToken.Vault
+//     let mainNftCollection: &{NonFungibleToken.Receiver}
+//     let componentNftCollection: &{NonFungibleToken.Receiver}
+//     let storefront: &NFTStorefront.Storefront{NFTStorefront.StorefrontPublic}
+//     let listing: &NFTStorefront.Listing{NFTStorefront.ListingPublic}
+
+//     prepare(acct: AuthAccount) {
+//         // set up account
+//         if acct.borrow<&SoulMadeMain.Collection>(from: SoulMadeMain.CollectionStoragePath) == nil {
+//             let collection <- SoulMadeMain.createEmptyCollection()
+//             acct.save(<-collection, to: SoulMadeMain.CollectionStoragePath)
+//             acct.link<&SoulMadeMain.Collection{SoulMadeMain.CollectionPublic}>(SoulMadeMain.CollectionPublicPath, target: SoulMadeMain.CollectionStoragePath)
+//             // todo: double check if we need this PrivatePath at all. I remeber we actually have used it somewhere.
+//             acct.link<&SoulMadeMain.Collection>(SoulMadeMain.CollectionPrivatePath, target: SoulMadeMain.CollectionStoragePath)
+//         }
+
+//         if acct.borrow<&SoulMadeComponent.Collection>(from: SoulMadeComponent.CollectionStoragePath) == nil {
+//             let collection <- SoulMadeComponent.createEmptyCollection()
+//             acct.save(<-collection, to: SoulMadeComponent.CollectionStoragePath)
+//             acct.link<&SoulMadeComponent.Collection{SoulMadeComponent.CollectionPublic}>(SoulMadeComponent.CollectionPublicPath, target: SoulMadeComponent.CollectionStoragePath)
+//             acct.link<&SoulMadeComponent.Collection>(SoulMadeComponent.CollectionPrivatePath, target: SoulMadeComponent.CollectionStoragePath)
+//         }
+
+//         // todo: actually, the uers do not need pack collection, as the pack will automatically be opened
+//         if acct.borrow<&SoulMadePack.Collection>(from: SoulMadePack.CollectionStoragePath) == nil {
+//             let collection <- SoulMadePack.createEmptyCollection()
+//             acct.save(<-collection, to: SoulMadePack.CollectionStoragePath)
+//             acct.link<&SoulMadePack.Collection{SoulMadePack.CollectionPublic}>(SoulMadePack.CollectionPublicPath, target: SoulMadePack.CollectionStoragePath)
+//             acct.link<&SoulMadePack.Collection>(SoulMadePack.CollectionPrivatePath, target: SoulMadePack.CollectionStoragePath)
+//         }
+        
+//         let platformAddress: Address = 0xf8d6e0586b0a20c7
+//         //  let platformAddress: Address = 0xb4187e54e0ed55a8
+//         self.storefront = getAccount(platformAddress)
+//             .getCapability<&NFTStorefront.Storefront{NFTStorefront.StorefrontPublic}>(NFTStorefront.StorefrontPublicPath).borrow() ?? panic("Could not borrow Storefront from provided address")
+
+//         self.listing = self.storefront.borrowListing(listingResourceID: listingResourceID) ?? panic("No Offer with that ID in Storefront")
+            
+//         let price = self.listing.getDetails().salePrice
+//         let mainFlowVault = acct.borrow<&FlowToken.Vault>(from: /storage/flowTokenVault)
+//             ?? panic("Cannot borrow FlowToken vault from acct storage")
+//         self.paymentVault <- mainFlowVault.withdraw(amount: price)
+
+//         // todo: remember to update all these panic to make it more explicit
+//         self.mainNftCollection = acct.borrow<&{NonFungibleToken.Receiver}>(from: SoulMadeMain.CollectionStoragePath) ?? panic("Cannot borrow Main NFT collection receiver from account")
+//         self.componentNftCollection = acct.borrow<&{NonFungibleToken.Receiver}>(from: SoulMadeComponent.CollectionStoragePath) ?? panic("Cannot borrow Component NFT collection receiver from account")
+//     }
+
+//     execute {
+//         let pack <- self.listing.purchase(payment: <-self.paymentVault) as! @SoulMadePack.NFT
+        
+//         let mainComponentIds = pack.getMainComponentIds()
+
+//         // todo: I explictly initialized the dictionary, is it safe to use the force operator?
+//         let mainNftIds = mainComponentIds.mainNftIds
+//         let componentNftIds = mainComponentIds.componentNftIds
+
+//         // todo: I recall there is some kind of "assert"?
+//         if(mainNftIds.length > 0 && self.mainNftCollection != nil){
+//         for mainNftId in mainNftIds{
+//             // todo: doulbe check all this kind of "casting actions"
+//             var nft <- pack.withdrawMain(mainNftId: mainNftId)! as @NonFungibleToken.NFT
+//             self.mainNftCollection!.deposit(token: <- nft)
+//         }
+//         } else if mainNftIds.length > 0 && self.mainNftCollection == nil {
+//             // todo: do we need this panic? it will just fail, right?
+//             panic("reference is null")
+//         }
+
+//         if(componentNftIds.length > 0 && self.componentNftCollection != nil){
+//         for componentNftId in componentNftIds{
+//             var nft <- pack.withdrawComponent(componentNftId: componentNftId)! as @NonFungibleToken.NFT
+//             self.componentNftCollection!.deposit(token: <- nft)
+//         }
+//         } else if componentNftIds.length > 0 && self.componentNftCollection == nil {
+//             panic("reference is null")
+//         }
+//         destroy pack
+//     }
+// }
