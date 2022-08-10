@@ -21,6 +21,9 @@ Infinity is achieved through constant dynamic splitting. However, since the weig
 parent NFT, the sum of the weights is no different from the original 32 NFTs at the time of creation. Therefore, the
 unlimited free issuance will not cause any trouble to the future DAO.
 
+- Y = 1 + 31X. The total supply of NFTs increases linearly.
+- W = K. The total weight of the NFT is constant.
+
 #### Target audience
 
 AI artist.
