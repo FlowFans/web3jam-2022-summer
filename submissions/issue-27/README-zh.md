@@ -16,7 +16,7 @@ NFT的所有权，理应是一种无需证明的事实。
 
 社群是NFT很重要的组成部分，在当前的NFT社群运营工具(如discord)没有原生NFT的集成，社群的身份证明依赖第三方bot的集成，从而产生了安全隐患。随着钓鱼攻击频发，NFT持有者的资产安全受到很大的威胁。
 
-另一方面，目前的NFT运营体系中社群工具与资产分隔在Web2与Web3，项目方只能看到一个个twitter/discord账号，无法精准的找到Owner用户，这使得运营激励活动活动即不精准也不高效。
+另一方面，目前的NFT运营体系中社群工具与资产分隔在Web2与Web3，项目方只能看到一个个twitter/discord账号，无法精准的找到Owner用户，这使得运营激励活动即不精准也不高效。
 
 Relation Club是基于Relation的服务构建的社群运营工具。Relation是基于Web3构建social graph的社交基础设施，提供统一身份认证、用户个人数据管理工具、web3 IM协议、Web3 social Graph，Data toolkit等工具帮助开发者高效开发及部署DAPP。
 
