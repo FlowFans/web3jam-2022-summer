@@ -151,7 +151,7 @@ Chain Native的特性为Relation Club带来独特的安全性，社群身份验�
 *交付材料*
 
 - [Source Code](https://github.com/relationlabs/web3jam-2022-summer/tree/main/submissions/issue-27/src/cadence), deployed to Testnet address: 0x457f3685a6f38813
-- [Pitch Deck](./docs/deck.pdf) <!-- or using online documentation url / ipfs url -->
+- [Pitch Deck](https://docsend.com/view/htfb4dzi55ey794j) 
 - [Demo Video](https://3fypb-gqaaa-aaaag-aaedq-cai.ic1.io/banner/relationClub.mp4) 
 - [测试demo地址](https://relationlabs.ai/#/clubguide/A.afb8473247d9354c.FlowNia) https://relationlabs.ai/#/clubguide/A.afb8473247d9354c.FlowNia
 
