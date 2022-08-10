@@ -39,7 +39,7 @@ Relation Club是基于Relation的服务构建的社群运营工具。Relation是
 
 - NFT社群与资产持有的割裂：
 
-    权属与社群的割裂已成常态，除少数愿意公开身份的KOL外，NFT项目方无法了解其用户，仅仅能通过拼凑的信息模糊的分析用户，无法精准的查找到Owner用户。
+    权属与社群的割裂已成常态，除少数愿意公开身份的KOL外，NFT项目方无法了解其用户，仅仅能通过拼凑的模糊信息的分析用户，无法精准的查找到Owner用户。
     ![Frame 1000003294](https://user-images.githubusercontent.com/91399393/183894671-b82f68f7-8a7d-4ac9-8c25-b1266daeaba7.png)
 
 
