@@ -126,4 +126,4 @@ NFT is rapidly emerging in 2021, with transactions totaling more than $40 billio
 | -------- | ---------------------------- | ---- | ----------------------------------------------------- |
 | Skyone   | Full-Stack Engineer          | ...  | [skyone@soulmade.art](mailto:skyone@soulmade.art)     |
 | AngleMon | NFT Artist & Product Manager | ...  | [peili.ge@soulmade.art](mailto:peili.ge@soulmade.art) |
-| Miya     | Product Manager              | ...  | [miya@soulmade.art](                                  |
+| Miya  | Product Manager      | ...          | [miya@soulmade.art](miya@soulmade.art) |
