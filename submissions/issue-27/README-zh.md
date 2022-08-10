@@ -34,6 +34,8 @@ Relation Club是基于Relation的服务构建的社群运营工具。Relation是
 3. 5月6日，NFT交易市场Opensea官方Discord遭受攻击。
 4. 更多的NFT安全事件......
 
+![Frame 1000003316](https://user-images.githubusercontent.com/91399393/183941144-afec3976-792d-4087-bd66-87dd6109bde7.png)
+
 
 - NFT社群与资产持有的割裂：
 
