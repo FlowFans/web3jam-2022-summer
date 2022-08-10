@@ -1,0 +1,42 @@
+.foot_top{
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    margin: 0;
+    display: flex;
+}
+
+.foot_top_d1{
+    float: left;
+    width: 80%;
+    height: 100%;
+}
+.foot_top_img{
+    width: 250px;
+    height: 70px;
+    margin-left: 1%;
+}
+
+.foot_txt{
+    margin-left: 2%;
+    font-size: 16px;
+    color: #293548;
+}
+
+.foot_top_d2{
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+
+.foot_c_txt{
+    color: #293548;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    /* font-family: Montserrat,sans-serif; */
+}
+
+.foot_com_img{
+    height: 40px;
+}

@@ -1,0 +1,58 @@
+header{
+    position: absolute;
+}
+.logoimg{
+    height: 85px;
+    width: 80px;
+}
+
+.divone{
+    display: block;
+}
+
+.divtwo{
+    display: block;
+}
+
+.divthr{
+    display: block;
+}
+
+.wallbtn{
+    height: 44px;
+    width: 187.5px;
+    padding: 0 20px;
+    border-radius: 18px;
+    font-size: 14px;
+    background: #df7292;
+    text-align: center;
+    border: 1px solid #df7292;
+    background-color: #df7292;
+    color: #fff;
+}
+
+.headerUl{
+    display:flex;
+    align-items:center;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: justify;
+    text-transform: uppercase;
+    margin: 0 20px;
+}
+
+.headli{
+    margin: 0 20px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.headlia{
+    margin:0 20px;
+    height: 15;
+    width: 61.53;
+    color: #959496;
+    font-family: Montserrat,sans-serif;
+}
