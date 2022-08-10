@@ -1,0 +1,1 @@
+ flow project deploy -l debug -o json --network=testnet -f flow.json -f flow.testnet.json --update

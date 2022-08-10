@@ -1,0 +1,138 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+        "FungibleToken": {
+            "source": "./contracts/core/FungibleToken.cdc",
+            "aliases": {
+                "testnet": "0x9a0766d93b6608b7",
+                "mainnet": "0xf233dcee88fe0abe"
+            }
+        },
+        "FlowToken": {
+            "source": "./contracts/core/FlowToken.cdc",
+            "aliases": {
+                "testnet": "0x7e60df042a9c0868",
+                "mainnet": "0x1654653399040a61"
+            }
+        },
+        "FUSD": {
+            "source": "./contracts/core/FUSD.cdc",
+            "aliases": {
+                "testnet": "0xe223d8a629e49c68",
+                "mainnet": "0x3c5959b568896393"
+            }
+        },
+        "FlowStorageFees": {
+            "source": "./contracts/core/FlowStorageFees.cdc",
+            "aliases": {
+                "testnet": "0x8c5303eaa26202d6",
+                "mainnet": "0xe467b9dd11fa00df"
+            } 
+        },
+        "NonFungibleToken": {
+            "source": "./contracts/core/NonFungibleToken.cdc",
+            "aliases": {
+                "testnet": "0x631e88ae7f1d7c20",
+                "mainnet": "0x1d7e57aa55817448"
+            } 
+        },
+        "MetadataViews": {
+            "source": "./contracts/core/MetadataViews.cdc",
+            "aliases": {
+                "testnet": "0x631e88ae7f1d7c20",
+                "mainnet": "0x1d7e57aa55817448"
+            } 
+        },
+        "FLOAT": {
+            "source": "./contracts/float/FLOAT.cdc",
+            "aliases": {
+                "testnet": "0x0afe396ebc8eee65",
+                "mainnet": "0x2d4c3caffbeab845"
+            } 
+        },
+        "FLOATVerifiers": {
+            "source": "./contracts/float/FLOATVerifiers.cdc",
+            "aliases": {
+                "testnet": "0x0afe396ebc8eee65",
+                "mainnet": "0x2d4c3caffbeab845"
+            } 
+        },
+        "GrantedAccountAccess": {
+            "source": "./contracts/float/GrantedAccountAccess.cdc",
+            "aliases": {
+                "testnet": "0x0afe396ebc8eee65",
+                "mainnet": "0x2d4c3caffbeab845"
+            } 
+        },
+        "Distributors": {
+            "source": "./contracts/Distributors.cdc",
+            "aliases": {
+                "testnet": "0xdc34f5a7b807bcfb",
+                "mainnet": "0x39b144ab4d348e2b"
+            }
+        },
+        "EligibilityVerifiers": {
+            "source": "./contracts/EligibilityVerifiers.cdc",
+            "aliases": {
+                "testnet": "0xdc34f5a7b807bcfb",
+                "mainnet": "0x39b144ab4d348e2b"
+            }
+        },
+        "Cloud": {
+            "source": "./contracts/Cloud.cdc",
+            "aliases": {
+                "testnet": "0xdc34f5a7b807bcfb",
+                "mainnet": "0x39b144ab4d348e2b"
+            }
+        },
+        "Mist": {
+            "source": "./contracts/Mist.cdc",
+            "aliases": {
+                "testnet": "0xdc34f5a7b807bcfb",
+                "mainnet": "0x39b144ab4d348e2b"
+            }
+        }
+    },
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "fae10f262a46ca34e438a48daff66d6672340a49e634bb7d0f7f9eeb78d7fa1b"
+		},
+        "drizzle-testnet": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "fae10f262a46ca34e438a48daff66d6672340a49e634bb7d0f7f9eeb78d7fa1b"
+        },
+        "drizzle": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "fae10f262a46ca34e438a48daff66d6672340a49e634bb7d0f7f9eeb78d7fa1b"
+        }
+	},
+	"deployments": {
+        "testnet": {
+            "drizzle-testnet": [
+                "Distributors",
+                "EligibilityVerifiers",
+                "Cloud",
+                "Mist" 
+            ]
+        },
+        "mainnet": {
+            "drizzle": [
+                "Distributors",
+                "EligibilityVerifiers",
+                "Cloud",
+                "Mist"
+            ]
+        }
+    }
+}
