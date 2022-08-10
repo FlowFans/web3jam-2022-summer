@@ -1,0 +1,16 @@
+/*
+ * Skypack CDN - react-icons@4.4.0
+ *
+ * Learn more:
+ *   📙 Package Documentation: https://www.skypack.dev/view/react-icons
+ *   📘 Skypack Documentation: https://www.skypack.dev/docs
+ *
+ * Pinned URL: (Optimized for Production)
+ *   ▶️ Normal: https://cdn.skypack.dev/pin/react-icons@v4.4.0-xDCxCkZDXOxefJzzdgoO/mode=imports/unoptimized/ti/index.esm.js
+ *   ⏩ Minified: https://cdn.skypack.dev/pin/react-icons@v4.4.0-xDCxCkZDXOxefJzzdgoO/mode=imports,min/unoptimized/ti/index.esm.js
+ *
+ */
+
+// Browser-Optimized Imports (Don't directly import the URLs below in your application!)
+export * from '/-/react-icons@v4.4.0-xDCxCkZDXOxefJzzdgoO/dist=es2019,mode=imports/unoptimized/ti/index.esm.js';
+export {default} from '/-/react-icons@v4.4.0-xDCxCkZDXOxefJzzdgoO/dist=es2019,mode=imports/unoptimized/ti/index.esm.js';

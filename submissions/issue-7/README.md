@@ -4,21 +4,34 @@
 
 ## 目录索引
 
-### 文档与演示材料：/docs
+### 文档与演示材料："/docs"
+#### PPT : "/docs/TIK8.pdf"
 
+### FLOW配置文件："/flow"
 
-### 项目文件：/src
-#### 合约文件：/src/cadence
-这里存放的是项目所有的合约文件，一共分为三类：Contracts Transactions Scripts
+### 项目文件："/src"
+#### 合约文件："/src/cadence"
+这里存放的是项目所有的合约文件，一共分为三类：1) Contracts 2) Transactions 3) Scripts
 
-- **Contracts**：/src/cadence/contract
+- **Contracts**："/src/cadence/contract"
   - NebulaActivity.cdc： 核心合约，包含需要创建的各类资源、接口与结构体定义
  
-- **Transactions**：/src/cadence/transactions
-  - add_tickets_info.cdc：
-- **Scripts**: /src/cadence/scripts
+- **Transactions**："/src/cadence/transactions"
+  - add_tickets_info.cdc: 增加一个活动的票务信息
+  - create_activity.cdc: 用来创建一个活动到链上的transaction
+  - purchase_ticket.cdc: 用来购买指定票的transaction
+  - set_up_account.cdc: 用来初始化账户票夹和活动助手的transaction
+  - verify_ticket.cdc: 用来核销票的transaction
+- **Scripts**: "/src/cadence/scripts"\
+用来查询各种数据的script,由于合约本身已经写好的对应的注释，故在给出的例子中只是援引了部分函数，具体可引用函数详情见 NebulaActivity.cdc
 
-#### 前端文件：/src/ui
+#### 前端文件："/src/ui"
+- **html**："/src/ui/html"\
+里面是UI的html形式
+
+- **Transactions**："/src/cadence/transactions"\
+里面是用next.js编写的一些UI
+
 
 ***
 

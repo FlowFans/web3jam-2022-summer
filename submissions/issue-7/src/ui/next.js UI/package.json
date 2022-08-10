@@ -1,0 +1,55 @@
+{
+  "homepage": "https://demos.creative-tim.com/notus-nextjs",
+  "description": "Notus NextJS - A free Tailwind CSS, NextJS and React Ui Kit and Admin by Creative Tim.",
+  "repository": "https://github.com/creativetimofficial/notus-nextjs",
+  "license": "MIT",
+  "name": "ticket-planet",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run build:tailwind && npm run dev",
+    "build:tailwind": "tailwind build styles/index.css -o styles/tailwind.css"
+  },
+  "dependencies": {
+    "@onflow/fcl": "^1.2.0",
+    "next": "12.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "@fortawesome/fontawesome-free": "5.15.3",
+    "@popperjs/core": "2.9.1",
+    "@tailwindcss/forms": "0.2.1",
+    "chart.js": "2.9.4",
+    "gulp": "4.0.2",
+    "gulp-append-prepend": "1.0.8",
+    "react-scripts": "4.0.3",
+    "tailwindcss": "2.0.4"
+  },
+  "devDependencies": {
+    "eslint": "8.21.0",
+    "eslint-config-next": "12.2.4",
+    "autoprefixer": "10.2.5",
+    "postcss": "8.2.8"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "optionalDependencies": {
+    "typescript": "4.2.3"
+  }
+}
