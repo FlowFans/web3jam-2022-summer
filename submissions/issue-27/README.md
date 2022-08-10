@@ -22,28 +22,28 @@ Relation Club is a community operation tool based on Relation social services. R
 
 *Target Users*
 
-- NFT创作者或项目方
-- NFT持有者
+- NFT Creators or Projectors
+- NFT Holders
 
 
-*需求证明*
-- NFT社群领域安全问题频发:
-1. 4月1日，BAYC（无聊猿）的Discord遭遇短暂黑客攻击。
-2. 5月23日，MEE6官方Discord遭受攻击，导致账号被盗，官方discord群里发布mint的钓鱼网站信息。
-3. 5月6日，NFT交易市场Opensea官方Discord遭受攻击。
-4. 更多的NFT安全事件......
+*Proof of Demand*
+- Security incidents in NFT communities happen frequently:
+1. On April 1, BAYC's (Bored Ape) Discord server was momentarily hacked
+2. On May 23, MEE6's official Discord server was attacked. The official Discord account was stolen. And phishing sites for minting were posted in the official Discord server
+3. On May 6, Opensea’s official Discord server was attacked
+4. Lots of security incidents in NFT communities has happened and are still happening...
 
 
-- NFT社群与资产持有的割裂：
+- The disconnection between NFT communities and NFT assets:
 
-    权属与社群的割裂已成常态，除少数愿意公开身份的KOL外，NFT项目方无法了解其用户，仅仅能通过拼凑的信息模糊的分析用户，无法精准的查找到Owner用户。
+    The NFT ownership and community membership has long been disconnected. Except for a few KOLs who are willing to disclose their real identities, NFT projectors find it hard to accurately locate and know more about NFT collection owners, with fragmented and vague user information only.
     ![Frame 1000003294](https://user-images.githubusercontent.com/91399393/183894671-b82f68f7-8a7d-4ac9-8c25-b1266daeaba7.png)
 
 
 
-### 产品方案
+### Product Plans
 
-*产品介绍*
+*Product Introduction*
 
 Relation Club是Chain native的NFT社群运营工具，它将帮助NFT创作者和NFT 持有者在web3中直接开展社群活动，这不仅能在有效地保证用户资产安全性，而且还将便利创作者的社群运营，可以开拓更多Web3 Native的NFT应用场景。
 
@@ -105,7 +105,7 @@ Chain Native的特性为Relation Club带来独特的安全性，社群身份验�
 
 *技术架构*
 
-<img width="756" alt="0000" src="https://user-images.githubusercontent.com/91399393/183899995-9f571d0a-6705-437e-af75-586b6b27bc5d.png">
+![Frame 1000003296](https://user-images.githubusercontent.com/91399393/183937137-f4c079d2-fc2e-47b8-aff8-987cab258bea.png)
 
 
 
