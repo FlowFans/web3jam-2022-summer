@@ -33,6 +33,9 @@ Relation Club is a community operation tool based on Relation social services. R
 3. On May 6, Opensea’s official Discord server was attacked
 4. Lots of security incidents in NFT communities has happened and are still happening...
 
+![Frame 1000003316](https://user-images.githubusercontent.com/91399393/183941100-8bc4fb37-7444-4550-9fc5-9fe70a9d346f.png)
+
+
 
 - The disconnection between NFT communities and NFT assets:
 
@@ -45,48 +48,48 @@ Relation Club is a community operation tool based on Relation social services. R
 
 *Product Introduction*
 
-Relation Club是Chain native的NFT社群运营工具，它将帮助NFT创作者和NFT 持有者在web3中直接开展社群活动，这不仅能在有效地保证用户资产安全性，而且还将便利创作者的社群运营，可以开拓更多Web3 Native的NFT应用场景。
+Relation Club is a chain-native NFT community operation tool. It will help NFT creators and NFT holders directly carry out community activities in the Web3 world, which will not only effectively ensure user asset security, but will also facilitate the community operation for NFT creators. With Relation Club, the exploration of more Web3 native NFT application scenarios will be possible.
 
-Chain Native的特性为Relation Club带来独特的安全性，社群身份验证无需依赖第三方Bot，有效防范了钓鱼风险。
+The chain-native feature makes Relation Club particularly secure. In Relation Club, identity verification does not rely on a third-party Bot any more, which effectively prevents phishing risks.
 
-同时，Relation Club提供精细化运营工具，帮助项目方高效触达NFT持有者，并能对用户的行为进行持续的追踪。
+In addition, Relation provides sophisticated operational tools that enables the NFT projectors to efficiently reach NFT holders and continuously track user behaviors.
 
-**Relation Club具有以下特性：**
+**Relation Club has the following features:**
 
-- Flow友好，支持Flow所有主流NFT collection
-- NFT权益事实化，进入、离开Club基于NFT的链上所有权，无需额外认证
-- 帮助创作者将地址映射到真实的用户,高效触达NFT持有者
-- 提供基于Web3的身份认证、IM、社交关系图谱等基础服务
-- 丰富且有趣社群运营小工具
+- Flow-friendly. Supportive of all mainstream NFT collections on the Flow blockchain
+- Helpful for NFT creators to map on-chain addresses to real users and  reach NFT holders efficiently
+- Providing Web3-based services such as Identity verification, IM, Social Graph, etc
+- Containing various and interesting community operation tools 
+- NFT rights de facto. Entrance and exit of Clubs will be based on the NFT ownership on chain, without additional verification process
 
-**Relation Club将包下述模块：**
+**Relation Club includes the following modules:**
 
 - **Club Space**
 
-    Club Space是Club的主页，包含Club基本信息，linked Page，Club News，Proposal，活跃用户和成员墙。
+    Club Space is the Club's home page, containing Club basic info, linked Pages, Club News, Proposals, Active Users and Club Membership Wall, gathering all the Club members.
 
 ![club homepage (5)](https://user-images.githubusercontent.com/91399393/183921942-8ae2378c-06f1-4a01-b1dd-27034badb261.jpg)
 
 
 - **Club Chat**
 
-    Club Chat是NFT Club的成员聊天群组，服务将根据合约的持有者信息自动管理Club成员，Chat的IM协议将支持文字、图片、emoji、自定义表情、NFT分享、网页分享等消息格式。
+    Club Chat is an NFT Club chat group for Club members. Club members could be automatically managed based on contract holder information. The Chat's IM protocol will support text, images, emoji, custom stickers, NFT sharing, website link sharing and other message formats.
     
     ![Frame 1000003293](https://user-images.githubusercontent.com/91399393/183894798-f7d4a222-18d5-4475-bef7-95ebbfdee4cb.png)
 
 
-- **Club信息聚合中间件**
+- **Club Information Aggregation Middleware**
 
-    负责收集和管理NFT持有者的链上公开信息的infra，将为Club提供基础的服务支持，并可以自动完成成员管理，用户通过FCL登录Relation Club后，将根据用户地址验证用户是否持有某些NFT，它将被自动加入对应的Club，而根据Flow链上的权属更新，如果他失去了NFT，则将被移出Club，由新的持有者进入。
+    The Infra, which is responsible for collecting and managing on-chain public information of NFT holders, will provide basic service support for the Club and will automatically complete membership management. After a user logging in to the Relation Club through the FCL, he/she will be verified on whether he/she holds some certain NFTs. If the user holds an NFT, then he/she will be automatically added to the corresponding Club. And according to the NFT ownership updated on the Flow blockchain, if the user does not own this NFT any more, he/she will be removed from the Club and replaced by a new holder.
 
-- **New Club合约**
+- **New Club Contract**
 
-    New Club合约是用于创建Club NFT的智能合约。New Club合约遵循自Flow的NFT创建标准，帮助项目方直接通过Relation Club的UI直接完成从合约部署、NFT mint到Club上线的全过程。
+    The New Club Contract is a smart contract for creating Club NFTs. The New Club Contract follows Flow’s NFT creation standard, helping NFT projectors finish the whole process of Contract Deployment, NFT Minting, and Club Launch directly with Relation Club UI.
 
 
-- **Club统计**
+- **Club Statistics**
 
-    基于聚合的Web3地址，Club帮助创作者能将用户定位为人而非地址，更加全面的了解NFT用户群体，制定运营策略。这使得Club统计不仅可以提供On-chain的数据分析，还能提供基于真实用户个体的进阶数据统计。
+    Based on aggregated Web3 addresses, Relation Club helps NFT creators locate users as people rather than addresses, thus creators could gain a more comprehensive understanding of the NFT user base, and develop operational strategies. This allows Club Statistics to provide not only on-chain data analysis, but also advanced statistics based on real users.
 
 ![club homepage (6)](https://user-images.githubusercontent.com/91399393/183922360-d77f3ea5-fa94-40a7-a787-1560183c7a63.jpg)
 
