@@ -21,7 +21,7 @@ Create a purchase tool based on dynamic ticket viewing for organizations or indi
 
 ### Project background
 
-Swift tickets is designed to solve the existing problems of traditional ticketing as much as possible. It can be reflected through the complaints in the consumer protection institutions that consumers must trust a third party when buying tickets in the secondary market, so they are faced with the risk of buying fake or invalid tickets. The two-dimensional code or bar code does not encrypt the information, which is not enough to make the ticket truly tamper resistant. In addition, consumers cannot verify whether the bar code on the ticket is valid. Therefore, we hope that by combining with NFT, we can design a ticket system with NFT characteristics, including but not limited to digitization, security, verifiability, transparency and ticket value-added. 
+SwiftTickets is designed to solve the existing problems of traditional ticketing as much as possible. It can be reflected through the complaints in the consumer protection institutions that consumers must trust a third party when buying tickets in the secondary market, so they are faced with the risk of buying fake or invalid tickets. The two-dimensional code or bar code does not encrypt the information, which is not enough to make the ticket truly tamper resistant. In addition, consumers cannot verify whether the bar code on the ticket is valid. Therefore, we hope that by combining with NFT, we can design a ticket system with NFT characteristics, including but not limited to digitization, security, verifiability, transparency and ticket value-added. 
 
 
 ### Product scheme
