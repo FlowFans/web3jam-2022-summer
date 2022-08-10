@@ -1,12 +1,13 @@
 # Project Name
-PunStar  
+**PunStar**
+![3333](https://user-images.githubusercontent.com/83746881/180390840-091e029d-2577-4c30-9c52-0ffb00dd1336.png)
+
+* Register to http://punster.stonelens.com/ and start your funny journey. Check the [Front UI Tutorial](./docs/Front%20UI%20Tutorial.md) if you are new to Flow.
+
 ## Track
 - [ ] NFT x DAO/Tools
 - [ ] NFT x Game/Entertainment
 - [x] NFT x Life/Metaverse
-
-## Links
-* Register to [PunStar](http://punster.stonelens.com/) and start your funny journey. Check the [Front UI Tutorial](./docs/Front%20UI%20Tutorial.md) if you are new to Flow.
 
 # Description
 ## Problem statement
@@ -53,8 +54,6 @@ The key points of the technology are as follows:
 * Advertisement mechanism based on `funny index` of `Punsters`.
 * A cross-chain access system.
 
-### Logo
-![3333](https://user-images.githubusercontent.com/83746881/180390840-091e029d-2577-4c30-9c52-0ffb00dd1336.png)
 ### Marketing
 * The funny `Duanji` is used as the initial entry point for the topic to start the market.
 * Give NFT more dynamical and practical value based on Flow's unique mechanism to attract more user to create to build their social relationships.
@@ -74,6 +73,7 @@ The key points of the technology are as follows:
     * [Web source code](https://github.com/zation/punster-client)
 * [Pitch Deck](./docs/PunStar(v0.0.1).ppt.pdf)
 * [Demo]()
+* [Website](http://punster.stonelens.com/)
 
 # Additional information
 ## The operation by Flow CLI is as below:
