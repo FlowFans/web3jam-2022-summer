@@ -131,7 +131,8 @@ Chain Native的特性为Relation Club带来独特的安全性，社群身份验�
 
 关键实现
 
-![image](https://user-images.githubusercontent.com/91399393/183738021-010bb837-16bb-4d94-b535-f785077c3fc4.png)
+<img width="912" alt="111" src="https://user-images.githubusercontent.com/91399393/183896194-aba9471c-2ac4-49f1-841e-49d7ec5e8671.png">
+
 
 *服务端*
 
