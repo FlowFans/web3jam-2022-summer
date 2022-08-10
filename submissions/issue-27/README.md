@@ -158,9 +158,9 @@ For example, the PFP Group Photo function, allowing NFT holders to  enter the sa
 - [Testing Demo](https://relationlabs.ai/#/clubguide/A.afb8473247d9354c.FlowNia) https://relationlabs.ai/#/clubguide/A.afb8473247d9354c.FlowNia
 
 
-## 团队成员
+## Team member
 
-| 姓名 Name | 角色 Role     | 个人经历 Bio | 联系方式 Contact     |
+|  Name |  Role     |  Bio |  Contact     |
 | ---- | ------------------- | --- | ----------------------- |
 | Jessica | Economic Designer | Crypto and commodity derivatives trader,5+ years of blockchain research experience,CFA, ACCA,Visiting researcher at Imperial College |  j.chang@relationlabs.ai |
 | Joe | Product Manager/Engineer | former product leader of top blockchain companies, 6+ years of project experience in finance, logistics, social networking, games products | pikajoe@relationlabs.ai  |
