@@ -105,7 +105,8 @@ Chain Native的特性为Relation Club带来独特的安全性，社群身份验�
 
 *技术架构*
 
-<img width="530" alt="000" src="https://user-images.githubusercontent.com/91399393/183895180-8016c224-9607-4412-a691-9fa24c908ec0.png">
+<img width="756" alt="0000" src="https://user-images.githubusercontent.com/91399393/183899995-9f571d0a-6705-437e-af75-586b6b27bc5d.png">
+
 
 
 *产品LOGO*
