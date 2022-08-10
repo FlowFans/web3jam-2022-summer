@@ -1,0 +1,68 @@
+.introduction {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 24px 160px;
+  background-color: #2a252c;
+
+  @media (min-width: 1024px) {
+    padding: 180px 24px 160px;
+  }
+
+  .title {
+    color: #ffffff;
+    font-size: 44px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 48px;
+    margin-bottom: 16px;
+  }
+
+  .desc {
+    color: #ffffff;
+    font-family: Avenir;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 30px;
+    margin-bottom: 72px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.steps {
+  display: flex;
+  justify-content: space-around;
+  width: var(--desktop-content-width);
+}
+
+.step {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .stepTitle {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2.6px;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .stepDesc {
+    font-family: Avenir;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 22px;
+    text-align: center;
+  }
+}
+
+.countdown {
+  color: white;
+}

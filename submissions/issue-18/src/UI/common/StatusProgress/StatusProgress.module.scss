@@ -1,0 +1,33 @@
+.statusProgress {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  min-width: 300px;
+  background-color: #2a252c;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 99999;
+
+  .status {
+    .text {
+      padding: 5px 16px;
+      background-color: #ccc;
+      display: inline-block;
+      border-radius: 30px;
+      color: #2a252c;
+    }
+  }
+
+  .progress {
+    padding: 10px 0;
+  }
+
+  .addr {
+    margin: 8px 0;
+  }
+
+  .desc {
+    margin: 8px 0;
+  }
+}

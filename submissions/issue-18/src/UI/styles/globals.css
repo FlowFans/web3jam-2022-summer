@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+@font-face {
+  font-family: 'Bradley Hand Bold';
+  src: url('/fonts/bradley_hand_itc_tt_bold.ttf');
+}
+@font-face {
+  font-family: 'Party LET Plain';
+  src: url('/fonts/party_let_plain/065f1d601ba5895c2b4b85347952315d.eot'); /* IE9*/
+  src: url('/fonts/party_let_plain/065f1d601ba5895c2b4b85347952315d.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */ /* chrome、firefox */ url('/fonts/party_let_plain/065f1d601ba5895c2b4b85347952315d.woff')
+      format('woff'),
+    /* chrome、firefox */ url('/fonts/party_let_plain/065f1d601ba5895c2b4b85347952315d.ttf') format('truetype'),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url('/fonts/party_let_plain/065f1d601ba5895c2b4b85347952315d.svg#Party LET Plain:1.0') format('svg'); /* iOS 4.1- */
+}
+
+:root {
+  --desktop-content-width: 1440px;
+  --header-padding: 34px 0;
+  --header-nav-font-size: 24px;
+  --header-nav-item-margin: 0 20px;
+  --white: #ffffff;
+}
+
+@media screen and (max-width: 1500px) {
+  :root {
+    --desktop-content-width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  :root {
+    --desktop-content-width: 1000px;
+    --header-padding: 20px 0;
+    --header-nav-item-margin: 0 10px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --desktop-content-width: 90%;
+    --header-padding: 20px 0;
+    --header-nav-font-size: 16px;
+    --header-nav-item-margin: 0 10px;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #efedf2;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Fredoka', sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+}

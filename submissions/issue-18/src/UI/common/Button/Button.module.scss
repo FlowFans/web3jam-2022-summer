@@ -1,0 +1,66 @@
+.btn {
+  border-radius: 6px;
+  background-color: #2a252c;
+  padding: 0;
+  color: #2a252c;
+  font-family: Fredoka;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2.6px;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+  border: 2px solid #2a252c;
+}
+
+.outlined {
+  text-transform: uppercase;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #2a252c;
+  font-family: Fredoka;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 2.6px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.btnLarge {
+  border-radius: 6px;
+  padding: 13px 40px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  font-size: 20px;
+
+  @media screen and (max-width: 1300px) {
+    padding: 9px 20px !important;
+    font-size: 16px !important;
+  }
+
+  @media screen and (max-width: 1000px) {
+    padding: 2px 8px !important;
+    font-size: 12px !important;
+  }
+  @media screen and (max-width: 414px) {
+    padding: 9px 20px !important;
+    font-size: 16px !important;
+  }
+}
+
+.btnSmall {
+  padding: 0 16px !important;
+  border-radius: 50px !important;
+  font-size: 16px !important;
+  letter-spacing: 2.3px !important;
+  line-height: 32px !important;
+
+  @media screen and (max-width: 1000px) {
+    font-size: 12px !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    letter-spacing: 1px !important;
+    font-size: 12px !important;
+  }
+}

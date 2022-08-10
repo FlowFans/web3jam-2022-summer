@@ -1,0 +1,52 @@
+.assetTabs {
+  flex: 1;
+
+  .indicator {
+    background-color: transparent;
+  }
+
+  .tab {
+    color: #ababab;
+    font-family: Avenir;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 24px;
+    padding: 0;
+
+    margin-right: 4px;
+
+    &.selected {
+      color: #262626;
+    }
+  }
+
+  .imgs {
+    display: flex;
+    padding: 8px 0;
+    overflow-x: scroll;
+    .img {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      aspect-ratio: 1;
+      margin-right: 8px;
+      background-color: #f6f6f6;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &.selected {
+        border: 2px solid #2a252c;
+      }
+
+      .closeIcon {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background-color: #efedf2;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.arrow {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.left {
+  transform: rotate(180deg);
+}
+
+.inactive {
+  opacity: 0.2;
+}

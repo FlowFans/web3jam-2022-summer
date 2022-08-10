@@ -1,0 +1,58 @@
+.homeScreen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.roadmap {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 56px;
+
+  .title {
+    color: #262626;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2.6px;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .content {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 128 / 75;
+  }
+}
+
+.teaminfo {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 56px;
+
+  .title {
+    color: #262626;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2.6px;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .content {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+  }
+}

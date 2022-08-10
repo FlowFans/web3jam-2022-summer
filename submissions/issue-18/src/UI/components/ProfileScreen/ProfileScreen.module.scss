@@ -1,0 +1,40 @@
+.profileScreen {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 0;
+
+  @media (min-width: 1024px) {
+    padding: 180px 0;
+  }
+
+  .title {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 48px;
+    margin-bottom: 32px;
+
+    @media (min-width: 1024px) {
+      font-size: 44px;
+    }
+  }
+
+  .assetsSection {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+
+    .ribbon {
+      width: 100%;
+    }
+  }
+
+  .filter {
+    display: flex;
+  }
+}

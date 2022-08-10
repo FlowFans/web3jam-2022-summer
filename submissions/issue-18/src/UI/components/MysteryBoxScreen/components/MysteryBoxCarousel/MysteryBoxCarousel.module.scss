@@ -1,0 +1,56 @@
+.mysteryBoxCarousel {
+  background-color: #efedf2;
+  width: 100%;
+
+  .wrapper {
+    transform: translate(0, -170px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .btnWrapper {
+      width: 100%;
+      padding: 0 24px;
+      text-align: center;
+
+      .btn {
+        width: 100%;
+        max-width: 370px;
+      }
+    }
+  }
+}
+
+.dialogContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .imgWrapper {
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  .title {
+    color: #262626;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2.6px;
+    line-height: 30px;
+    text-align: center;
+    margin: 56px 0 4px;
+  }
+
+  .msg {
+    color: #262626;
+    font-family: Fredoka;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 48px;
+    margin-bottom: 32px;
+  }
+}

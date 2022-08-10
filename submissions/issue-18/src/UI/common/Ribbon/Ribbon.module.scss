@@ -1,0 +1,19 @@
+.ribbon {
+  height: 70px;
+  width: 200px;
+  border-radius: 0 35px 35px 0;
+  background-color: #2a252c;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 38px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 40px;
+
+  @media screen and (min-width: 1024px) {
+    width: 269px;
+  }
+}

@@ -1,0 +1,15 @@
+.closeIcon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #2a252c;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #efedf2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}

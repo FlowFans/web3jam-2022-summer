@@ -1,0 +1,67 @@
+{
+  "name": "soulmade-web",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.6.0",
+    "@emotion/styled": "^11.6.0",
+    "@mui/base": "^5.0.0-alpha.73",
+    "@mui/icons-material": "^5.1.1",
+    "@mui/lab": "^5.0.0-alpha.62",
+    "@mui/material": "^5.1.1",
+    "@mui/styles": "^5.1.1",
+    "@onflow/fcl": "1.1.1",
+    "@onflow/transport-http": "^1.2.0",
+    "@onflow/types": "1.0.1",
+    "@rumess/react-flip-countdown": "^1.2.6",
+    "ahooks": "^3.1.14",
+    "aws-sdk": "^2.1176.0",
+    "axios": "^0.27.2",
+    "b64-to-blob": "^1.2.19",
+    "classnames": "^2.3.1",
+    "currency.js": "^2.0.4",
+    "del": "^6.1.1",
+    "file-saver": "^2.0.5",
+    "i18next": "^21.5.3",
+    "ipfs-http-client": "^57.0.3",
+    "lodash": "^4.17.21",
+    "lodash.groupby": "^4.6.0",
+    "lodash.omit": "^4.5.0",
+    "moment": "^2.29.3",
+    "next": "12.0.4",
+    "ni18n": "^1.0.2",
+    "nprogress": "^0.2.0",
+    "react": "17.0.2",
+    "react-countdown": "^2.3.2",
+    "react-dom": "17.0.2",
+    "react-flip-move": "^3.0.4",
+    "react-i18next": "^11.14.3",
+    "react-icons": "^4.3.1",
+    "react-number-format": "^4.9.3",
+    "request": "^2.88.2",
+    "sass": "^1.49.9",
+    "sharp": "^0.30.7",
+    "styled-components": "^5.3.3",
+    "swiper": "^8.0.7",
+    "swr": "^1.1.2"
+  },
+  "devDependencies": {
+    "eslint": "7",
+    "eslint-config-next": "12.0.4",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.1.4",
+    "prettier": "^2.5.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  }
+}

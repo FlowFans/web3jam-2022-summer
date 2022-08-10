@@ -1,0 +1,12 @@
+{
+  "demoHeader": "演示",
+  "hide": "隐藏",
+  "show": "显示",
+  "trends": "热门",
+  "demo.mint.firstAlert": "恭喜！ 您铸造了一个NFT，现在您可以添加或移除组件来铸造新的 NFT。",
+  "demo.mint.secondAlert": "很好! 您铸造了一个新的NFT。",
+  "demo.mint.firstClose": "试一试",
+  "demo.mint.secondClose": "完成",
+  "introHeader": "关于我们",
+  "faq": "常见问题"
+}

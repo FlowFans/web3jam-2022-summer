@@ -1,0 +1,45 @@
+.introduction {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 24px 71px;
+  background-color: #efedf2;
+
+  @media (min-width: 1024px) {
+    padding: 180px 24px 71px;
+  }
+
+  .imgWrapper {
+    width: 100%;
+    aspect-ratio: 1;
+    position: relative;
+
+    @media screen and (min-width: 1024px) {
+      width: 940px;
+      aspect-ratio: 5 / 2;
+    }
+  }
+
+  .title {
+    color: #262626;
+    font-size: 60px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 63px;
+    text-align: center;
+    margin-bottom: 16px;
+    margin-top: 64px;
+  }
+
+  .desc {
+    color: #8321aa;
+    font-family: Avenir;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 34px;
+    text-align: center;
+  }
+}
