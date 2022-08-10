@@ -30,8 +30,7 @@
 1. 我们参照“1元夺宝“创意对当前NFT发行及二级流通方式进行新的思考-“1 Flow 夺宝”
 1. We refer to the idea of "1 yuan to win treasure" to make new thinking on the current NFT issuance and secondary circulation methods - "1 Flow to win treasure"
 2. 产品逻辑 product logic ：
-
-
+<img width="1488" alt="image" src="https://user-images.githubusercontent.com/33271914/183895017-ff2190c3-35ad-418e-be43-d860e8d2a21c.png">
 
 
 ## What was done during Web3 Jam
