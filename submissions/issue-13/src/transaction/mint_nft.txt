@@ -1,0 +1,75 @@
+import NonFungibleToken from 0xNonFungibleToken
+import TicketNFT from 0xProfile
+
+transaction (recipient: Address,message:{String: String},timeout:UInt64) {
+    let minter: &TicketNFT.NFTMinter
+
+
+  prepare(acct: AuthAccount) {
+
+    self.minter = acct.borrow<&TicketNFT.NFTMinter>(from: /storage/TicketNFTMinter)
+       ?? panic("Could not borrow a reference to the NFT minter")
+
+  }
+
+  execute {
+
+    let receiverRef =  getAccount(recipient).getCapability(/public/TicketNFTCollection).borrow<&{TicketNFT.TicketNFTCollectionPublic}>()
+            ?? panic("Cannot borrow a reference to the recipient's moment collection")
+
+
+      // Mint the NFT and deposit it to the recipient's collection
+
+      let NFTmessage: {String: String} = message
+       let ticketID :UInt64=self.minter.createTicket(metadata: NFTmessage,timeout:timeout)
+       log( ticketID)
+
+
+       let TicketNFT:@TicketNFT.NFT  <-self.minter.mintNFT(ticketID:ticketID,timeout:1)
+        receiverRef.deposit(token: <-TicketNFT)
+
+
+  }
+}
+
+
+/*
+import NonFungibleToken from 0xc5a99a489c97d3cd
+import ConNFT from 0xc5a99a489c97d3cd
+
+// This script uses the NFTMinter resource to mint a new NFT
+// It must be run with the account that has the minter resource
+// stored in /storage/NFTMinter
+
+transaction(recipient: Address,cid: String,description: String): UInt64 {
+
+    // local variable for storing the minter reference
+    let minter: &ConNFT.NFTMinter
+
+    prepare(signer: AuthAccount) {
+
+        // borrow a reference to the NFTMinter resource in storage
+        self.minter = signer.borrow<&ConNFT.NFTMinter>(from: /storage/ConNFTMinter)
+            ?? panic("Could not borrow a reference to the NFT minter")
+    }
+
+    execute {
+        // Borrow the recipient's public NFT collection reference
+        let receiver = getAccount(recipient)
+            .getCapability(/public/NFTCollection001)
+            .borrow<&{NonFungibleToken.CollectionPublic}>()
+            ?? panic("Could not get receiver reference to the NFT Collection")
+
+        // Mint the NFT and deposit it to the recipient's collection
+        let NFTmessage: {String: String} ={
+                "cid":cid,
+                "desc":desc
+        }
+        return self.minter.mintNFT(recipient: receiver,metadata:NFTmessage)
+    }
+}
+
+
+
+
+*/
