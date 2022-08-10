@@ -66,7 +66,7 @@ Chain Native的特性为Relation Club带来独特的安全性，社群身份验�
 
     Club space 是Club的主页，包含Club基本信息，linked page，Club news，Proposal，活跃用户和成员墙，是Club成员的聚集地.
 
-![club homepage-3](https://user-images.githubusercontent.com/91399393/183894772-f6691ed4-12ec-40d8-8ead-799c7995ccf4.png)
+![club homepage (3)](https://user-images.githubusercontent.com/91399393/183905775-33109515-e4ff-4996-918b-8af9fbf6cd66.jpg)
 
 
 - **Club Chat**
@@ -89,7 +89,7 @@ Chain Native的特性为Relation Club带来独特的安全性，社群身份验�
 
     基于聚合的Web3地址，Club帮助创作者能将用户定位为人而非地址，更加全面的了解NFT用户群体，制定运营策略。这使得Club统计不仅可以提供On-chain的数据分析，还能提供基于真实用户个体的进阶数据统计。
 
-![club homepage](https://user-images.githubusercontent.com/91399393/183894849-9f89e6d9-32f0-4e02-87bd-50a974d08a48.png)
+![club homepage (4)](https://user-images.githubusercontent.com/91399393/183905802-6e1d751b-d50a-4bfe-9694-f5f48d9d929c.jpg)
 
 
 
@@ -99,7 +99,7 @@ Chain Native的特性为Relation Club带来独特的安全性，社群身份验�
 
     例如：PFP合影工具，这将允许NFT持有实时进入同一个房间完成合影，提供有趣味、有传播力的出席证明工具。
     
-![club homepage-4](https://user-images.githubusercontent.com/91399393/183894871-f743f508-1fd5-4bc1-8f5b-d2d147a08f06.png)
+![club homepage (1)](https://user-images.githubusercontent.com/91399393/183905910-a1c13282-762a-44eb-84f1-433d99c3dced.jpg)
 
 
 
