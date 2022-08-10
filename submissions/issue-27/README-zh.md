@@ -64,7 +64,7 @@ Chain Native的特性为Relation Club带来独特的安全性，社群身份验�
 
 - **Club Space**
 
-    Club Space 是Club的主页，包含Club基本信息，linked Page，Club News，Proposal，活跃用户和成员墙，是Club成员的聚集地.
+    Club Space是Club的主页，包含Club基本信息，linked Page，Club News，Proposal，活跃用户和成员墙。
 
 ![club homepage (5)](https://user-images.githubusercontent.com/91399393/183921942-8ae2378c-06f1-4a01-b1dd-27034badb261.jpg)
 
@@ -120,7 +120,7 @@ Chain Native的特性为Relation Club带来独特的安全性，社群身份验�
 - 与NFT市场、项目方合作创建Web3原生社群，利用Relation Club的数据功能，更好的了解用户需求，优化产品功能迭代
 - 通过合作构建Club，增强Club的在NFT社区影响力。并以此增加用户黏性
 - 横向拓展不同类型的Club，丰富Club运营工具的类型，激励社区共建Club运营工具
-- 丰富Club Infra的数据深度和可用性，构建出Flow生态NFT的数据基础设施
+- 丰富Club Infra的数据深度和可用性，构建Flow生态NFT的数据基础设施
 
 ## Web3 Jam 期间的开发规划
 
@@ -146,7 +146,7 @@ Chain Native的特性为Relation Club带来独特的安全性，社群身份验�
 - 定义Club Space的web/Html5的UI界面，根据Flow Club Infra定期完成linked page，Club news，Proposal，活跃用户和成员墙的信息展示。
 - 实现聊天扩展程序对Flow NFT的发送及展示支持，Flow Club的UI。
 - 实现Club统计功能的UI及数据分析，Club统计功能将根据用户的聚合身份向合约部署者开放On chain和Relation服务的数据权限。包括平均的持有者、交易均价、每日的独立钱包统计、不同二级市场的销售情况统计、用户每日的活跃、Club聊天的统计、Club成员的资产分析及Club成员的明细。这些统计都将基于用户所有的账户而非仅仅单一的地址。
-- 实现Club社区工具的用例——合影工具的，包括Club合影工具的UI、合影房间创建的功能、在线状态检查、以及图片生成与分享的功能。
+- 实现Club社区工具的用例——合影工具，包括Club合影工具的UI、合影房间创建的功能、在线状态检查、以及图片生成与分享的功能。
 
 *交付材料*
 
