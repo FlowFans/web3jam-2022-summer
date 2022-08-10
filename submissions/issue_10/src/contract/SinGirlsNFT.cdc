@@ -1,5 +1,5 @@
-import NonFungibleToken from 0x02
-import MetadataViews from 0x04
+import NonFungibleToken from "./NonFungibleToken.cdc"
+import MetadataViews from "./MetadataViews.cdc"
 
 pub contract SinGirlsNFT: NonFungibleToken {
 
