@@ -1,5 +1,5 @@
-import NonFungibleToken from 0xf5c21ffd3438212b
-import WakandaPass from 0xf5c21ffd3438212b
+import NonFungibleToken from 0xdaf76cab293e4369
+import WakandaPass from 0xdaf76cab293e4369
 
 transaction {
     prepare(signer: AuthAccount) {

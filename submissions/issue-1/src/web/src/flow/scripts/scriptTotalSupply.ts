@@ -1,7 +1,7 @@
 import { send, decode, script, cdc, args } from "@onflow/fcl"
 
 const CODE = cdc`
-import WakandaPass from 0xf5c21ffd3438212b
+import WakandaPass from 0xdaf76cab293e4369
 
 pub fun main(): UInt64 {
     return WakandaPass.totalSupply
