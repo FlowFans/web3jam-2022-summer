@@ -96,66 +96,66 @@ In addition, Relation provides sophisticated operational tools that enables the 
 
 
 
-- **符合项目社区文化的趣味工具**
+- **Interesting Tools Matching NFT Community Cultures**
 
-    为了便于社区开展活动，Club推出了一系列运营工具帮助NFT创作者更便捷、更有趣的运营Club，创造符合NFT社区文化的社区内容。
+  To facilitate community activities, Relation Club has launched a series of tools to help NFT creators conduct community operation in more convenient and interesting ways and produce content that matches NFT community cultures.
 
-    例如：PFP合影工具，这将允许NFT持有实时进入同一个房间完成合影，提供有趣味、有传播力的出席证明工具。
+For example, the PFP Group Photo function, allowing NFT holders to  enter the same room to take group photos in real time, which provides an interesting and informative tool for proving user attendance in activities.
     
 ![club homepage (1)](https://user-images.githubusercontent.com/91399393/183905910-a1c13282-762a-44eb-84f1-433d99c3dced.jpg)
 
 
 
-*技术架构*
+*Technology Architecture*
 
 ![Frame 1000003297 (1)](https://user-images.githubusercontent.com/91399393/183940677-fd1e4589-7ee3-42ec-aa74-90395f1e5d2d.png)
 
 
 
-*产品LOGO*
+*Product LOGO*
 
 ![0 5](https://user-images.githubusercontent.com/91399393/183939657-c03171f3-a950-4eec-b032-fd7d7a6b7af1.png)
 
-*运营策略*
+*Operation Strategies*
 
 
-- 与NFT市场、项目方合作创建Web3原生社群，利用Relation Club的数据功能，更好的了解用户需求，优化产品功能迭代
-- 通过合作构建Club，增强Club的在NFT社区影响力。并以此增加用户黏性
-- 横向拓展不同类型的Club，丰富Club运营工具的类型，激励社区共建Club运营工具
-- 丰富Club Infra的数据深度和可用性，构建Flow生态NFT的数据基础设施
+- Cooperating with NFT marketplace and projectors to create Web3 native communities. Making use of Relation Club's data function to better understand user's demands and iterate product functions.
+- Strengthening the influence of Relation Clubs in NFT communities through cooperation to increase user stickiness.
+- Horizontally increasing Club types. Enriching the types of Club operation tools, and encouraging communities to build Club operation tools together.
+- Increasing the depth and availability of Club Infra data and building data infrastructure for Flow NFTs
 
-## Web3 Jam 期间的开发规划
+## Development Plans during the Web3 Jam
 
-*Cadence合约*
+*The Cadence Contract*
 
-- 定义New Club的架构与关键字段
-- 实现用户自主创建NFT合约、mint NFT的功能
-- 部署测试网[合约](https://flow-view-source.com/testnet/account/0x457f3685a6f38813/contract/RelationNFT)
-- 联通Infra与New Club合约，使用户自主创建的NFT可以第一时间生成Club
-- 关键实现
+- To define New Club's architecture and key fields.
+- To enable user-generated NFT contracts and NFT minting functions. 
+- To deploy test network [contracts](https://flow-view-source.com/testnet/account/0x457f3685a6f38813/contract/RelationNFT)
+- To connect Infra to New Club Contract. And to enable NFTs created by users to be generated into Clubs in the first place.
+- Key Implementations
 <img width="912" alt="111" src="https://user-images.githubusercontent.com/91399393/183896194-aba9471c-2ac4-49f1-841e-49d7ec5e8671.png">
 
 
-*服务端*
+*Server-end*
 
-- 实现Flow Club Infra，根据链上交易实时完成NFT权属信息的更新，进行Club成员管理。
-- 实现Flow资源聚合器，整合现有的数据平台及服务，汇总不同DAPP和市场中NFT中的metadata信息并定期更新。
-- 实现Club Owner校验程序，通过校验用户签名是否是对应NFT的合约部署者，向用户开放管理权限及运营看板的浏览权限。
+- To implement Flow Club Infra. To update NFT ownership according to real-time transactions on chain to manage Club members.
+- To implement Flow Resource Aggregator with existing data platforms and services and to collect and regularly update metadata information from different Dapps and NFTs in marketplaces.
+- To implement the Club Owner Verification Program to open the rights of management and dashboard browsing to users by verifying whether their signatures are NFT contract deployers.
 
-*客户端*
+*Client-end*
 
-- 接入FCL，实现Flow身份体系与Relation统一身份认证的打通，使用户Flow地址的签名可以被验证并获得临时session key，作为身份认证。
-- 定义Club Space的web/Html5的UI界面，根据Flow Club Infra定期完成linked page，Club news，Proposal，活跃用户和成员墙的信息展示。
-- 实现聊天扩展程序对Flow NFT的发送及展示支持，Flow Club的UI。
-- 实现Club统计功能的UI及数据分析，Club统计功能将根据用户的聚合身份向合约部署者开放On chain和Relation服务的数据权限。包括平均的持有者、交易均价、每日的独立钱包统计、不同二级市场的销售情况统计、用户每日的活跃、Club聊天的统计、Club成员的资产分析及Club成员的明细。这些统计都将基于用户所有的账户而非仅仅单一的地址。
-- 实现Club社区工具的用例——合影工具，包括Club合影工具的UI、合影房间创建的功能、在线状态检查、以及图片生成与分享的功能。
+- To integrate FCL and integrate Flow Identity System into Relation Unified Identity Verification. To enable the users’ signatures of the Flow addresses to be authenticated and obtain temporary session keys as identity verification credentials.
+- To define the web/HTML5 UI for Club Space. To regularly update the Linked Pages, Club News, Proposals, Active Users and Club Membership Wall information according to the Flow Club Infra.
+- To implement Flow Club UI and the sending and display of Flow NFTs in Chat extensions.
+- To implement the UI and data analysis of the Club statistics function, which will open data services on chain and in Relation to the contract deployers based on the users’ aggregated identities. The statistics of data covering average NFT holdings, average prices, everyday independent wallet statistics, sales statistics in different secondary markets, daily active users, statistics of Club chat, Club member asset analysis and Club members details. These statistics will be based on user-owned accounts rather than just addresses.
+- To implement the use cases of the Club community operation tools. For the Group Photo function, it includes UI, the function of creating a Group Photo room, the Online Status Check, and the function to generate and share images.  
 
-*交付材料*
+*Materials Submission*
 
 - [Source Code](https://github.com/relationlabs/web3jam-2022-summer/tree/main/submissions/issue-27/src/cadence), deployed to Testnet address: 0x457f3685a6f38813
 - [Pitch Deck](https://docsend.com/view/htfb4dzi55ey794j) 
 - [Demo Video](https://3fypb-gqaaa-aaaag-aaedq-cai.ic1.io/banner/relationClub.mp4) 
-- [测试demo地址](https://relationlabs.ai/#/clubguide/A.afb8473247d9354c.FlowNia) https://relationlabs.ai/#/clubguide/A.afb8473247d9354c.FlowNia
+- [Testing Demo](https://relationlabs.ai/#/clubguide/A.afb8473247d9354c.FlowNia) https://relationlabs.ai/#/clubguide/A.afb8473247d9354c.FlowNia
 
 
 ## 团队成员
