@@ -4,6 +4,7 @@
 
 * Register to http://punster.stonelens.com/ and start your funny journey. Check the [Front UI Tutorial](./docs/Front%20UI%20Tutorial.md) if you are new to Flow.
 * More details are in our [Pitch Deck](./docs/PunStar(v0.0.1).ppt.pdf)
+* [Demo Video](https://punstar.oss-cn-hangzhou.aliyuncs.com/PunStar%20Demo.mp4)
 
 ## Track
 - [ ] NFT x DAO/Tools
@@ -76,7 +77,10 @@ The key points of the technology are as follows:
         * [Locker](./src/contracts/Locker.cdc): The smart contract manages the cross ecosystem transfering of NFTs based on Dante Network.
     * [Web source code](https://github.com/zation/punster-client)
 * [Pitch Deck](./docs/PunStar(v0.0.1).ppt.pdf)
-* [Demo]()
+* [Demo Video(Clear)](https://punstar.oss-cn-hangzhou.aliyuncs.com/PunStar%20Demo.mp4)
+* A zipped version of demo video is as below, which is not very clear:  
+https://user-images.githubusercontent.com/83746881/183885041-cbdbc2e9-cb59-44f9-8434-1d3e0d228511.mp4
+
 * [Website](http://punster.stonelens.com/)
 
 # Additional information
