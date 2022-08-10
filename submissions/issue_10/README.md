@@ -2,9 +2,9 @@
 
 Pick your tracks：
 
-- [x] NFT x DAO/Tools - 组织工具
-- [ ] NFT x Game/Entertainment - 游戏娱乐
-- [x] NFT x Life/Metaverse - 生活方式
+- [x] NFT x DAO/Tools
+- [ ] NFT x Game/Entertainment
+- [x] NFT x Life/Metaverse
 
 
 ## Overview
@@ -218,7 +218,7 @@ Public launch
 
 - [x] FCL Acess
 - [x] UX UI design
-- [x] NFT盲盒购买
+- [x] NFT Blind Box
 
 ## Team
 
