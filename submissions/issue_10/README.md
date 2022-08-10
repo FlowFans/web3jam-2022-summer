@@ -9,6 +9,7 @@ Pick your tracks：
 
 ## Overview
 [WEBSITE](https://sin-girls.vercel.app/)
+<img width="128" alt="4adc9b4204436380e0b7b0383680a56" src="https://user-images.githubusercontent.com/90014846/183946301-e83def5a-c13f-4292-876d-494eb120c8e7.png">
 
 In this era of rapid information development, individual value is infinitely magnified by the Internet, thus people are increasingly willing to trust information from individuals. Each person can create different information based on his or her unique knowledge, skills and experience. We have witnessed the rise of countless KOL on the internet, verifying the value of individuals by time and the market.
 
