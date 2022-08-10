@@ -1,4 +1,4 @@
-# Project Name
+# Univoice
 
 ## Track
 
@@ -19,7 +19,7 @@ Currently, the intelligent Voice metaverse in Web3 have big problems:
 - Communicate: Although the main source of information for humans comes from sight, speech is the best way to socialize
 - Cost: In the existing animation, game, and virtual idol scenes, it is still necessary to invite many voice actors to dub the characters, and the cost is huge
 
-Univoice can support indivisual needs for Web3.0 metaverse
+Univoice can support individual needs for Web3.0 metaverse
 - Users with personalized needs for voice in the metaverse
 - NFT enthusiasts
 - Metaverse socialization
