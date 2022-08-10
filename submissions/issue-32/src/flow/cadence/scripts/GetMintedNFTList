@@ -1,0 +1,8 @@
+import Racenumber from 0xf8d6e0586b0a20c7
+
+pub fun main(hostAddr:Address,gameUId:UInt64):[UInt64]{
+    let hostAcct = getAccount(hostAddr)
+    let gamesRef = hostAcct.getCapability<&Racenumber.Games{Racenumber.GamesPublic}>(Racenumber.GamesPublicPath).borrow() ?? panic("Games resource not found")
+    let gameRef = gamesRef.borrowPublicGameRef(GameUId: gameUId) as &Racenumber.Game{Racenumber.GamePublic}
+    return gameRef.getMintedNftList()
+} 

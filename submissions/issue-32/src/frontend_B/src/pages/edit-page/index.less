@@ -1,0 +1,73 @@
+.edit-page {
+  position: relative;
+  .edit-form {
+    position: absolute;
+    left: 62%;
+    margin-top: 330px;
+    transform: translate(-50%, -50%);
+  }
+  .deploy-label {
+    font-family: 'Tuffy';
+    color: #8A8A8A;
+    font-size: 24px;
+  }
+  .flex {
+    display: flex;
+    align-items: center;
+  }
+  .input-warp {
+    width: 482px;
+    margin-right: 66px;
+    border-radius: 10px;
+    padding: 2px;
+    background-image: linear-gradient(to bottom, #0012BF 30%, rgba(12, 75, 235, 0.5) 100%);
+    clip-path: inset(0 round 10px);
+  }
+  .input-warp-short {
+    width: 212px;
+    margin-right: 26px;
+    border-radius: 10px;
+    padding: 2px;
+    background-image: linear-gradient(to bottom, #0012BF 30%, rgba(12, 75, 235, 0.5) 100%);
+    clip-path: inset(0 round 10px);
+  }
+  .ant-input:focus, .ant-input-focused {
+    border-color: white !important;
+    box-shadow: none;
+    border-right-width: 1px;
+    outline: 0;
+  }
+  .time-hint {
+    width: 212px;
+    text-align: center;
+    margin-right: 26px;
+    color: #8A8A8A;
+    font-size: 18px;
+  }
+  .confirm-btn {
+    width: 314px;
+    margin-left: 70px;
+    transform: skew(-30deg);
+  }
+  .btn-wrap {
+    box-shadow: 25px 0px 8px -5px #F7C4FF,
+    -25px 0px 8px -5px #96E1FF;
+  }
+}
+.custom-input {
+  position: relative;
+	border-style: hidden;
+	border-radius: 10px;
+}
+.custom-input:after {
+	content: '';
+	position: absolute;
+	top: -2px;
+	bottom: -2px;
+	left: -2px;
+	right: -2px;
+	background: linear-gradient(to right, #0396ff, #21f7e8);
+	border-radius: 30px;
+	z-index: -1;
+}
+  

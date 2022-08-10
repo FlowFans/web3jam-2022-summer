@@ -1,0 +1,69 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"devWallet": {
+		"accessNode": {
+			"endpoint": "http://localhost:8080"
+		},
+		"port": 8701
+	},
+	"contracts": {
+		"NonFungibleToken": {
+			"source": "./flow/cadence/contracts/NonFungibleToken.cdc",
+			"aliases": {
+				"testnet": "0x83f8ed4318375647"
+			}
+		},
+		"Racenumber": {
+			"source": "./flow/cadence/contracts/Racenumber.cdc",
+			"aliases": {
+				"testnet": "0x83f8ed4318375647"
+			}
+		},
+		"FlowToken": "./flow/cadence/contracts/FlowToken.cdc",
+		"FungibleToken": "./flow/cadence/contracts/FungibleToken.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "c2599f8dea49eff238008744056720cd251a4489e6dffa82cf8f99fbefbbffde"
+		},
+		"testnet-account": {
+			"address": "0x83f8ed4318375647",
+			"key": {
+				"type": "hex",
+				"index": 0,
+				"signatureAlgorithm": "ECDSA_P256",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "d09f61d016e0fa767a7af5fb35f9a198d7ee37cf36db2fd02a0d596ffde81d0c"
+			}
+		}
+	},
+	"deployments": {
+		"emulator": {
+			"emulator-account": [
+				"NonFungibleToken",
+				"Racenumber",
+				"FungibleToken",
+				"FlowToken"
+			]
+		},
+		"testnet": {
+			"testnet-account": [
+				"NonFungibleToken",
+				"Racenumber",
+				"FungibleToken",
+				"FlowToken"
+			]
+		}
+	}
+}
