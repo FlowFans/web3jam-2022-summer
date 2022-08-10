@@ -12,7 +12,7 @@
 ### 项目背景（待解决的问题）
 
 
-NFT是一种无需证明的事实权属。
+NFT是一种无需证明的事实。
 
 社群是NFT很重要的组成部分，在当前的NFT社群运营工具(如discord)没有原生NFT的集成，社群的身份证明依赖第三方bot的集成，从而产生了安全隐患。随着钓鱼攻击频发，NFT持有者的资产安全受到很大的威胁。
 
@@ -29,9 +29,9 @@ Relation Club是基于Relation的服务构建的社群运营工具。Relation是
 
 *需求证明*
 - NFT社群领域安全问题频发:
-1. 4月1日，BAYC（无聊猿）的Discord遭遇短暂黑客攻击
+1. 4月1日，BAYC（无聊猿）的Discord遭遇短暂黑客攻击。
 2. 5月23日，MEE6官方Discord遭受攻击，导致账号被盗，官方discord群里发布mint的钓鱼网站信息。
-3. 5月6日，NFT交易市场Opensea官方Discord遭受攻击
+3. 5月6日，NFT交易市场Opensea官方Discord遭受攻击。
 4. 更多的NFT安全事件......
 
 
@@ -48,30 +48,30 @@ Relation Club是基于Relation的服务构建的社群运营工具。Relation是
 
 Relation Club是Chain native的NFT社群运营工具，它将帮助NFT创作者和NFT 持有者在web3中直接开展社群活动，这不仅能在有效地保证用户资产安全性，而且还将便利创作者的社群运营，可以开拓更多Web3 Native的NFT应用场景。
 
-Chain Native的特性为Relation Club带来独特的安全性，社群身份验证无需依赖第三方Bot，有效方法了钓鱼风险。
+Chain Native的特性为Relation Club带来独特的安全性，社群身份验证无需依赖第三方Bot，有效防范了钓鱼风险。
 
-此外，Relation提供精细化运营工具，帮助项目方高效触达NFT持有者，并能对用户的行为进行持续的追踪。
+同时，Relation Club提供精细化运营工具，帮助项目方高效触达NFT持有者，并能对用户的行为进行持续的追踪。
 
 **Relation Club具有以下特性：**
 
 - Flow友好，支持Flow所有主流NFT collection
+- NFT权益事实化，进入、离开Club基于NFT的链上所有权，无需额外认证
 - 帮助创作者将地址映射到真实的用户,高效触达NFT持有者
 - 提供基于Web3的身份认证、IM、社交关系图谱等基础服务
 - 丰富且有趣社群运营小工具
-- NFT权益事实化，进入、离开Club基于NFT的链上所有权，无需额外认证
 
 **Relation Club将包下述模块：**
 
 - **Club Space**
 
-    Club space 是Club的主页，包含Club基本信息，linked page，Club news，Proposal，活跃用户和成员墙，是Club成员的聚集地.
+    Club Space 是Club的主页，包含Club基本信息，linked Page，Club News，Proposal，活跃用户和成员墙，是Club成员的聚集地.
 
-![club homepage (3)](https://user-images.githubusercontent.com/91399393/183905775-33109515-e4ff-4996-918b-8af9fbf6cd66.jpg)
+![club homepage (5)](https://user-images.githubusercontent.com/91399393/183921942-8ae2378c-06f1-4a01-b1dd-27034badb261.jpg)
 
 
 - **Club Chat**
 
-    Club chat是NFT Club的成员聊天群组，服务将根据合约的持有者信息自动管理Club成员，Chat的IM协议将支持文字、图片、emoji、自定义表情、NFT分享、网页分享等消息格式。
+    Club Chat是NFT Club的成员聊天群组，服务将根据合约的持有者信息自动管理Club成员，Chat的IM协议将支持文字、图片、emoji、自定义表情、NFT分享、网页分享等消息格式。
     
     ![Frame 1000003293](https://user-images.githubusercontent.com/91399393/183894798-f7d4a222-18d5-4475-bef7-95ebbfdee4cb.png)
 
@@ -89,7 +89,8 @@ Chain Native的特性为Relation Club带来独特的安全性，社群身份验�
 
     基于聚合的Web3地址，Club帮助创作者能将用户定位为人而非地址，更加全面的了解NFT用户群体，制定运营策略。这使得Club统计不仅可以提供On-chain的数据分析，还能提供基于真实用户个体的进阶数据统计。
 
-![club homepage (4)](https://user-images.githubusercontent.com/91399393/183905802-6e1d751b-d50a-4bfe-9694-f5f48d9d929c.jpg)
+![club homepage (6)](https://user-images.githubusercontent.com/91399393/183922360-d77f3ea5-fa94-40a7-a787-1560183c7a63.jpg)
+
 
 
 
@@ -116,22 +117,20 @@ Chain Native的特性为Relation Club带来独特的安全性，社群身份验�
 *运营策略*
 
 
-- 连接二级市场作为合作突破点，协助项目方创建Web3原生的社群，利用Relation Club产生的统计数据，更好的了解用户需求，进行产品功能迭代
-- 借助项目方、交易市场的合作，增加NFT项目方影响力和运营效率的方式，增强Club的社区影响力。并以此增加用户、NFT项目方对Relation Club的黏性
-- 拓展不同类型的Club，丰富Club运营工具的类型，开放端口激励社区基于Club构建社群工具
-- 增强Club Infra的数据深度和可用性，积极与社区合约开发者合作，构建出Flow生态NFT的数据基础设施
+- 与NFT市场、项目方合作创建Web3原生社群，利用Relation Club的数据功能，更好的了解用户需求，优化产品功能迭代
+- 通过合作构建Club，增强Club的在NFT社区影响力。并以此增加用户黏性
+- 横向拓展不同类型的Club，丰富Club运营工具的类型，激励社区共建Club运营工具
+- 丰富Club Infra的数据深度和可用性，构建出Flow生态NFT的数据基础设施
 
 ## Web3 Jam 期间的开发规划
 
 *Cadence合约*
 
-定义New Club的架构与关键字段
-实现用户自主创建NFT合约、mint NFT的功能
-部署测试网[合约](https://flow-view-source.com/testnet/account/0x457f3685a6f38813/contract/RelationNFT)
-联通Infra与New Club合约，使用户自主创建的NFT可以第一时间生成Club
-
-关键实现
-
+- 定义New Club的架构与关键字段
+- 实现用户自主创建NFT合约、mint NFT的功能
+- 部署测试网[合约](https://flow-view-source.com/testnet/account/0x457f3685a6f38813/contract/RelationNFT)
+- 联通Infra与New Club合约，使用户自主创建的NFT可以第一时间生成Club
+- 关键实现
 <img width="912" alt="111" src="https://user-images.githubusercontent.com/91399393/183896194-aba9471c-2ac4-49f1-841e-49d7ec5e8671.png">
 
 
@@ -161,11 +160,11 @@ Chain Native的特性为Relation Club带来独特的安全性，社群身份验�
 
 | 姓名 Name | 角色 Role     | 个人经历 Bio | 联系方式 Contact     |
 | ---- | ------------------- | --- | ----------------------- |
-| Jessica | Economic Designer | Crypto and commodity derivatives trader,5+ years of blockchain research experience,CFA, ACCA,Visiting researcher at Imperial College |  b.zhang@relationlabs.ai |
+| Jessica | Economic Designer | Crypto and commodity derivatives trader,5+ years of blockchain research experience,CFA, ACCA,Visiting researcher at Imperial College |  j.chang@relationlabs.ai |
 | Joe | Product Manager/Engineer | former product leader of top blockchain companies, 6+ years of project experience in finance, logistics, social networking, games products | pikajoe@relationlabs.ai  |
 | Santry | Marketing |Former CMO at Patract Labs,9+ years of marketing, operation and management experiences |  santry@relationlabs.ai | 
 | Yann | Full Stack Developer | 15+ years of experience in cloud computing, big data and large-scale distributed systems. |  yann.ren@relationlabs.ai  |
-|  Ben | Full Stack Developer | former core development engineer of IBM, AWS.10+ years of back-end development experience |  j.chang@relationlabs.ai  |           |
+|  Ben | Full Stack Developer | former core development engineer of IBM, AWS.10+ years of back-end development experience |  b.zhang@relationlabs.ai  |           |
 
 
 
