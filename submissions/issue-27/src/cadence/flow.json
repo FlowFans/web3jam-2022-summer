@@ -1,0 +1,117 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+		"NonFungibleToken": {
+			"source": "./contracts/NonFungibleToken.cdc",
+			"aliases": {
+			  "emulator": "0xf8d6e0586b0a20c7",
+			  "testnet": "0x631e88ae7f1d7c20"
+			}
+		  },
+		  "MetadataViews": {
+			"source": "./contracts/MetadataViews.cdc",
+			"aliases": {
+			  "testnet": "0x631e88ae7f1d7c20"
+			}
+		  },
+		  "FungibleToken": {
+			"source": "./contracts/FungibleToken.cdc",
+			"aliases": {
+			  "emulator": "0xee82856bf20e2aa6",
+			  "testnet": "0x9a0766d93b6608b7"
+			}
+		  },
+		"RelationNFT": "./contracts/RelationNFT.cdc"
+		
+		
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "79e6150fba48b6a0ba46d9c9c5d29e43a7540be9b5410523d24ebae61aaaa441"
+		},
+		"testnet": {
+			"address": "0x457f3685a6f38813",
+			"key": "25513c02b6479f6347f2cad48ff3ffa0dbd217f40cf7c37d7e2790675424af18",
+			"pub": "52d8cbf15169e854479481cc2c6a5e53e0ca8cb4c359f985f27d6c3e6f189aefaa54b4de18ffc0a9eb0d305ba49c0cd030b577923dd061a85a13ead9aa3ba550"
+		},
+		"recive-account": {
+			"address": "0x99b1890d5b2f5499",
+			"key": "492d0efe923eea55dffdf3bf7ca928711245149d132aec214cf05e43def6d584"
+		},
+		"a": {
+			"address": "0x76eef64f2202d18f",
+			"key": "fe2c19b32e5abf43688cf7cd20a3c10bb53506c830f0ce286d6bfcf86d3e6d99",
+			"pub": "882d69aafe8cf7f4a308a84dbce1a17dc92773f83889b1f6fa301575bb977599630e7af4a9ada6356a4071564ecb35cf742cde6e156c501f36a3c147e3d2f47a"
+		},"b": {
+			"address": "0x8a6201748038f782",
+			"key": "88e2ff65983805b4320c3ff987fc264cae0be3e37e68d9d60734284561a1e247",
+			"pub": "c0a309a27a7b5e202da4ee85a9997b7d7099edefbf7987da0423df519e5f67cf9756222e30770528250dcc5784f70ad49b9df3054556d915cb7dbd78182ab4d9"
+		},"c": {
+			"address": "0x737bef03c4438315",
+			"key": "0263293d47e64122a221d5aa5f02eda119f83835a7ba64ce2bac4a9a3856fc2c",
+			"pub": "90bfd83edc2fb4fba4b9ba323be8c4627db0ed61cbce3ae03f520df99ed73b2ba91e46cd350bc223452d3d12e299886f931c960b3d207880e58efa585285ff14"
+		},"d": {
+			"address": "0x7a9b513c7be23990",
+			"key": "a22400c3ceac6a9817d2ea52a97b7dc927ae68d7b0d13573d00439d5f44f65ca",
+			"pub": "b53747cf8b27796c9fa21914d6ec793555cbd3652c2a36c52d27be6f6b316999ea81145cc6ec12f4760bfbc751eb421e6fd2a23c37b6b644bbab8e11799c9869"
+		},"e": {
+			"address": "0x9043c33440dc15fc",
+			"key": "d5d29bc6c2161d8bc9642323a387b29bf17f84ffa0d5cb0e017e73f8c1e29088",
+			"pub": "e7a93ebadef9e8f1b6e7751afc475d1f8e9328c193afe28aa2640bced0d8d0bf1d9b516988dd42da93b226e6a60bd0d21ce74468e87ae688be5951110e429469"
+		},"f": {
+			"address": "0x9b69f1ad8c596bd5",
+			"key": "8417403ee3095bc4c11c7d7a4cf4658a5823b2b41595b74de318b842785260d7",
+			"pub": "5926a197fa585d22dda84685c12d7d9f866a04a21af5b2df53cf4ab9afb11bcb90df8e44c05a4ce49b80aef27ee3d29f9865164890b0182245e5fd90c6f8906c"
+		},"g": {
+			"address": "0xcde577ad268a5ff4",
+			"key": "d7a4a685185258682ae744693a27ca767cb3862970608eced17b12c27ae08c75",
+			"pub": "9609ebfdb353248d424fe5b5d5490c8900855f3dd3f18062128f851125d5adf268b576a816005c6456218a137b0249299497db33b669852817ddfd09bcbc2f5c"
+		},"h": {
+			"address": "0x34fc99da62f12b63",
+			"key": "f88459aed718581ef8cef386720b32634ad0e87c3d7d7a8623aef5a2444170b6",
+			"pub": "1d008fcc7e3a282eaef26215bd9f96ce6add1d6b58fd2082981fede4fa0ab424f96425a31cb23f2bed4892c7037a34beb80fe9b685ab9c93e94f7cf7a1b12667"
+		},"i": {
+			"address": "0x22a8fce9fbf52102",
+			"key": "9d05c3b0022c9df9c6a246b91986ae7233852819d29e65186c01df3ed8d81af4",
+			"pub": "1d32bc1050abf27994dda82780bed317b5028e8e1d977af28a5e59d969010a79609d52ec8776c298f6a6c78dabeecee11abb29a56b5fca8a9e5ed05ac32c617d"
+		},"j": {
+			"address": "0xd50e394b954a7926",
+			"key": "9d9c4cc5c15cdc4036aedd215fd06251d3d91c4f1f9ca3907fab36ddc13a7adc",
+			"pub": "c42715e836c186e9a3e21e1f374934c57ceb81ece82fff91b95f3009abd2cfb5b84c8b917019840b6b41dc2cad37686e30f3b5ec1170512b04c7ec9c1b4e8aa4"
+		},"k": {
+			"address": "0x273de5a51db47398",
+			"key": "5421c24d9ca9b81520a797aba287daf5525743fe82be3c1be18707e502894cde",
+			"pub": "343744b416baee1fd8dfd4b457fbfb3ce474f05af9a0d3a7a6987c76ef4eb6ce739e8ba4ec5e22e0f1f6cc109c7a3ac0faa2be2013d4ca35cc65e9f972ba5f3f"
+		},"l": {
+			"address": "0xde240bd259cf070f",
+			"key": "12cef3324af9a59e383dc48d9f3349a6ecda61690bf8cb18471fb0aaa74742f7",
+			"pub": "60680618a32e1ef9a627d07589de68478837a06767ce84814c83e81b6706a538ef7e4c91222e9860e8d148c79715f143936fbcd5bc948962e8256caa2f00c472"
+		},"ml": {
+			"address": "0x3b945775ed6c8997",
+			"key": "731d65e4aa19509d10e3677e441e44d05d5d5bafd51394138160f9176a9b76fb",
+			"pub": "e79080bf6c0a789191663cfcaeb3558142c0e8feff0e7bfa2485b054038dec5def76081ac7cfdebdba812c410e011054b577dd60a32099ac9791cb2dbc6dbb61"
+		}
+		
+	},
+	"deployments": {
+		"emulator": {
+			"testnet": ["FungibleToken","NonFungibleToken", "MetadataViews","RelationNFT"]
+		},
+		"testnet": {
+			"testnet": [
+			  "RelationNFT"
+			]
+		}
+	}
+}
