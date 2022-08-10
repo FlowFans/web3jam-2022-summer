@@ -49,6 +49,8 @@ independent existence.
 - [x] Smart contract. (Cadence, Solidity)
 - [x] UI. (React)
 - [x] AI. (OpenAI)
+- [x] DB. (Amazon DynamoDB)
+- [x] API. (Amazon Lambda + AWS API Gateway)
 - [x] Bot. (Discord Bot)
 - [x] Community. (Discord)
 
@@ -61,7 +63,7 @@ subsequently will be freely distributed by the holders.
 
 > Delivery Materials
 
-- [Source Code](./src), deployed to Testnet address: 0xf5c21ffd3438212b.
+- [Source Code](./src), deployed to Testnet address: 0xdaf76cab293e4369.
 - [web code](./src/web), deployed to [https://wakandaplus.wakanda-labs.com](https://wakandaplus.wakanda-labs.com). Origin git is [wakanda-plus-web](https://github.com/wakandalabs/wakanda-plus-web)
 - [solidity code](./src/solidity), deployed to polygon, see [polygonscan](https://polygonscan.com/address/0x9c824c1dc64cdfcfe27c91faafc991c013bdaa74#code). Origin git is [wakanda-pass](https://github.com/wakandalabs/wakanda-pass)
 - [discord bot code](./src/bot), see [Wakanda Metaverse](https://discord.com/invite/hzvXbjtzgj), the bot is

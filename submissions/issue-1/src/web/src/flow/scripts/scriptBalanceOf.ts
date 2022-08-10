@@ -2,8 +2,8 @@ import { send, decode, script, args, arg, cdc } from "@onflow/fcl"
 import { Address } from "@onflow/types"
 
 const CODE = cdc`
-import NonFungibleToken from 0xf5c21ffd3438212b
-import WakandaPass from 0xf5c21ffd3438212b
+import NonFungibleToken from 0x631e88ae7f1d7c20
+import WakandaPass from 0xdaf76cab293e4369
 
 pub fun main(address: Address): Int {
     let account = getAccount(address)
