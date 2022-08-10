@@ -48,7 +48,7 @@ Relation Club是基于Relation的服务构建的社群运营工具。Relation是
 
 *产品介绍*
 
-Relation Club是Chain native的NFT社群运营工具，它将帮助NFT创作者和NFT 持有者在web3中直接开展社群活动，这不仅能在有效地保证用户资产安全性，而且还将便利创作者的社群运营，可以开拓更多Web3 Native的NFT应用场景。
+Relation Club是Chain native的NFT社群运营工具，它将帮助NFT创作者和NFT 持有者在web3中直接开展社群活动，这不仅能有效地保证用户资产安全性，而且还将便利创作者的社群运营，可以开拓更多Web3 Native的NFT应用场景。
 
 Chain Native的特性为Relation Club带来独特的安全性，社群身份验证无需依赖第三方Bot，有效防范了钓鱼风险。
 
@@ -60,9 +60,9 @@ Chain Native的特性为Relation Club带来独特的安全性，社群身份验�
 - NFT权益事实化，进入、离开Club基于NFT的链上所有权，无需额外认证
 - 帮助创作者将地址映射到真实的用户,高效触达NFT持有者
 - 提供基于Web3的身份认证、IM、社交关系图谱等基础服务
-- 丰富且有趣社群运营小工具
+- 丰富且有趣社群的运营工具
 
-**Relation Club将包下述模块：**
+**Relation Club将包含下述模块：**
 
 - **Club Space**
 
