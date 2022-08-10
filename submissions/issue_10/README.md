@@ -1,4 +1,3 @@
-Readme for flow 2022	
 Overview
 In this era of rapid information development, individual value is infinitely magnified by the Internet, thus people are increasingly willing to trust information from individuals. Each person can create different information based on his or her unique knowledge, skills and experience. We have witnessed the rise of countless KOL on the internet, verifying the value of individuals by time and the market.
 However, with the development of Internet giants, the value of information has been deprived by platforms and the freedom of creation has been restricted again and again. If creators trigger some keywords, such as the name of other platforms, the publicity of their posts will be restricted. Platforms can also easily close an account and delete certain content.
@@ -101,38 +100,9 @@ Seven different zone badges can be exchanged for HUMAN coins, and the women's zo
 Advertiser
 Advertisers need to buy ad space to place ads. The revenue earned through advertising will be partially used to reward community members and partially used to support the development of the platform. Advertisers can also choose to collaborate with creators or platforms through the platform to co-create content or hold events.
 
-- TOKEN
-TOKEN
-Gain
-Burn
-SIN
-- Basic earnings for daily creation
-- Continuous income from quality content
-- Regular dividends from the platform
+Token
+![image](https://user-images.githubusercontent.com/90014846/183920353-94cffdc0-6a95-4d12-9ffe-1291469fb35f.png)
 
-
--Upgrade Magic Pen and attributes
--Buy Paid Content
--Reward Authors
--Buy advertising space
-
-
-
-Badge (7 Sins + Female Partition)
-
-- Comment, like and vote on content with a chance to get
-- Create quality content
--Synthesize HUMAN tokens
--Unlock Partition Pro creator 
-
-
-HUMAN
-- Create quality content
-- Collect 7 different partition badges to synthesize
-- Community Service
--Community Affairs Voting
--Magic Pen high level unlock
--Repair Magic Pen
 Roadmap
 2022 Third Quarter
 Genesis NFT released
