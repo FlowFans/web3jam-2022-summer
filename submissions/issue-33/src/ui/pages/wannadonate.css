@@ -1,0 +1,123 @@
+.donate_div_img{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    
+}
+.donate_img{
+    width: 100%;
+    height: 1000px;
+}
+
+.donate_show{
+    /* @media {} */
+    /* position: relative; */
+    margin-top: 2%;
+    float: right;
+    width: 23%;
+    height: 20%;
+    right: 0px;
+    padding: 20px;
+    /* top:scrollHeight + 150 + "px" */
+}
+
+.donate_show_img{
+    width: 100%;
+    height: 100%;
+}
+
+.nftsec3{
+    margin-top: 30px;
+}
+
+.wanna_collection{
+    border-radius: 18px;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #e3e6f1;
+    background: #fff;
+}
+
+.wanna_collection_top{
+    height: 75px;
+    border-radius: 18px 18px 0 0;
+    font-size: 18px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    background: #f3f9f6;
+    color: #1a285a;
+    font-weight: 600;
+    line-height: 22px;
+}
+.wanna_coll_img{
+    width: 27px;
+    height: 27px;
+}
+
+.wanna_collection_bto{
+    width: 100%;
+    height: auto;
+}
+
+.wanna_collection_bto_d1{
+    float: left;
+    width: 25%;
+    padding: 20px;
+}
+
+.wanna_collection_bto_d1_img{
+    width: 202px;
+    height: 202px;
+    border-radius: 18px;
+}
+
+.wanna_collection_bto_d1_txt1{
+    color: #555f84c9;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 2px;
+    margin-top: 10px;
+}
+
+.coll_bto_d1_txt_logo{
+    float: right;
+    color: #1a285a;
+    font-size: 14px;
+    font-weight:700;
+}
+.flowlogo2{
+    width: 20px;
+    height: 20px;
+}
+
+.coll_bto_d1_txt_name{
+    float: left;
+    width: 50%;
+    color: #1a285a;
+    font-size: 14px;
+    font-weight:700;
+}
+.coll_bto_d1_txt_price{
+    float: left;
+    width: 50%;
+    color: #555f84c9;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: right;
+}
+
+.wanna_slide{
+    float:left;
+    width: 50%;
+    height: 100%;
+}
+
+.wanna_slide_img{
+    width: 100%;
+    height: 214px;
+    border-radius: 18PX;
+    padding: 5px;
+}
