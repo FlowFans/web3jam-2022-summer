@@ -1,0 +1,33 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "testnet-account"
+		}
+	},
+	"contracts": {
+		"NonFungibleToken": "./src/cadence/contracts/NonFungibleToken.cdc",
+		"CarlyToken": "./src/cadence/contracts/CarlyToken.cdc",
+		"FungibleToken": "./src/cadence/contracts/FungibleToken.cdc"
+	  },
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "bec5b44014ac79a5a1190effd5e3a064a41f0b90d0ce03dd00813c8596987187"
+		},
+		"testnet-account": {
+			"address": "0xb51a64d391859f6d",
+			"key": "9d09946836630bcdc6c9f609540cfd1d0665772052a8cfa9bd47c45733e5069f"
+		}
+	},
+	"deployments": {
+		"testnet": {
+		  "testnet-account": ["FungibleToken","CarlyToken", "NonFungibleToken"]
+		}
+	  }
+}
