@@ -3,6 +3,7 @@
 ![3333](https://user-images.githubusercontent.com/83746881/180390840-091e029d-2577-4c30-9c52-0ffb00dd1336.png)
 
 * Register to http://punster.stonelens.com/ and start your funny journey. Check the [Front UI Tutorial](./docs/Front%20UI%20Tutorial.md) if you are new to Flow.
+* More details are in our [Pitch Deck](./docs/PunStar(v0.0.1).ppt.pdf)
 
 ## Track
 - [ ] NFT x DAO/Tools
@@ -11,19 +12,23 @@
 
 # Description
 ## Problem statement
-PunStar is a social platform established on Flow. Besides static content features and combinability of normal NFT, we take advantage of Flow's unique resource mechanism to coalesce some innovative properties into NFT and asset them. These innovative properties include dynamical social relationships between participants established by resource interactions on Flow, executable abilities based on methods bound to Flow's resources (some of which have realistic meanings, e.g. advertising), and upgradeable features like `Funny index` which may actually increase NFT's value.  
+We want to build a decentralized digital social network. By building a next-generation NFT to express various social relationships and interactions in the Web3 world, and asset all this, so that the value of social capabilities of every participant could be confirmed and clarified.  
 
-In this stage, PunStar chooses `Funny things` as the entry point of a social platform, which could be easily extended in the future. The participants of PunStar are called "Punsters" (an NFT) and they can share their funny things in the form of "Duanji" (an NFT). Each person can express their preference for a "Duanji", which can stimulate the construction of social relationships between participants and let it possible to estimate the "funny index" of each "Punster". The "Punsters" can make content promotions(e.g. publish ads) based on their relationship constructed in PunStar, which needs to satisfy some restrictions based on the "funny index" first. We use Flow's unique mechanism to coalesce social relationships, content promotion, and some other practical abilities into NFT, which is a great enhancement to the existing NFT, allowing NFT to be more realistic and of greater practical value.
+**PunStar** is an initial form of this social network. Besides static content features and combinability of normal NFT, we take advantage of Flow's unique resource mechanism to coalesce some innovative properties into NFT and asset them. The innovative properties include dynamical social relationships between participants established by resource interactions on Flow, executable abilities based on methods bound to Flow's resources (some of which have realistic meanings, e.g. advertising), and upgradeable features like `Funny index` which may actually increase NFT's value.  
+
+In this stage, PunStar chooses `Funny things` as the entry point of the social network, which could be easily extended in the future. The participants of PunStar are called "Punsters" (an NFT) and they can share their funny things in the form of "Duanji" (an NFT). Each person can express their preference for a "Duanji", which can stimulate the construction of social relationships between participants and let it possible to estimate the "funny index" of each "Punster". The "Punsters" can make content promotions(e.g. publish ads) based on their relationship constructed in PunStar, which needs to satisfy some restrictions based on the "funny index" first. We use Flow's unique mechanism to coalesce social relationships, content promotion, and some other practical abilities into NFT, which is a great enhancement to the existing NFT, allowing NFT to be more realistic and of greater practical value.
 
 ### Highlights
-* **Assetization of social relationships**  
-As we know, in resource-oriented cadence things can be bound to each resource, so resources can actually **have** their own abilities, such as social relationships based on the `following` mechanism. This is very different from the smart-contract-based chains where everything is published on smart contracts. Resources can be exchanged, so the bound abilities such as relationships can be exchanged too. This improves the potential value of the `Punster` NFT, as relationships can be combined with the advertisement ability for example. `Punsters` with more followers might be more valuable. 
+* **Brings associativity abilities to NFT with related assetization**  
+As we know, in resource-oriented cadence things can be bound to each resource, so resources can actually **have** their own abilities, such as social relationships based on the `following` mechanism. This is very different from the smart-contract-based chains where everything is published on smart contracts. Resources can be exchanged, so the bound abilities such as relationships can be exchanged too. This improves the potential value of the `Punster` NFT, as relationships can be combined with the advertising ability for instance. `Punsters` with more followers might be more valuable. 
 
-* **Assetization of funny things** 
-As every participant can express their preference for a `Dunaji`, the funny index of a `Duanji` and `Punsters` can be evaluated, which may improve their market performance.
-
-* **Enable and assetize execution abilities for NFT: Such as advertisement mechanism**   
+* **Brings execution abilities to NFT: Such as advertisement mechanism**   
 `Punsters` can push advertisements to their followers with limitations of some conditions based on the `funny index` mechanism. This is a demonstration of a specific feature of Flow's NFT, which is the implementation of executable abilities bound to NFTs. 
+
+* **Brings dynamical growth abilities for NFT**   
+Some dynamical abilities of `Punsters` could grow as they make contributions. For example, the funny index will increase if someone's `Duanji` is commended by others. And the funny index will influence the cooling time of Punster's advertising ability.
+
+* Assetization of all the social capabilities in PunStar
 
 * Assets in PunStar can be accessed cross-chain  
 Interesting things should be shared with others. Users can enjoy some special abilities of PunStar deployed on Flow from other chains without losing the specific features of resources.
@@ -52,7 +57,7 @@ The key points of the technology are as follows:
 * `Following` mechanism can be implemented easily on Flow by resource interactions. 
 * `Funny index` evaluation algorithm in the `Commend` mechanism can make out an estimation of how funny a `Duanji` or a `Punster` is, which depends on both commending counts and time passed.
 * Advertisement mechanism based on `funny index` of `Punsters`.
-* A cross-chain access system.
+* `StarRealm` and `Cross-Chain Locker` provide a Star Port for NFTs to travel to other chains.
 
 ### Marketing
 * The funny `Duanji` is used as the initial entry point for the topic to start the market.
@@ -60,7 +65,6 @@ The key points of the technology are as follows:
 * Assetization the practical value of both `Duanji` and `Punster` NFTs, and make everything tradable, so that to improve the activity of PunStar platform.
 * Bring in more dynamical and practical ablities to `Punster` and `Duanji` NFT, such as E-commerce.
 * Besides funny things, bring in more topics like dating to inspire users to enhance their social relationships.
-
 
 # What was done during Web3 Jam
 *Cadence Smart Contract*
