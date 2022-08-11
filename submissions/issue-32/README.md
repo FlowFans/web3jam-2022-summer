@@ -50,6 +50,8 @@ The NFT is tied to the runner's behavior, which is stored as JSON on the IPFS/Ar
 > Delivery Meterials
 
 - [Online Sites](https://racenumber.xyz)
+  - b-end: https://test.uppbook.com.cn/hoster/
+  - c-end: https://test.uppbook.com.cn/runner/
 - [Source Code](./src/) Testnet address: https://flow-view-source.com/testnet/account/0x83f8ed4318375647/contract/Racenumber
 - [Pitch Deck](./docs/deck.pdf) 
 - [Demo Video](./docs/demo.mp4) 
